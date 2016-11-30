@@ -12,7 +12,7 @@
         <!--View Controller-->
         <scene sceneID="sff-8S-vuk">
             <objects>
-                <tableViewController id="9k5-4o-Tng" customClass="ViewController" customModule="JTL" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController storyboardIdentifier="ios experience" id="9k5-4o-Tng" customClass="ViewController" customModule="JTL" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="hN0-69-dFJ">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -22,11 +22,11 @@
                                 <rect key="frame" x="0.0" y="28" width="414" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="F9b-hh-XzY" id="fqf-Te-ysD">
-                                    <rect key="frame" x="0.0" y="0.0" width="414" height="43.666666666666664"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="43"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="e74-Lq-lZW">
-                                            <rect key="frame" x="15" y="0.0" width="384" height="43.666666666666664"/>
+                                            <rect key="frame" x="15" y="0.0" width="384" height="43"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <nil key="textColor"/>
@@ -45,7 +45,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ZKk-8T-FbA" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3454" y="72"/>
+            <point key="canvasLocation" x="3296" y="-422"/>
         </scene>
         <!--Initial View Controller-->
         <scene sceneID="50l-Wb-cEk">
@@ -58,72 +58,89 @@
                     <view key="view" contentMode="scaleToFill" id="OUt-d5-qGa">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VhS-Ka-UNv">
-                                <rect key="frame" x="132.66666666666669" y="428.66666666666669" width="149.00000000000006" height="35"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="19"/>
-                                <state key="normal" title="Facebook"/>
-                                <connections>
-                                    <action selector="tappedFacebook:" destination="hqO-Nq-Mm8" eventType="touchUpInside" id="c9a-Lv-ERF"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yne-J7-XLd">
-                                <rect key="frame" x="132.66666666666669" y="625" width="149.00000000000006" height="71"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="71" id="Tpz-vl-M4q"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="19"/>
-                                <state key="normal" title="Resume"/>
-                                <connections>
-                                    <action selector="tappedResume:" destination="hqO-Nq-Mm8" eventType="touchUpInside" id="BWn-ut-fBR"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="f5c-du-01n">
-                                <rect key="frame" x="132.66666666666669" y="491.66666666666663" width="149.00000000000006" height="70.999999999999886"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="71" id="iUc-ed-Dca"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="19"/>
-                                <state key="normal" title="LinkedIn"/>
-                                <connections>
-                                    <action selector="tappedLinkedIn:" destination="hqO-Nq-Mm8" eventType="touchUpInside" id="imh-wF-EiL"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleAspectFit" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OqO-l4-9Yz">
-                                <rect key="frame" x="132" y="333.66666666666663" width="149" height="35"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="19"/>
-                                <state key="normal" title="  iOS Experience  "/>
-                                <connections>
-                                    <action selector="tappedIOSExperience:" destination="hqO-Nq-Mm8" eventType="touchUpInside" id="hHq-W3-gG5"/>
-                                </connections>
-                            </button>
-                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <constraints>
-                            <constraint firstItem="OqO-l4-9Yz" firstAttribute="centerY" secondItem="OUt-d5-qGa" secondAttribute="centerY" id="3pA-ic-J94"/>
-                            <constraint firstItem="VhS-Ka-UNv" firstAttribute="centerX" secondItem="OqO-l4-9Yz" secondAttribute="centerX" id="5oh-mC-2Ot"/>
-                            <constraint firstItem="f5c-du-01n" firstAttribute="centerX" secondItem="OqO-l4-9Yz" secondAttribute="centerX" id="Lfp-F1-erU"/>
-                            <constraint firstItem="yne-J7-XLd" firstAttribute="width" secondItem="OqO-l4-9Yz" secondAttribute="width" id="S7B-LZ-ZrR"/>
-                            <constraint firstItem="f5c-du-01n" firstAttribute="width" secondItem="OqO-l4-9Yz" secondAttribute="width" id="XEp-KC-EgB"/>
-                            <constraint firstItem="wSv-VZ-coa" firstAttribute="top" secondItem="yne-J7-XLd" secondAttribute="bottom" constant="40" id="fea-k7-ypZ"/>
-                            <constraint firstItem="OqO-l4-9Yz" firstAttribute="centerX" secondItem="OUt-d5-qGa" secondAttribute="centerX" id="fmA-ec-oPv"/>
-                            <constraint firstItem="VhS-Ka-UNv" firstAttribute="width" secondItem="OqO-l4-9Yz" secondAttribute="width" id="p0w-Lf-5qv"/>
-                            <constraint firstItem="VhS-Ka-UNv" firstAttribute="top" secondItem="OqO-l4-9Yz" secondAttribute="bottom" constant="43" id="q9q-j9-Kjo"/>
-                            <constraint firstItem="f5c-du-01n" firstAttribute="top" secondItem="VhS-Ka-UNv" secondAttribute="bottom" constant="28" id="vvj-RP-ZGo"/>
-                            <constraint firstItem="yne-J7-XLd" firstAttribute="centerX" secondItem="OqO-l4-9Yz" secondAttribute="centerX" id="yuW-sr-M9c"/>
-                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="Vfq-Uj-Vw6"/>
                     <connections>
-                        <outlet property="facebookButton" destination="VhS-Ka-UNv" id="iLo-bR-0lb"/>
-                        <outlet property="iosButton" destination="OqO-l4-9Yz" id="z4a-qH-Fi2"/>
-                        <outlet property="linkedInButton" destination="f5c-du-01n" id="dfo-S2-u0Z"/>
-                        <outlet property="resumeButton" destination="yne-J7-XLd" id="Cmt-uK-urW"/>
+                        <segue destination="hvb-4Q-iYa" kind="show" identifier="segueToTab" id="gaI-do-v8j"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="agO-wO-h9c" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2485.5999999999999" y="71.514242878560722"/>
+            <point key="canvasLocation" x="2417" y="71"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="z9r-wk-7Gk">
+            <objects>
+                <tabBarController id="hvb-4Q-iYa" sceneMemberID="viewController">
+                    <tabBar key="tabBar" contentMode="scaleToFill" id="rMg-2v-rX3">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="1ou-fZ-0yn" kind="relationship" relationship="viewControllers" id="Rma-nX-VJl"/>
+                        <segue destination="Bkq-oP-WSn" kind="relationship" relationship="viewControllers" id="qcf-sb-HTb"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="zyT-8L-BlR" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3296" y="271"/>
+        </scene>
+        <!--html-->
+        <scene sceneID="78W-JE-oUD">
+            <objects>
+                <viewController id="Bkq-oP-WSn" customClass="ResumeViewController" customModule="JTL" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="WCb-HC-96v"/>
+                        <viewControllerLayoutGuide type="bottom" id="MGw-te-Yn3"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Ovx-GJ-R27">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <webView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="1F7-Jj-Ia8">
+                                <rect key="frame" x="0.0" y="64" width="414" height="623"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </webView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="html" id="auo-df-nAG"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dk2-zA-Kae" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4250.7246376811599" y="516.84782608695662"/>
+        </scene>
+        <!--Resume Table View Controller-->
+        <scene sceneID="6Jy-1Y-pFf">
+            <objects>
+                <tableViewController id="1ou-fZ-0yn" customClass="ResumeTableViewController" customModule="JTL" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="161" sectionHeaderHeight="28" sectionFooterHeight="28" id="725-RS-Rvs">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" rowHeight="161" id="hHe-I3-j7h">
+                                <rect key="frame" x="0.0" y="28" width="414" height="161"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="hHe-I3-j7h" id="OAm-Ze-EWd">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="160"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="1ou-fZ-0yn" id="3b4-Gs-R7c"/>
+                            <outlet property="delegate" destination="1ou-fZ-0yn" id="w44-u4-Q4E"/>
+                        </connections>
+                    </tableView>
+                    <tabBarItem key="tabBarItem" systemItem="favorites" id="87n-3a-FLd"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="evd-7s-gtH" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4257.971014492754" y="-181.79347826086959"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="G6j-Gi-Rao">

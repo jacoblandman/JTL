@@ -17,12 +17,11 @@ class InitialViewController: UIViewController {
     var taylorLabel: UILabel!
     var landmanLabel: UILabel!
     
+    var iosButton: UIButton!
+    var facebookButton: UIButton!
+    var linkedinButton: UIButton!
+    var resumeButton: UIButton!
     
-    
-    @IBOutlet weak var iosButton: UIButton!
-    @IBOutlet weak var facebookButton: UIButton!
-    @IBOutlet weak var linkedInButton: UIButton!
-    @IBOutlet weak var resumeButton: UIButton!
     
     // METHODS
     // ------------------------------------------------------------------------------------------
@@ -31,24 +30,18 @@ class InitialViewController: UIViewController {
     override func loadView() {
         super.loadView()
         
-        editButtons()
+        makeButtons()
         makeLabels()
     }
     
     // ------------------------------------------------------------------------------------------
-    // here I'm going to set the button borders
+    // here I will add the auto layout constraints now that the buttons are created
+    // the labels are already constrained by the CGRects
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         
-        for subview in self.view.subviews {
-            // loop through the buttons here to set their values
-            if let btn = subview as? UIButton {
-                btn.layer.borderWidth = 1.0
-                btn.layer.borderColor = self.view.tintColor.cgColor
-                btn.layer.cornerRadius = 10
-            }
-        }
+        addConstraints()
     }
     
     
@@ -71,7 +64,7 @@ class InitialViewController: UIViewController {
 
     // ------------------------------------------------------------------------------------------
     
-    @IBAction func tappedIOSExperience(_ sender: Any) {
+    func tappedIOSExperience(_ sender: Any) {
         let vc = ViewController()
         navigationController?.pushViewController(vc, animated: true)
         
@@ -80,7 +73,7 @@ class InitialViewController: UIViewController {
     // ------------------------------------------------------------------------------------------
     // if the user taps the facebook button, they will be redirected to my facebook
     
-    @IBAction func tappedFacebook(_ sender: Any) {
+    func tappedFacebook(_ sender: Any) {
         let UID: String = "1372129908"
         let URLString = "fb://profile/" + UID
         
@@ -101,7 +94,7 @@ class InitialViewController: UIViewController {
     
     // ------------------------------------------------------------------------------------------
     
-    @IBAction func tappedLinkedIn(_ sender: Any) {
+    func tappedLinkedIn(_ sender: Any) {
         let UID: String = "25216973"
         let URLString = "https://www.linkedin.com/in/jacob-landman-" + UID
         
@@ -120,7 +113,9 @@ class InitialViewController: UIViewController {
     
     // ------------------------------------------------------------------------------------------
     
-    @IBAction func tappedResume(_ sender: Any) {
+    func tappedResume(_ sender: Any) {
+        //let vc = ResumeTableViewController()
+        performSegue(withIdentifier: "segueToTab", sender: self)
     }
     
     // ------------------------------------------------------------------------------------------
@@ -138,53 +133,118 @@ class InitialViewController: UIViewController {
         // the size of the screen is in points
         let sizeOfScreen: CGSize = UIScreen.main.bounds.size
 
-        let offset: CGFloat = 20.0
+        let xOffset: CGFloat = 20.0
+        let yOffset: CGFloat = 30.0
         let viewWidth: CGFloat = sizeOfScreen.width
+        let scaleFactor: CGFloat = 0.9
         
-        let labelHeight: CGFloat = 56
-        let labelStartingPosition: CGFloat = 77
+        let labelHeight: CGFloat = scaleFactor * 0.33 * ((0.33 * sizeOfScreen.height) - yOffset)
+        
+        let labelStartingPosition: CGFloat = labelHeight + yOffset
         
         jacobLabel = UILabel()
-        jacobLabel.frame = CGRect(x: viewWidth + offset, y: labelStartingPosition, width: viewWidth, height: labelHeight)
+        jacobLabel.frame = CGRect(x: viewWidth + xOffset, y: labelStartingPosition, width: viewWidth, height: labelHeight)
         jacobLabel.text = "Jacob"
         jacobLabel.font = UIFont(name: "AppleSDGothicNeo-Regular", size: labelHeight)
         view.addSubview(jacobLabel)
         
         taylorLabel = UILabel()
-        taylorLabel.frame = CGRect(x: viewWidth + offset, y: labelStartingPosition + 1 * labelHeight, width: viewWidth, height: labelHeight)
+        taylorLabel.frame = CGRect(x: viewWidth + xOffset, y: labelStartingPosition + 1 * (labelHeight - 2), width: viewWidth, height: labelHeight)
         taylorLabel.text = "Taylor"
         taylorLabel.font = UIFont(name: "AppleSDGothicNeo-Regular", size: labelHeight)
         view.addSubview(taylorLabel)
         
         landmanLabel = UILabel()
-        landmanLabel.frame = CGRect(x: viewWidth + offset, y: labelStartingPosition + 2 * labelHeight, width: viewWidth, height: labelHeight)
+        landmanLabel.frame = CGRect(x: viewWidth + xOffset, y: labelStartingPosition + 2 * (labelHeight - 2), width: viewWidth, height: labelHeight)
         landmanLabel.text = "Landman"
         landmanLabel.font = UIFont(name: "AppleSDGothicNeo-Regular", size: labelHeight)
         view.addSubview(landmanLabel)
     }
     
     // ------------------------------------------------------------------------------------------
+    // add all the buttons to the view
     
-    func editButtons() {
+    func makeButtons() {
+        
+        // make the buttons of type .system so that the text highlights when tapped
+        
+        iosButton = UIButton(type: .system) as UIButton
+        iosButton.translatesAutoresizingMaskIntoConstraints = false
+        iosButton.setTitle("  iOS Experience  ", for: .normal)
+        iosButton.setTitleColor(self.view.tintColor, for: .normal)
+        iosButton.addTarget(self, action: #selector(tappedIOSExperience(_:)), for: .touchUpInside)
+        iosButton.layer.borderWidth = 1.0
+        iosButton.layer.borderColor = self.view.tintColor.cgColor
+        iosButton.layer.cornerRadius = 10
+        view.addSubview(iosButton)
+        
+        facebookButton = UIButton(type: .system) as UIButton
+        facebookButton.translatesAutoresizingMaskIntoConstraints = false
+        facebookButton.setTitle("Facebook", for: .normal)
+        facebookButton.setTitleColor(self.view.tintColor, for: .normal)
+        facebookButton.addTarget(self, action: #selector(tappedFacebook(_:)), for: .touchUpInside)
+        facebookButton.showsTouchWhenHighlighted = true
+        facebookButton.layer.borderWidth = 1.0
+        facebookButton.layer.borderColor = self.view.tintColor.cgColor
+        facebookButton.layer.cornerRadius = 10
+        view.addSubview(facebookButton)
+        
+        linkedinButton = UIButton(type: .system) as UIButton
+        linkedinButton.translatesAutoresizingMaskIntoConstraints = false
+        linkedinButton.setTitle("LinkedIn", for: .normal)
+        linkedinButton.setTitleColor(self.view.tintColor, for: .normal)
+        linkedinButton.addTarget(self, action: #selector(tappedLinkedIn(_:)), for: .touchUpInside)
+        linkedinButton.showsTouchWhenHighlighted = true
+        linkedinButton.layer.borderWidth = 1.0
+        linkedinButton.layer.borderColor = self.view.tintColor.cgColor
+        linkedinButton.layer.cornerRadius = 10
+        view.addSubview(linkedinButton)
+        
+        resumeButton = UIButton(type: .system) as UIButton
+        resumeButton.translatesAutoresizingMaskIntoConstraints = false
+        resumeButton.setTitle("Resume", for: .normal)
+        resumeButton.setTitleColor(self.view.tintColor, for: .normal)
+        resumeButton.addTarget(self, action: #selector(tappedResume(_:)), for: .touchUpInside)
+        resumeButton.showsTouchWhenHighlighted = true
+        resumeButton.layer.borderWidth = 1.0
+        resumeButton.layer.borderColor = self.view.tintColor.cgColor
+        resumeButton.layer.cornerRadius = 10
+        view.addSubview(resumeButton)
+        
+    }
+    
+    // ------------------------------------------------------------------------------------------
+    // add all the constraints for the buttons and labels
+    
+    func addConstraints() {
         
         // the size of the screen is in points
-        // let sizeOfScreen: CGSize = UIScreen.main.bounds.size
         
-        // let offsetFromBottom: CGFloat = 40
-        // let distanceBetween: CGFloat = 20
+        let offsetFromBottom: CGFloat = 60
+        let distanceBetween: CGFloat = 20
         
-        // let maxButtonHeight = 0.33 * sizeOfScreen.height
-        // let buttonCoverage = 0.66 * sizeOfScreen.height
-        // let numberOfButtons: CGFloat = 4
+        // iOS button constraints
+        NSLayoutConstraint(item: iosButton, attribute: .top, relatedBy: .equal, toItem: view, attribute: .top, multiplier: 1.0, constant: 0.5 * view.frame.height).isActive = true
+        NSLayoutConstraint(item: iosButton, attribute: .centerX, relatedBy: .equal, toItem: view, attribute: .centerX, multiplier: 1.0, constant: 0.0).isActive = true
         
-        // we need the button height
-        // let buttonHeight = (buttonCoverage - (numberOfButtons - 1) * distanceBetween - offsetFromBottom) / 4
-        // let buttonWidth: CGFloat = sizeOfScreen.width / 2
+        // facebook button constraints
+        NSLayoutConstraint(item: facebookButton, attribute: .centerX, relatedBy: .equal, toItem: view, attribute: .centerX, multiplier: 1.0, constant: 0.0).isActive = true
+        NSLayoutConstraint(item: facebookButton, attribute: .width, relatedBy: .equal, toItem: iosButton, attribute: .width, multiplier: 1.0, constant: 0.0).isActive = true
+        NSLayoutConstraint(item: facebookButton, attribute: .height, relatedBy: .equal, toItem: iosButton, attribute: .height, multiplier: 1.0, constant: 0.0).isActive = true
+        NSLayoutConstraint(item: facebookButton, attribute: .top, relatedBy: .equal, toItem: iosButton, attribute: .bottom, multiplier: 1.0, constant: distanceBetween).isActive = true
         
-        // iosButton.translatesAutoresizingMaskIntoConstraints = false
-        // iosButton.frame = CGRect(x: <#T##CGFloat#>, y: sizeOfScreen, width: buttonWidth, height: buttonHeight)
+        // linkedin button constraints
+        NSLayoutConstraint(item: linkedinButton, attribute: .centerX, relatedBy: .equal, toItem: view, attribute: .centerX, multiplier: 1.0, constant: 0.0).isActive = true
+        NSLayoutConstraint(item: linkedinButton, attribute: .width, relatedBy: .equal, toItem: iosButton, attribute: .width, multiplier: 1.0, constant: 0.0).isActive = true
+        NSLayoutConstraint(item: linkedinButton, attribute: .height, relatedBy: .equal, toItem: iosButton, attribute: .height, multiplier: 1.0, constant: 0.0).isActive = true
+        NSLayoutConstraint(item: linkedinButton, attribute: .top, relatedBy: .equal, toItem: facebookButton, attribute: .bottom, multiplier: 1.0, constant: distanceBetween).isActive = true
         
-        
+        // resume button constraints
+        NSLayoutConstraint(item: resumeButton, attribute: .centerX, relatedBy: .equal, toItem: view, attribute: .centerX, multiplier: 1.0, constant: 0.0).isActive = true
+        NSLayoutConstraint(item: resumeButton, attribute: .width, relatedBy: .equal, toItem: iosButton, attribute: .width, multiplier: 1.0, constant: 0.0).isActive = true
+        NSLayoutConstraint(item: resumeButton, attribute: .height, relatedBy: .equal, toItem: iosButton, attribute: .height, multiplier: 1.0, constant: 0.0).isActive = true
+        NSLayoutConstraint(item: resumeButton, attribute: .top, relatedBy: .equal, toItem: linkedinButton, attribute: .bottom, multiplier: 1.0, constant: distanceBetween).isActive = true
+        NSLayoutConstraint(item: resumeButton, attribute: .bottom, relatedBy: .equal, toItem: view, attribute: .bottom, multiplier: 1.0, constant: -offsetFromBottom).isActive = true
     }
     
     // ------------------------------------------------------------------------------------------
