@@ -37,6 +37,8 @@ class ViewController: UITableViewController {
         tableView.isEditing = true
         tableView.allowsSelectionDuringEditing = true
         tableView.register(UITableViewCell.self, forCellReuseIdentifier: "Cell")
+        
+        title = "Hacking With Swift Tutorial Series"
     }
     
     // ------------------------------------------------------------------------------------------

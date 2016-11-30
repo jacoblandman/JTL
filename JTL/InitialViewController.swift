@@ -17,6 +17,13 @@ class InitialViewController: UIViewController {
     var taylorLabel: UILabel!
     var landmanLabel: UILabel!
     
+    
+    
+    @IBOutlet weak var iosButton: UIButton!
+    @IBOutlet weak var facebookButton: UIButton!
+    @IBOutlet weak var linkedInButton: UIButton!
+    @IBOutlet weak var resumeButton: UIButton!
+    
     // METHODS
     // ------------------------------------------------------------------------------------------
     // This method only gets called once. We will make the labels here and add them as subviews
@@ -24,6 +31,7 @@ class InitialViewController: UIViewController {
     override func loadView() {
         super.loadView()
         
+        editButtons()
         makeLabels()
     }
     
@@ -130,27 +138,53 @@ class InitialViewController: UIViewController {
         // the size of the screen is in points
         let sizeOfScreen: CGSize = UIScreen.main.bounds.size
 
-        let offset: CGFloat = 50.0
-        let viewWidth: CGFloat = 375
+        let offset: CGFloat = 20.0
+        let viewWidth: CGFloat = sizeOfScreen.width
+        
+        let labelHeight: CGFloat = 56
+        let labelStartingPosition: CGFloat = 77
         
         jacobLabel = UILabel()
-        jacobLabel.frame = CGRect(x: viewWidth + offset, y: 77, width: 201.5, height: 56)
+        jacobLabel.frame = CGRect(x: viewWidth + offset, y: labelStartingPosition, width: viewWidth, height: labelHeight)
         jacobLabel.text = "Jacob"
-        jacobLabel.textColor = UIColor.black
-        jacobLabel.font = UIFont(name: "AppleSDGothicNeo-Regular", size: 50)
+        jacobLabel.font = UIFont(name: "AppleSDGothicNeo-Regular", size: labelHeight)
         view.addSubview(jacobLabel)
         
         taylorLabel = UILabel()
-        taylorLabel.frame = CGRect(x: viewWidth + offset, y: 131, width: 201.5, height: 56)
+        taylorLabel.frame = CGRect(x: viewWidth + offset, y: labelStartingPosition + 1 * labelHeight, width: viewWidth, height: labelHeight)
         taylorLabel.text = "Taylor"
-        taylorLabel.font = UIFont(name: "AppleSDGothicNeo-Regular", size: 50)
+        taylorLabel.font = UIFont(name: "AppleSDGothicNeo-Regular", size: labelHeight)
         view.addSubview(taylorLabel)
         
         landmanLabel = UILabel()
-        landmanLabel.frame = CGRect(x: viewWidth + offset, y: 183, width: 201.5, height: 56)
+        landmanLabel.frame = CGRect(x: viewWidth + offset, y: labelStartingPosition + 2 * labelHeight, width: viewWidth, height: labelHeight)
         landmanLabel.text = "Landman"
-        landmanLabel.font = UIFont(name: "AppleSDGothicNeo-Regular", size: 50)
+        landmanLabel.font = UIFont(name: "AppleSDGothicNeo-Regular", size: labelHeight)
         view.addSubview(landmanLabel)
+    }
+    
+    // ------------------------------------------------------------------------------------------
+    
+    func editButtons() {
+        
+        // the size of the screen is in points
+        // let sizeOfScreen: CGSize = UIScreen.main.bounds.size
+        
+        // let offsetFromBottom: CGFloat = 40
+        // let distanceBetween: CGFloat = 20
+        
+        // let maxButtonHeight = 0.33 * sizeOfScreen.height
+        // let buttonCoverage = 0.66 * sizeOfScreen.height
+        // let numberOfButtons: CGFloat = 4
+        
+        // we need the button height
+        // let buttonHeight = (buttonCoverage - (numberOfButtons - 1) * distanceBetween - offsetFromBottom) / 4
+        // let buttonWidth: CGFloat = sizeOfScreen.width / 2
+        
+        // iosButton.translatesAutoresizingMaskIntoConstraints = false
+        // iosButton.frame = CGRect(x: <#T##CGFloat#>, y: sizeOfScreen, width: buttonWidth, height: buttonHeight)
+        
+        
     }
     
     // ------------------------------------------------------------------------------------------
