@@ -202,7 +202,8 @@ class InitialViewController: UIViewController {
         
         resumeButton = UIButton(type: .system) as UIButton
         resumeButton.translatesAutoresizingMaskIntoConstraints = false
-        resumeButton.setTitle("Resume", for: .normal)
+        let eAcute: Character = "\u{E9}"
+        resumeButton.setTitle("Resum".appending(String(eAcute)), for: .normal)
         resumeButton.setTitleColor(self.view.tintColor, for: .normal)
         resumeButton.addTarget(self, action: #selector(tappedResume(_:)), for: .touchUpInside)
         resumeButton.showsTouchWhenHighlighted = true

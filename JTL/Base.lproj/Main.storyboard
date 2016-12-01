@@ -13,20 +13,20 @@
         <scene sceneID="sff-8S-vuk">
             <objects>
                 <tableViewController storyboardIdentifier="ios experience" id="9k5-4o-Tng" customClass="ViewController" customModule="JTL" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="hN0-69-dFJ">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="150" sectionHeaderHeight="28" sectionFooterHeight="28" id="hN0-69-dFJ">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" textLabel="e74-Lq-lZW" style="IBUITableViewCellStyleDefault" id="F9b-hh-XzY">
-                                <rect key="frame" x="0.0" y="28" width="414" height="44"/>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" textLabel="e74-Lq-lZW" rowHeight="150" style="IBUITableViewCellStyleDefault" id="F9b-hh-XzY">
+                                <rect key="frame" x="0.0" y="28" width="414" height="150"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="F9b-hh-XzY" id="fqf-Te-ysD">
-                                    <rect key="frame" x="0.0" y="0.0" width="414" height="43"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="149"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="e74-Lq-lZW">
-                                            <rect key="frame" x="15" y="0.0" width="384" height="43"/>
+                                            <rect key="frame" x="15" y="0.0" width="384" height="149"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <nil key="textColor"/>
@@ -45,7 +45,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ZKk-8T-FbA" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3296" y="-422"/>
+            <point key="canvasLocation" x="3295.652173913044" y="-422.28260869565219"/>
         </scene>
         <!--Initial View Controller-->
         <scene sceneID="50l-Wb-cEk">
@@ -87,7 +87,7 @@
             </objects>
             <point key="canvasLocation" x="3296" y="271"/>
         </scene>
-        <!--html-->
+        <!--pdf-->
         <scene sceneID="78W-JE-oUD">
             <objects>
                 <viewController id="Bkq-oP-WSn" customClass="ResumeViewController" customModule="JTL" customModuleProvider="target" sceneMemberID="viewController">
@@ -107,13 +107,13 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="html" id="auo-df-nAG"/>
+                    <tabBarItem key="tabBarItem" title="pdf" image="file-document-7.png" id="auo-df-nAG"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dk2-zA-Kae" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="4250.7246376811599" y="516.84782608695662"/>
         </scene>
-        <!--Resume Table View Controller-->
+        <!--Table-->
         <scene sceneID="6Jy-1Y-pFf">
             <objects>
                 <tableViewController id="1ou-fZ-0yn" customClass="ResumeTableViewController" customModule="JTL" customModuleProvider="target" sceneMemberID="viewController">
@@ -136,11 +136,11 @@
                             <outlet property="delegate" destination="1ou-fZ-0yn" id="w44-u4-Q4E"/>
                         </connections>
                     </tableView>
-                    <tabBarItem key="tabBarItem" systemItem="favorites" id="87n-3a-FLd"/>
+                    <tabBarItem key="tabBarItem" title="Table" image="list-fat-7.png" id="87n-3a-FLd"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="evd-7s-gtH" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4257.971014492754" y="-181.79347826086959"/>
+            <point key="canvasLocation" x="4251" y="-219"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="G6j-Gi-Rao">
@@ -161,4 +161,8 @@
             <point key="canvasLocation" x="1696.8" y="71.514242878560722"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="file-document-7.png" width="30" height="30"/>
+        <image name="list-fat-7.png" width="30" height="30"/>
+    </resources>
 </document>
