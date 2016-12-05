@@ -225,27 +225,27 @@ class InitialViewController: UIViewController {
         let distanceBetween: CGFloat = 20
         
         // iOS button constraints
-        NSLayoutConstraint(item: iosButton, attribute: .top, relatedBy: .equal, toItem: view, attribute: .top, multiplier: 1.0, constant: 0.5 * view.frame.height).isActive = true
-        NSLayoutConstraint(item: iosButton, attribute: .centerX, relatedBy: .equal, toItem: view, attribute: .centerX, multiplier: 1.0, constant: 0.0).isActive = true
+        NSLayoutConstraint(item: resumeButton, attribute: .top, relatedBy: .equal, toItem: view, attribute: .top, multiplier: 1.0, constant: 0.5 * view.frame.height).isActive = true
+        NSLayoutConstraint(item: resumeButton, attribute: .centerX, relatedBy: .equal, toItem: view, attribute: .centerX, multiplier: 1.0, constant: 0.0).isActive = true
         
         // facebook button constraints
         NSLayoutConstraint(item: facebookButton, attribute: .centerX, relatedBy: .equal, toItem: view, attribute: .centerX, multiplier: 1.0, constant: 0.0).isActive = true
-        NSLayoutConstraint(item: facebookButton, attribute: .width, relatedBy: .equal, toItem: iosButton, attribute: .width, multiplier: 1.0, constant: 0.0).isActive = true
-        NSLayoutConstraint(item: facebookButton, attribute: .height, relatedBy: .equal, toItem: iosButton, attribute: .height, multiplier: 1.0, constant: 0.0).isActive = true
-        NSLayoutConstraint(item: facebookButton, attribute: .top, relatedBy: .equal, toItem: iosButton, attribute: .bottom, multiplier: 1.0, constant: distanceBetween).isActive = true
+        NSLayoutConstraint(item: facebookButton, attribute: .width, relatedBy: .equal, toItem: resumeButton, attribute: .width, multiplier: 1.0, constant: 0.0).isActive = true
+        NSLayoutConstraint(item: facebookButton, attribute: .height, relatedBy: .equal, toItem: resumeButton, attribute: .height, multiplier: 1.0, constant: 0.0).isActive = true
+        NSLayoutConstraint(item: facebookButton, attribute: .top, relatedBy: .equal, toItem: resumeButton, attribute: .bottom, multiplier: 1.0, constant: distanceBetween).isActive = true
         
         // linkedin button constraints
         NSLayoutConstraint(item: linkedinButton, attribute: .centerX, relatedBy: .equal, toItem: view, attribute: .centerX, multiplier: 1.0, constant: 0.0).isActive = true
-        NSLayoutConstraint(item: linkedinButton, attribute: .width, relatedBy: .equal, toItem: iosButton, attribute: .width, multiplier: 1.0, constant: 0.0).isActive = true
-        NSLayoutConstraint(item: linkedinButton, attribute: .height, relatedBy: .equal, toItem: iosButton, attribute: .height, multiplier: 1.0, constant: 0.0).isActive = true
+        NSLayoutConstraint(item: linkedinButton, attribute: .width, relatedBy: .equal, toItem: resumeButton, attribute: .width, multiplier: 1.0, constant: 0.0).isActive = true
+        NSLayoutConstraint(item: linkedinButton, attribute: .height, relatedBy: .equal, toItem: resumeButton, attribute: .height, multiplier: 1.0, constant: 0.0).isActive = true
         NSLayoutConstraint(item: linkedinButton, attribute: .top, relatedBy: .equal, toItem: facebookButton, attribute: .bottom, multiplier: 1.0, constant: distanceBetween).isActive = true
         
         // resume button constraints
-        NSLayoutConstraint(item: resumeButton, attribute: .centerX, relatedBy: .equal, toItem: view, attribute: .centerX, multiplier: 1.0, constant: 0.0).isActive = true
-        NSLayoutConstraint(item: resumeButton, attribute: .width, relatedBy: .equal, toItem: iosButton, attribute: .width, multiplier: 1.0, constant: 0.0).isActive = true
-        NSLayoutConstraint(item: resumeButton, attribute: .height, relatedBy: .equal, toItem: iosButton, attribute: .height, multiplier: 1.0, constant: 0.0).isActive = true
-        NSLayoutConstraint(item: resumeButton, attribute: .top, relatedBy: .equal, toItem: linkedinButton, attribute: .bottom, multiplier: 1.0, constant: distanceBetween).isActive = true
-        NSLayoutConstraint(item: resumeButton, attribute: .bottom, relatedBy: .equal, toItem: view, attribute: .bottom, multiplier: 1.0, constant: -offsetFromBottom).isActive = true
+        NSLayoutConstraint(item: iosButton, attribute: .centerX, relatedBy: .equal, toItem: view, attribute: .centerX, multiplier: 1.0, constant: 0.0).isActive = true
+        NSLayoutConstraint(item: iosButton, attribute: .width, relatedBy: .equal, toItem: resumeButton, attribute: .width, multiplier: 1.0, constant: 0.0).isActive = true
+        NSLayoutConstraint(item: iosButton, attribute: .height, relatedBy: .equal, toItem: resumeButton, attribute: .height, multiplier: 1.0, constant: 0.0).isActive = true
+        NSLayoutConstraint(item: iosButton, attribute: .top, relatedBy: .equal, toItem: linkedinButton, attribute: .bottom, multiplier: 1.0, constant: distanceBetween).isActive = true
+        NSLayoutConstraint(item: iosButton, attribute: .bottom, relatedBy: .equal, toItem: view, attribute: .bottom, multiplier: 1.0, constant: -offsetFromBottom).isActive = true
     }
     
     // ------------------------------------------------------------------------------------------

@@ -7,12 +7,26 @@
 //
 
 import UIKit
+import CoreImage
+
+enum SectionType: Int {
+    case personalInfo
+    case technicalExperience
+    case languages
+    case education
+    case awards
+    case interests
+    case publications
+}
 
 class ResumeTableViewController: UITableViewController {
 
     // PARAMETERS
     // ------------------------------------------------------------------------------------------
     var sections = [String]()
+    var selectedIndexPath: IndexPath?
+    var context: CIContext!
+    var filter: CIFilter!
     
     
     // METHODS
@@ -22,7 +36,20 @@ class ResumeTableViewController: UITableViewController {
         super.viewDidLoad()
 
         loadSections()
-        tableView.register(UITableViewCell.self, forCellReuseIdentifier: "Cell")
+        
+        filter = CIFilter(name: "CIExposureAdjust")
+        context = CIContext()
+    }
+    
+    // ------------------------------------------------------------------------------------------
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        if let indexPath = selectedIndexPath {
+            let cell = tableView.cellForRow(at: indexPath) as! ResumeSectionTableViewCell
+            cell.sectionImage.alpha = 0.9
+        }
     }
     
     // ------------------------------------------------------------------------------------------
@@ -66,34 +93,35 @@ class ResumeTableViewController: UITableViewController {
         sections.append("Languages")
         sections.append("Education")
         sections.append("Awards")
+        sections.append("Interests")
         sections.append("Publications")
     }
     
     // ------------------------------------------------------------------------------------------
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath)
+        let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath) as! ResumeSectionTableViewCell
         
-        // modify the text label attributes
-        cell.textLabel?.text = sections[indexPath.row]
-        cell.textLabel?.textColor = UIColor.black
-        cell.textLabel?.backgroundColor = UIColor.clear
-        cell.textLabel?.textAlignment = .center
-        cell.textLabel?.font = UIFont(name: "AppleSDGothicNeo-Regular", size: cell.frame.height / 6)
+        let name: String = sections[indexPath.row].replacingOccurrences(of: " ", with: "").appending(".jpg")
+        cell.sectionImage.image = UIImage(named: name)
         
-        // modify the add the image to the view and send it to the back
-        let name: String = sections[indexPath.row].replacingOccurrences(of: " ", with: "").appending(".png")
-        if let path = Bundle.main.path(forResource: name, ofType: nil) {
-            print(name)
-            let imageView = UIImageView(frame: cell.frame)
-            imageView.image = UIImage(contentsOfFile: path)!
-            imageView.center = cell.center
-            imageView.frame.size = cell.frame.size
-            imageView.contentMode = .scaleAspectFill
-            cell.addSubview(imageView)
-            cell.sendSubview(toBack: imageView)
+        // modify the labe attributes
+        cell.sectionLabel.text = sections[indexPath.row]
+        cell.sectionLabel.font = UIFont(name: "AppleSDGothicNeo-Regular", size: cell.frame.height / 6)
+        cell.sectionLabel.textColor = UIColor.white
+        
+        // attempt to filter the image
+        let inputImage = CIImage(image: UIImage(named: name)!)
+        
+        // The inputEV value on the CIFilter adjusts exposure (negative values darken, positive values brighten)
+        filter.setValue(inputImage, forKey: kCIInputImageKey)
+        filter.setValue(-2.0, forKey: kCIInputEVKey)
+        
+        // Break early if the filter was not a success (.outputImage is optional in Swift)
+        if let cgimg = context.createCGImage(filter.outputImage!, from: filter.outputImage!.extent) {
+            let processedImage = UIImage(cgImage: cgimg)
+            cell.sectionImage.image = processedImage
         }
-        
         
         return cell
     }
@@ -108,6 +136,12 @@ class ResumeTableViewController: UITableViewController {
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         print(sections[indexPath.row])
+        let cell = tableView.cellForRow(at: indexPath) as! ResumeSectionTableViewCell
+        cell.sectionImage.alpha = 0.5
+        selectedIndexPath = indexPath
+        
+        segueToNextView(sectionType: SectionType(rawValue: indexPath.row)!)
+        
     }
     
     // ------------------------------------------------------------------------------------------
@@ -136,6 +170,26 @@ class ResumeTableViewController: UITableViewController {
         } else {
             changeTabBar(hidden: false, animated: true)
         }
+    }
+    
+    // ------------------------------------------------------------------------------------------
+    
+    func segueToNextView(sectionType: SectionType) {
+        
+        switch sectionType {
+        case .education:
+            let vc = EducationTableViewController()
+            (navigationController?.pushViewController(vc, animated: true))!
+        case .personalInfo:
+            let vc = UITableViewController()
+            (navigationController?.pushViewController(vc, animated: true))!
+        case .interests:
+            performSegue(withIdentifier: "segueToInterests", sender: self)
+        default:
+            let vc = UITableViewController()
+            (navigationController?.pushViewController(vc, animated: true))!
+        }
+
     }
     
     // ------------------------------------------------------------------------------------------
