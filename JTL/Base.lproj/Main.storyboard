@@ -22,11 +22,11 @@
                                 <rect key="frame" x="0.0" y="28" width="414" height="150"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="F9b-hh-XzY" id="fqf-Te-ysD">
-                                    <rect key="frame" x="0.0" y="0.0" width="414" height="149"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="149.66666666666666"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="e74-Lq-lZW">
-                                            <rect key="frame" x="15" y="0.0" width="384" height="149"/>
+                                            <rect key="frame" x="15" y="0.0" width="384" height="149.66666666666666"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <nil key="textColor"/>
@@ -50,7 +50,7 @@
         <!--Initial View Controller-->
         <scene sceneID="50l-Wb-cEk">
             <objects>
-                <viewController id="hqO-Nq-Mm8" customClass="InitialViewController" customModule="JTL" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="InitialViewController" id="hqO-Nq-Mm8" customClass="InitialViewController" customModule="JTL" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="R2L-rc-WHs"/>
                         <viewControllerLayoutGuide type="bottom" id="wSv-VZ-coa"/>
@@ -183,7 +183,7 @@
                                 <rect key="frame" x="0.0" y="28" width="414" height="205"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="1hZ-qz-IdU" id="oAe-fE-BNx">
-                                    <rect key="frame" x="0.0" y="0.0" width="414" height="204"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="205"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="ACZ-2Y-PuR">

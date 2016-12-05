@@ -120,7 +120,8 @@ class ResumeTableViewController: UITableViewController {
         // Break early if the filter was not a success (.outputImage is optional in Swift)
         if let cgimg = context.createCGImage(filter.outputImage!, from: filter.outputImage!.extent) {
             let processedImage = UIImage(cgImage: cgimg)
-            cell.sectionImage.image = processedImage
+            let resizedImage = processedImage.resize(maxHeight: cell.frame.size.height, maxWidth: cell.frame.size.width)
+            cell.sectionImage.image = resizedImage
         }
         
         return cell

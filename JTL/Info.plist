@@ -35,7 +35,7 @@
 			<key>UIApplicationShortcutItemTitle</key>
 			<string>View Resume</string>
 			<key>UIApplicationShortcutItemType</key>
-			<string>JTL.viewResume</string>
+			<string>$(PRODUCT_BUNDLE_IDENTIFIER).ViewResume</string>
 		</dict>
 		<dict>
 			<key>UIApplicationShortcutItemIconType</key>
@@ -43,7 +43,7 @@
 			<key>UIApplicationShortcutItemTitle</key>
 			<string>View Facebook</string>
 			<key>UIApplicationShortcutItemType</key>
-			<string>JTL.viewFacebook</string>
+			<string>$(PRODUCT_BUNDLE_IDENTIFIER).ViewFacebook</string>
 		</dict>
 		<dict>
 			<key>UIApplicationShortcutItemIconType</key>
@@ -51,7 +51,7 @@
 			<key>UIApplicationShortcutItemTitle</key>
 			<string>View LinkedIn</string>
 			<key>UIApplicationShortcutItemType</key>
-			<string>JTL.viewLinkedIn</string>
+			<string>$(PRODUCT_BUNDLE_IDENTIFIER).ViewLinkedIn</string>
 		</dict>
 		<dict>
 			<key>UIApplicationShortcutItemIconType</key>
@@ -59,7 +59,7 @@
 			<key>UIApplicationShortcutItemTitle</key>
 			<string>View iOS Development</string>
 			<key>UIApplicationShortcutItemType</key>
-			<string>JTL.viewiOS</string>
+			<string>$(PRODUCT_BUNDLE_IDENTIFIER).ViewiOS</string>
 		</dict>
 	</array>
 	<key>UILaunchStoryboardName</key>
