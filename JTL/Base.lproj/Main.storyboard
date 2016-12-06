@@ -190,23 +190,23 @@
                                 <rect key="frame" x="0.0" y="376.33333333333326" width="414" height="310.66666666666674"/>
                             </imageView>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="Bhd-pu-cRG">
-                                <rect key="frame" x="0.0" y="287.33333333333331" width="414" height="88"/>
+                                <rect key="frame" x="0.0" y="293.33333333333331" width="414" height="82"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <string key="text">Master of Science in Nuclear Engineering
 Graduation: Dec 2016
 Cumulative GPA: 4.0/4.0</string>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle3"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="evl-nF-uTe">
-                                <rect key="frame" x="0.0" y="599" width="414" height="88"/>
+                                <rect key="frame" x="0.0" y="605" width="414" height="82"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <string key="text">Bachelor of Science in Nuclear Engineering
 Graduation: May 2014
 Cumulative GPA: 3.54/4.0</string>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle3"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Texas A&amp;M University" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="pJL-GA-wYQ">
