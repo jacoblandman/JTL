@@ -110,19 +110,10 @@ class ResumeTableViewController: UITableViewController {
         cell.sectionLabel.font = UIFont(name: "AppleSDGothicNeo-Regular", size: cell.frame.height / 6)
         cell.sectionLabel.textColor = UIColor.white
         
-        // attempt to filter the image
-        let inputImage = CIImage(image: UIImage(named: name)!)
-        
-        // The inputEV value on the CIFilter adjusts exposure (negative values darken, positive values brighten)
-        filter.setValue(inputImage, forKey: kCIInputImageKey)
-        filter.setValue(-2.0, forKey: kCIInputEVKey)
-        
-        // Break early if the filter was not a success (.outputImage is optional in Swift)
-        if let cgimg = context.createCGImage(filter.outputImage!, from: filter.outputImage!.extent) {
-            let processedImage = UIImage(cgImage: cgimg)
-            let resizedImage = processedImage.resize(maxHeight: cell.frame.size.height, maxWidth: cell.frame.size.width)
-            cell.sectionImage.image = resizedImage
-        }
+        // it turns out that performance is suffering from filtering the image on the fly
+        // instead we will do image filtering before
+        // this isn't surprising since we have to create additional CIImage and CGImages
+        //filterCellImage(cell: cell)
         
         return cell
     }
@@ -179,8 +170,7 @@ class ResumeTableViewController: UITableViewController {
         
         switch sectionType {
         case .education:
-            let vc = EducationTableViewController()
-            (navigationController?.pushViewController(vc, animated: true))!
+            performSegue(withIdentifier: "segueToEducation", sender: self)
         case .personalInfo:
             let vc = UITableViewController()
             (navigationController?.pushViewController(vc, animated: true))!
@@ -189,6 +179,25 @@ class ResumeTableViewController: UITableViewController {
         default:
             let vc = UITableViewController()
             (navigationController?.pushViewController(vc, animated: true))!
+        }
+
+    }
+    
+    // ------------------------------------------------------------------------------------------
+    
+    func filterCellImage(cell: ResumeSectionTableViewCell) {
+        // attempt to filter the image
+        let inputImage = CIImage(image: cell.sectionImage.image!)
+        
+        // The inputEV value on the CIFilter adjusts exposure (negative values darken, positive values brighten)
+        filter.setValue(inputImage, forKey: kCIInputImageKey)
+        filter.setValue(-2.0, forKey: kCIInputEVKey)
+        
+        // Break early if the filter was not a success (.outputImage is optional in Swift)
+        if let cgimg = context.createCGImage(filter.outputImage!, from: filter.outputImage!.extent) {
+            let processedImage = UIImage(cgImage: cgimg)
+            let resizedImage = processedImage.resize(maxHeight: cell.frame.size.height, maxWidth: cell.frame.size.width)
+            cell.sectionImage.image = resizedImage
         }
 
     }

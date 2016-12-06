@@ -22,11 +22,11 @@
                                 <rect key="frame" x="0.0" y="28" width="414" height="150"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="F9b-hh-XzY" id="fqf-Te-ysD">
-                                    <rect key="frame" x="0.0" y="0.0" width="414" height="149.66666666666666"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="149"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="e74-Lq-lZW">
-                                            <rect key="frame" x="15" y="0.0" width="384" height="149.66666666666666"/>
+                                            <rect key="frame" x="15" y="0.0" width="384" height="149"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <nil key="textColor"/>
@@ -122,11 +122,11 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" rowHeight="187" id="hHe-I3-j7h" customClass="ResumeSectionTableViewCell" customModule="JTL" customModuleProvider="target">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="Cell" rowHeight="187" id="hHe-I3-j7h" customClass="ResumeSectionTableViewCell" customModule="JTL" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="28" width="414" height="187"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="hHe-I3-j7h" id="OAm-Ze-EWd">
-                                    <rect key="frame" x="0.0" y="0.0" width="414" height="187"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="381" height="187"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="nIa-5s-cnO">
@@ -164,11 +164,96 @@
                     <tabBarItem key="tabBarItem" title="Table" image="list-fat-7.png" id="87n-3a-FLd"/>
                     <connections>
                         <segue destination="R5Y-Qt-6wK" kind="show" identifier="segueToInterests" id="9k8-9h-cQy"/>
+                        <segue destination="kWA-f5-Sls" kind="show" identifier="segueToEducation" id="QuE-QL-eFW"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="evd-7s-gtH" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="4250.7246376811599" y="-219.29347826086959"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="dAs-vp-amv">
+            <objects>
+                <viewController id="kWA-f5-Sls" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="NOv-nZ-jcq"/>
+                        <viewControllerLayoutGuide type="bottom" id="xhJ-kU-vpl"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="3n2-mX-Kdf">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="tamu1.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="hvO-Hb-2bV">
+                                <rect key="frame" x="0.0" y="64" width="414" height="311.33333333333331"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="tamu2.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="fGq-hA-Kv4">
+                                <rect key="frame" x="0.0" y="376.33333333333326" width="414" height="310.66666666666674"/>
+                            </imageView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="Bhd-pu-cRG">
+                                <rect key="frame" x="0.0" y="287.33333333333331" width="414" height="88"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <string key="text">Master of Science in Nuclear Engineering
+Graduation: Dec 2016
+Cumulative GPA: 4.0/4.0</string>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle3"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="evl-nF-uTe">
+                                <rect key="frame" x="0.0" y="599" width="414" height="88"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <string key="text">Bachelor of Science in Nuclear Engineering
+Graduation: May 2014
+Cumulative GPA: 3.54/4.0</string>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle3"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Texas A&amp;M University" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="pJL-GA-wYQ">
+                                <rect key="frame" x="0.0" y="72" width="414" height="34"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Texas A&amp;M University" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="kGf-Qc-2AP">
+                                <rect key="frame" x="0.0" y="383.66666666666669" width="414" height="34"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="kGf-Qc-2AP" firstAttribute="centerX" secondItem="fGq-hA-Kv4" secondAttribute="centerX" id="270-OD-yaJ"/>
+                            <constraint firstItem="hvO-Hb-2bV" firstAttribute="top" secondItem="pJL-GA-wYQ" secondAttribute="bottom" constant="-42" id="2AX-yG-Uwq"/>
+                            <constraint firstItem="kGf-Qc-2AP" firstAttribute="width" secondItem="fGq-hA-Kv4" secondAttribute="width" id="340-a5-30d"/>
+                            <constraint firstItem="fGq-hA-Kv4" firstAttribute="height" secondItem="hvO-Hb-2bV" secondAttribute="height" id="4mH-fH-Hgd"/>
+                            <constraint firstItem="evl-nF-uTe" firstAttribute="bottom" secondItem="fGq-hA-Kv4" secondAttribute="bottom" id="8iD-eY-70o"/>
+                            <constraint firstItem="fGq-hA-Kv4" firstAttribute="centerX" secondItem="hvO-Hb-2bV" secondAttribute="centerX" id="9Bs-Zb-lju"/>
+                            <constraint firstItem="kGf-Qc-2AP" firstAttribute="leading" secondItem="hvO-Hb-2bV" secondAttribute="trailing" constant="-414" id="Cm3-MY-bd8"/>
+                            <constraint firstItem="Bhd-pu-cRG" firstAttribute="centerX" secondItem="hvO-Hb-2bV" secondAttribute="centerX" id="DkO-ye-Fc6"/>
+                            <constraint firstItem="xhJ-kU-vpl" firstAttribute="top" secondItem="fGq-hA-Kv4" secondAttribute="bottom" id="Ea5-dl-OdQ"/>
+                            <constraint firstItem="Bhd-pu-cRG" firstAttribute="bottom" secondItem="hvO-Hb-2bV" secondAttribute="bottom" id="J9x-SN-27u"/>
+                            <constraint firstItem="Bhd-pu-cRG" firstAttribute="width" secondItem="hvO-Hb-2bV" secondAttribute="width" id="Kmu-gi-DeU"/>
+                            <constraint firstItem="fGq-hA-Kv4" firstAttribute="width" secondItem="3n2-mX-Kdf" secondAttribute="width" id="NAB-eY-da9"/>
+                            <constraint firstItem="fGq-hA-Kv4" firstAttribute="width" secondItem="hvO-Hb-2bV" secondAttribute="width" id="T3o-KZ-i9K"/>
+                            <constraint firstItem="pJL-GA-wYQ" firstAttribute="centerX" secondItem="hvO-Hb-2bV" secondAttribute="centerX" id="Vx0-gK-O67"/>
+                            <constraint firstItem="fGq-hA-Kv4" firstAttribute="top" secondItem="kGf-Qc-2AP" secondAttribute="bottom" constant="-42" id="Zcj-Mj-5Zk"/>
+                            <constraint firstItem="evl-nF-uTe" firstAttribute="centerX" secondItem="fGq-hA-Kv4" secondAttribute="centerX" id="cDH-Kt-NZf"/>
+                            <constraint firstItem="hvO-Hb-2bV" firstAttribute="leading" secondItem="3n2-mX-Kdf" secondAttribute="leading" id="diC-vt-bE0"/>
+                            <constraint firstItem="evl-nF-uTe" firstAttribute="width" secondItem="Bhd-pu-cRG" secondAttribute="width" id="fzU-ua-M4f"/>
+                            <constraint firstItem="fGq-hA-Kv4" firstAttribute="top" secondItem="hvO-Hb-2bV" secondAttribute="bottom" constant="1" id="mCA-HX-58e"/>
+                            <constraint firstItem="pJL-GA-wYQ" firstAttribute="width" secondItem="hvO-Hb-2bV" secondAttribute="width" id="obg-Kd-a4q"/>
+                            <constraint firstItem="hvO-Hb-2bV" firstAttribute="top" secondItem="NOv-nZ-jcq" secondAttribute="bottom" id="sFg-lP-eQT"/>
+                            <constraint firstItem="hvO-Hb-2bV" firstAttribute="width" secondItem="3n2-mX-Kdf" secondAttribute="width" id="wS2-mi-ZAW"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="jnY-fW-bHf" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="5650.7246376811599" y="-810.32608695652175"/>
         </scene>
         <!--Interests Table View Controller-->
         <scene sceneID="3Hy-kt-5Ri">
@@ -221,7 +306,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="F4z-kK-Ei1" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="5211.594202898551" y="-213.58695652173915"/>
+            <point key="canvasLocation" x="5635" y="-35"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="G6j-Gi-Rao">
@@ -245,5 +330,7 @@
     <resources>
         <image name="file-document-7.png" width="30" height="30"/>
         <image name="list-fat-7.png" width="30" height="30"/>
+        <image name="tamu1.jpg" width="1080" height="1080"/>
+        <image name="tamu2.jpg" width="3258" height="2007"/>
     </resources>
 </document>
