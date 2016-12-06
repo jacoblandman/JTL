@@ -164,69 +164,13 @@
                     </tableView>
                     <tabBarItem key="tabBarItem" title="Table" image="list-fat-7.png" id="87n-3a-FLd"/>
                     <connections>
-                        <segue destination="R5Y-Qt-6wK" kind="show" identifier="segueToInterests" id="9k8-9h-cQy"/>
                         <segue destination="kWA-f5-Sls" kind="show" identifier="segueToEducation" id="QuE-QL-eFW"/>
-                        <segue destination="Yzy-EZ-krP" kind="show" identifier="segueToLanguages" id="XbA-UP-eiI"/>
+                        <segue destination="1wX-5u-c9Z" kind="show" identifier="segueToSection" id="uzW-cc-l35"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="evd-7s-gtH" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="4250.7246376811599" y="-219.29347826086959"/>
-        </scene>
-        <!--Languages Table View Controller-->
-        <scene sceneID="C8l-fs-3zu">
-            <objects>
-                <tableViewController id="Yzy-EZ-krP" customClass="languagesTableViewController" customModule="JTL" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="158" sectionHeaderHeight="28" sectionFooterHeight="28" id="lB7-fu-rox">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <prototypes>
-                            <tableViewCell clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" rowHeight="158" id="YID-F4-mRu" customClass="languageTableViewCell" customModule="JTL" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="28" width="414" height="158"/>
-                                <autoresizingMask key="autoresizingMask"/>
-                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="YID-F4-mRu" id="iQh-G8-bUv">
-                                    <rect key="frame" x="0.0" y="0.0" width="414" height="157"/>
-                                    <autoresizingMask key="autoresizingMask"/>
-                                    <subviews>
-                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="hBp-yu-RMc">
-                                            <rect key="frame" x="0.0" y="-0.6666666666666714" width="414" height="158.33333333333331"/>
-                                        </imageView>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="X54-OC-PAh">
-                                            <rect key="frame" x="0.0" y="-0.6666666666666714" width="414" height="158.33333333333331"/>
-                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                            <nil key="textColor"/>
-                                            <nil key="highlightedColor"/>
-                                        </label>
-                                    </subviews>
-                                </tableViewCellContentView>
-                                <constraints>
-                                    <constraint firstItem="X54-OC-PAh" firstAttribute="height" secondItem="YID-F4-mRu" secondAttribute="height" id="7ZF-cM-KLx"/>
-                                    <constraint firstItem="X54-OC-PAh" firstAttribute="centerY" secondItem="YID-F4-mRu" secondAttribute="centerY" id="Bbi-bO-SKV"/>
-                                    <constraint firstItem="hBp-yu-RMc" firstAttribute="height" secondItem="YID-F4-mRu" secondAttribute="height" id="Ekh-Pb-fzl"/>
-                                    <constraint firstItem="X54-OC-PAh" firstAttribute="width" secondItem="YID-F4-mRu" secondAttribute="width" id="PAg-GE-Zki"/>
-                                    <constraint firstItem="X54-OC-PAh" firstAttribute="centerX" secondItem="YID-F4-mRu" secondAttribute="centerX" id="gk9-p4-zSl"/>
-                                    <constraint firstItem="hBp-yu-RMc" firstAttribute="centerX" secondItem="YID-F4-mRu" secondAttribute="centerX" id="ie8-2x-r5i"/>
-                                    <constraint firstItem="hBp-yu-RMc" firstAttribute="centerY" secondItem="YID-F4-mRu" secondAttribute="centerY" id="jrn-dT-xTw"/>
-                                    <constraint firstItem="hBp-yu-RMc" firstAttribute="width" secondItem="YID-F4-mRu" secondAttribute="width" id="z0N-y8-KJM"/>
-                                </constraints>
-                                <inset key="separatorInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
-                                <connections>
-                                    <outlet property="languageImage" destination="hBp-yu-RMc" id="m17-kq-kRF"/>
-                                    <outlet property="languageLabel" destination="X54-OC-PAh" id="Dat-4Y-1gj"/>
-                                </connections>
-                            </tableViewCell>
-                        </prototypes>
-                        <connections>
-                            <outlet property="dataSource" destination="Yzy-EZ-krP" id="780-F4-qlH"/>
-                            <outlet property="delegate" destination="Yzy-EZ-krP" id="Qtf-4g-Fi0"/>
-                        </connections>
-                    </tableView>
-                </tableViewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Ktx-CE-cD3" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="5626.0869565217399" y="-1505.7065217391305"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="dAs-vp-amv">
@@ -250,7 +194,7 @@
                                 <rect key="frame" x="0.0" y="293.33333333333331" width="414" height="82"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <string key="text">Master of Science in Nuclear Engineering
-Graduation: Dec 2016
+Graduation: Dec. 2016
 Cumulative GPA: 4.0/4.0</string>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
@@ -310,29 +254,29 @@ Cumulative GPA: 3.54/4.0</string>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jnY-fW-bHf" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="5635" y="-754"/>
+            <point key="canvasLocation" x="5155" y="-620"/>
         </scene>
-        <!--Interests Table View Controller-->
-        <scene sceneID="3Hy-kt-5Ri">
+        <!--Section Table View Controller-->
+        <scene sceneID="Ujx-2g-beN">
             <objects>
-                <tableViewController id="R5Y-Qt-6wK" customClass="interestsTableViewController" customModule="JTL" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="205" sectionHeaderHeight="28" sectionFooterHeight="28" id="uJ4-Vi-Rv6">
+                <tableViewController id="1wX-5u-c9Z" customClass="sectionTableViewController" customModule="JTL" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="186" sectionHeaderHeight="28" sectionFooterHeight="28" id="Ngj-cN-3zE">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" rowHeight="205" id="1hZ-qz-IdU" customClass="interestsTableViewCell" customModule="JTL" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="28" width="414" height="205"/>
+                            <tableViewCell clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" rowHeight="186" id="dbu-xA-Xy5" customClass="dataTableViewCell" customModule="JTL" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="28" width="414" height="186"/>
                                 <autoresizingMask key="autoresizingMask"/>
-                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="1hZ-qz-IdU" id="oAe-fE-BNx">
-                                    <rect key="frame" x="0.0" y="0.0" width="414" height="204"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="dbu-xA-Xy5" id="UtO-Zr-Npj">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="185"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="ACZ-2Y-PuR">
-                                            <rect key="frame" x="0.0" y="-0.6666666666666714" width="414" height="205.33333333333331"/>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="GP4-tA-4Jo">
+                                            <rect key="frame" x="0.0" y="-0.6666666666666714" width="414" height="186.33333333333331"/>
                                         </imageView>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8Uu-PG-ZH3">
-                                            <rect key="frame" x="0.0" y="-0.6666666666666714" width="414" height="205.33333333333331"/>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wUt-c2-MJa">
+                                            <rect key="frame" x="0.0" y="-0.6666666666666714" width="414" height="186.33333333333331"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
@@ -340,31 +284,31 @@ Cumulative GPA: 3.54/4.0</string>
                                     </subviews>
                                 </tableViewCellContentView>
                                 <constraints>
-                                    <constraint firstItem="ACZ-2Y-PuR" firstAttribute="height" secondItem="1hZ-qz-IdU" secondAttribute="height" id="5PQ-ID-LE2"/>
-                                    <constraint firstItem="8Uu-PG-ZH3" firstAttribute="height" secondItem="1hZ-qz-IdU" secondAttribute="height" id="8ga-oR-Y9j"/>
-                                    <constraint firstItem="8Uu-PG-ZH3" firstAttribute="width" secondItem="1hZ-qz-IdU" secondAttribute="width" id="KPT-db-UO4"/>
-                                    <constraint firstItem="8Uu-PG-ZH3" firstAttribute="centerY" secondItem="1hZ-qz-IdU" secondAttribute="centerY" id="NOU-pq-86C"/>
-                                    <constraint firstItem="ACZ-2Y-PuR" firstAttribute="centerX" secondItem="1hZ-qz-IdU" secondAttribute="centerX" id="Ums-j2-w82"/>
-                                    <constraint firstItem="8Uu-PG-ZH3" firstAttribute="centerX" secondItem="1hZ-qz-IdU" secondAttribute="centerX" id="luV-vz-wa3"/>
-                                    <constraint firstItem="ACZ-2Y-PuR" firstAttribute="width" secondItem="1hZ-qz-IdU" secondAttribute="width" id="tea-dO-WZZ"/>
-                                    <constraint firstItem="ACZ-2Y-PuR" firstAttribute="centerY" secondItem="1hZ-qz-IdU" secondAttribute="centerY" id="uKa-bF-cN9"/>
+                                    <constraint firstItem="wUt-c2-MJa" firstAttribute="centerX" secondItem="dbu-xA-Xy5" secondAttribute="centerX" id="19Y-CZ-HPQ"/>
+                                    <constraint firstItem="wUt-c2-MJa" firstAttribute="width" secondItem="dbu-xA-Xy5" secondAttribute="width" id="5Rj-dF-riy"/>
+                                    <constraint firstItem="GP4-tA-4Jo" firstAttribute="centerX" secondItem="dbu-xA-Xy5" secondAttribute="centerX" id="9Ky-FY-yar"/>
+                                    <constraint firstItem="wUt-c2-MJa" firstAttribute="height" secondItem="dbu-xA-Xy5" secondAttribute="height" id="L8n-ru-v6g"/>
+                                    <constraint firstItem="wUt-c2-MJa" firstAttribute="centerY" secondItem="dbu-xA-Xy5" secondAttribute="centerY" id="QZK-Fa-pT9"/>
+                                    <constraint firstItem="GP4-tA-4Jo" firstAttribute="height" secondItem="dbu-xA-Xy5" secondAttribute="height" id="fzk-58-E3t"/>
+                                    <constraint firstItem="GP4-tA-4Jo" firstAttribute="width" secondItem="dbu-xA-Xy5" secondAttribute="width" id="lFt-an-LTj"/>
+                                    <constraint firstItem="GP4-tA-4Jo" firstAttribute="centerY" secondItem="dbu-xA-Xy5" secondAttribute="centerY" id="vYh-6C-hDV"/>
                                 </constraints>
                                 <inset key="separatorInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 <connections>
-                                    <outlet property="interestImage" destination="ACZ-2Y-PuR" id="HVg-QT-9a6"/>
-                                    <outlet property="interestLabel" destination="8Uu-PG-ZH3" id="jIN-Ru-Ql7"/>
+                                    <outlet property="dataImage" destination="GP4-tA-4Jo" id="8SL-Nt-oiT"/>
+                                    <outlet property="dataLabel" destination="wUt-c2-MJa" id="a9m-WK-MCN"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
-                            <outlet property="dataSource" destination="R5Y-Qt-6wK" id="Uz3-I8-Qnv"/>
-                            <outlet property="delegate" destination="R5Y-Qt-6wK" id="hxE-Sy-Rod"/>
+                            <outlet property="dataSource" destination="1wX-5u-c9Z" id="otx-12-Nsj"/>
+                            <outlet property="delegate" destination="1wX-5u-c9Z" id="u4t-Yh-6Bl"/>
                         </connections>
                     </tableView>
                 </tableViewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="F4z-kK-Ei1" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Eg3-9n-LBp" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="5635" y="-35"/>
+            <point key="canvasLocation" x="5154" y="62"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="G6j-Gi-Rao">

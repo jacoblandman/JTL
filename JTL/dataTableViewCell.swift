@@ -1,5 +1,5 @@
 //
-//  languageTableViewCell.swift
+//  dataTableViewCell.swift
 //  JTL
 //
 //  Created by Jacob Landman on 12/6/16.
@@ -8,9 +8,9 @@
 
 import UIKit
 
-class languageTableViewCell: UITableViewCell {
-    @IBOutlet weak var languageLabel: UILabel!
-    @IBOutlet weak var languageImage: UIImageView!
+class dataTableViewCell: UITableViewCell {
+    @IBOutlet weak var dataImage: UIImageView!
+    @IBOutlet weak var dataLabel: UILabel!
 
     override func awakeFromNib() {
         super.awakeFromNib()

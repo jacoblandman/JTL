@@ -1,20 +1,21 @@
 //
-//  interestsTableViewController.swift
+//  sectionTableViewController.swift
 //  JTL
 //
-//  Created by Jacob Landman on 12/1/16.
+//  Created by Jacob Landman on 12/6/16.
 //  Copyright © 2016 Jacob Landman. All rights reserved.
 //
 
 import UIKit
 
-class interestsTableViewController: UITableViewController {
+class sectionTableViewController: UITableViewController {
 
     // PARAMETERS
     // ------------------------------------------------------------------------------------------
-    var interests = [String]()
-    var context: CIContext!
-    var filter: CIFilter!
+    var data = [String]()
+    var dataType: String = "Interests"
+    var imageNames = [String]()
+    var cellAccessory: UITableViewCellAccessoryType = .none
     
     
     // METHODS
@@ -22,11 +23,11 @@ class interestsTableViewController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        loadData()
+        setImageNames()
         
-        loadInterests()
+        if dataType == "Technical Experience" { cellAccessory = .disclosureIndicator }
         
-        filter = CIFilter(name: "CIExposureAdjust")
-        context = CIContext()
     }
     
     // ------------------------------------------------------------------------------------------
@@ -61,36 +62,60 @@ class interestsTableViewController: UITableViewController {
     
     // ------------------------------------------------------------------------------------------
     
-    func loadInterests() {
-        interests.append("Hiking")
-        interests.append("Swimming")
-        interests.append("Football")
-        interests.append("Baseball")
-        interests.append("Golf")
-    }
-    
-    // ------------------------------------------------------------------------------------------
-    
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath) as! interestsTableViewCell
+        let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath) as! dataTableViewCell
         
-        let name: String = "interest".appending(interests[indexPath.row].replacingOccurrences(of: " ", with: "").appending(".jpg"))
-        cell.interestImage.image = UIImage(named: name)
+        let type = dataType.lowercased()
+        let name: String = type.appending(imageNames[indexPath.row].replacingOccurrences(of: " ", with: "").appending(".jpg"))
+        cell.dataImage.image = UIImage(named: name)
         
         // modify the labe attributes
-        cell.interestLabel.text = interests[indexPath.row]
+        cell.dataLabel.text = data[indexPath.row]
         //cell.interestLabel.frame = cell.frame
-        cell.interestLabel.font = UIFont(name: "AppleSDGothicNeo-Regular", size: cell.frame.height / 6)
-        cell.interestLabel.textColor = UIColor.white
-    
+        cell.dataLabel.font = UIFont(name: "AppleSDGothicNeo-Regular", size: cell.frame.height / 6)
+        cell.dataLabel.textColor = UIColor.white
+        cell.accessoryType = cellAccessory  
+        
+        if cell.dataImage.image == nil { cell.dataLabel.textColor = UIColor.black }
+        
         return cell
     }
     
     // ------------------------------------------------------------------------------------------
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return interests.count
+        return data.count
     }
     
     // ------------------------------------------------------------------------------------------
+    
+    func loadData() {
+        if let filePath = Bundle.main.path(forResource: dataType.replacingOccurrences(of: " ", with: ""), ofType: "txt") {
+            do {
+                let text = try String(contentsOfFile: filePath)
+                data = text.components(separatedBy: "\n")
+            } catch {
+                // should present an alert controller here
+                print("The data could not be loaded")
+            }
+        }
+        // make sure no elements are empty strings
+        data = data.filter { $0 != "" }
+    }
+    
+    // ------------------------------------------------------------------------------------------
+    
+    func setImageNames() {
+        imageNames.removeAll()
+        if (dataType == "Awards" || dataType == "Publications") {
+            for i in 0 ..< data.count {
+                imageNames.append(String(i))
+            }
+        } else {
+            imageNames = data
+        }
+    }
+    
+    // ------------------------------------------------------------------------------------------
+
 }

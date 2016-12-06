@@ -172,18 +172,23 @@ class ResumeTableViewController: UITableViewController {
                 let vc = UITableViewController()
                 (navigationController?.pushViewController(vc, animated: true))!
             
+            case .technicalExperience:
+                performSegue(withIdentifier: "segueToSection", sender: self)
+            
             case .languages:
-                performSegue(withIdentifier: "segueToLanguages", sender: self)
+                performSegue(withIdentifier: "segueToSection", sender: self)
             
             case .education:
                 performSegue(withIdentifier: "segueToEducation", sender: self)
             
-            case .interests:
-                performSegue(withIdentifier: "segueToInterests", sender: self)
+            case .awards:
+                performSegue(withIdentifier: "segueToSection", sender: self)
             
-            default:
-                let vc = UITableViewController()
-                (navigationController?.pushViewController(vc, animated: true))!
+            case .interests:
+                performSegue(withIdentifier: "segueToSection", sender: self)
+            
+            case .publications:
+                performSegue(withIdentifier: "segueToSection", sender: self)
         }
 
     }
@@ -205,6 +210,17 @@ class ResumeTableViewController: UITableViewController {
             cell.sectionImage.image = resizedImage
         }
 
+    }
+    
+    // ------------------------------------------------------------------------------------------
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if (segue.identifier == "segueToSection") {
+            let vc = segue.destination as! sectionTableViewController
+            if let indexPath = selectedIndexPath {
+                vc.dataType = sections[indexPath.row]
+            }
+        }
     }
     
     // ------------------------------------------------------------------------------------------
