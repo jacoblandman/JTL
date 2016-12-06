@@ -22,6 +22,15 @@
 		AE34B9481DF74837001D1E66 /* interestBaseball.jpg in Resources */ = {isa = PBXBuildFile; fileRef = AE34B9461DF74837001D1E66 /* interestBaseball.jpg */; };
 		AE34B9491DF74837001D1E66 /* interestFootball.jpg in Resources */ = {isa = PBXBuildFile; fileRef = AE34B9471DF74837001D1E66 /* interestFootball.jpg */; };
 		AE34B94B1DF7486D001D1E66 /* interestSwimming.jpg in Resources */ = {isa = PBXBuildFile; fileRef = AE34B94A1DF7486D001D1E66 /* interestSwimming.jpg */; };
+		AE34B94D1DF7578D001D1E66 /* languagesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE34B94C1DF7578D001D1E66 /* languagesTableViewController.swift */; };
+		AE34B94F1DF758CC001D1E66 /* languageTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE34B94E1DF758CC001D1E66 /* languageTableViewCell.swift */; };
+		AE34B9571DF75BEA001D1E66 /* languageC++.jpg in Resources */ = {isa = PBXBuildFile; fileRef = AE34B9501DF75BEA001D1E66 /* languageC++.jpg */; };
+		AE34B9581DF75BEA001D1E66 /* languageFortran.jpg in Resources */ = {isa = PBXBuildFile; fileRef = AE34B9511DF75BEA001D1E66 /* languageFortran.jpg */; };
+		AE34B95A1DF75BEA001D1E66 /* languageMatlab.jpg in Resources */ = {isa = PBXBuildFile; fileRef = AE34B9531DF75BEA001D1E66 /* languageMatlab.jpg */; };
+		AE34B95B1DF75BEA001D1E66 /* languagePython.jpg in Resources */ = {isa = PBXBuildFile; fileRef = AE34B9541DF75BEA001D1E66 /* languagePython.jpg */; };
+		AE34B95D1DF75BEA001D1E66 /* languageSwift.jpg in Resources */ = {isa = PBXBuildFile; fileRef = AE34B9561DF75BEA001D1E66 /* languageSwift.jpg */; };
+		AE34B95F1DF75D0A001D1E66 /* languageLatex.jpg in Resources */ = {isa = PBXBuildFile; fileRef = AE34B95E1DF75D0A001D1E66 /* languageLatex.jpg */; };
+		AE34B9611DF75F08001D1E66 /* languageR.jpg in Resources */ = {isa = PBXBuildFile; fileRef = AE34B9601DF75F08001D1E66 /* languageR.jpg */; };
 		AE3DD86D1DF5EDD40016B7C6 /* file-document-7.png in Resources */ = {isa = PBXBuildFile; fileRef = AE3DCCDE1DF5EDCB0016B7C6 /* file-document-7.png */; };
 		AE3DD86E1DF5EDD40016B7C6 /* interestsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE3DCCDF1DF5EDCB0016B7C6 /* interestsTableViewCell.swift */; };
 		AE3DD86F1DF5EDD40016B7C6 /* interestsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE3DCCE01DF5EDCB0016B7C6 /* interestsTableViewController.swift */; };
@@ -73,6 +82,15 @@
 		AE34B9461DF74837001D1E66 /* interestBaseball.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = interestBaseball.jpg; sourceTree = "<group>"; };
 		AE34B9471DF74837001D1E66 /* interestFootball.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = interestFootball.jpg; sourceTree = "<group>"; };
 		AE34B94A1DF7486D001D1E66 /* interestSwimming.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = interestSwimming.jpg; sourceTree = "<group>"; };
+		AE34B94C1DF7578D001D1E66 /* languagesTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = languagesTableViewController.swift; sourceTree = "<group>"; };
+		AE34B94E1DF758CC001D1E66 /* languageTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = languageTableViewCell.swift; sourceTree = "<group>"; };
+		AE34B9501DF75BEA001D1E66 /* languageC++.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "languageC++.jpg"; sourceTree = "<group>"; };
+		AE34B9511DF75BEA001D1E66 /* languageFortran.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = languageFortran.jpg; sourceTree = "<group>"; };
+		AE34B9531DF75BEA001D1E66 /* languageMatlab.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = languageMatlab.jpg; sourceTree = "<group>"; };
+		AE34B9541DF75BEA001D1E66 /* languagePython.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = languagePython.jpg; sourceTree = "<group>"; };
+		AE34B9561DF75BEA001D1E66 /* languageSwift.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = languageSwift.jpg; sourceTree = "<group>"; };
+		AE34B95E1DF75D0A001D1E66 /* languageLatex.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = languageLatex.jpg; sourceTree = "<group>"; };
+		AE34B9601DF75F08001D1E66 /* languageR.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = languageR.jpg; sourceTree = "<group>"; };
 		AE3DCCDE1DF5EDCB0016B7C6 /* file-document-7.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "file-document-7.png"; sourceTree = "<group>"; };
 		AE3DCCDF1DF5EDCB0016B7C6 /* interestsTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = interestsTableViewCell.swift; sourceTree = "<group>"; };
 		AE3DCCE01DF5EDCB0016B7C6 /* interestsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = interestsTableViewController.swift; sourceTree = "<group>"; };
@@ -128,6 +146,13 @@
 				AE34B9261DF72F0B001D1E66 /* Awards.jpg */,
 				AE34B93D1DF73D9C001D1E66 /* tamu1.jpg */,
 				AE34B9461DF74837001D1E66 /* interestBaseball.jpg */,
+				AE34B9501DF75BEA001D1E66 /* languageC++.jpg */,
+				AE34B9511DF75BEA001D1E66 /* languageFortran.jpg */,
+				AE34B9531DF75BEA001D1E66 /* languageMatlab.jpg */,
+				AE34B9541DF75BEA001D1E66 /* languagePython.jpg */,
+				AE34B9601DF75F08001D1E66 /* languageR.jpg */,
+				AE34B95E1DF75D0A001D1E66 /* languageLatex.jpg */,
+				AE34B9561DF75BEA001D1E66 /* languageSwift.jpg */,
 				AE34B94A1DF7486D001D1E66 /* interestSwimming.jpg */,
 				AE34B9471DF74837001D1E66 /* interestFootball.jpg */,
 				AE34B9421DF747C4001D1E66 /* interestGolf.jpg */,
@@ -170,6 +195,8 @@
 				AE34B9141DF61999001D1E66 /* UIImageExtension.swift */,
 				AEF088F11DEDECA400AA313C /* ViewController.swift */,
 				AEF088F31DEDECA400AA313C /* Main.storyboard */,
+				AE34B94C1DF7578D001D1E66 /* languagesTableViewController.swift */,
+				AE34B94E1DF758CC001D1E66 /* languageTableViewCell.swift */,
 				AEF0891D1DEDEE7B00AA313C /* InitialViewController.swift */,
 				AEF088F61DEDECA400AA313C /* Assets.xcassets */,
 				AE3DCCDE1DF5EDCB0016B7C6 /* file-document-7.png */,
@@ -316,14 +343,18 @@
 			buildActionMask = 2147483647;
 			files = (
 				AE34B92E1DF72F0B001D1E66 /* Education.jpg in Resources */,
+				AE34B9611DF75F08001D1E66 /* languageR.jpg in Resources */,
 				AE34B9481DF74837001D1E66 /* interestBaseball.jpg in Resources */,
 				AE34B92F1DF72F0B001D1E66 /* Interests.jpg in Resources */,
 				AEF088FA1DEDECA400AA313C /* LaunchScreen.storyboard in Resources */,
 				AE34B9331DF72F0B001D1E66 /* TechnicalExperience.jpg in Resources */,
+				AE34B95D1DF75BEA001D1E66 /* languageSwift.jpg in Resources */,
 				AEF088F71DEDECA400AA313C /* Assets.xcassets in Resources */,
+				AE34B9581DF75BEA001D1E66 /* languageFortran.jpg in Resources */,
 				AE34B9441DF747C4001D1E66 /* interestGolf.jpg in Resources */,
 				AE34B9321DF72F0B001D1E66 /* Publications.jpg in Resources */,
 				AE3DE14F1DF5EDE90016B7C6 /* Resume.pdf in Resources */,
+				AE34B95B1DF75BEA001D1E66 /* languagePython.jpg in Resources */,
 				AE34B9451DF747C4001D1E66 /* interestHiking.jpg in Resources */,
 				AE3DD86D1DF5EDD40016B7C6 /* file-document-7.png in Resources */,
 				AE34B93F1DF73D9C001D1E66 /* tamu1.jpg in Resources */,
@@ -333,8 +364,11 @@
 				AE34B9411DF74135001D1E66 /* tamu2.jpg in Resources */,
 				AE34B94B1DF7486D001D1E66 /* interestSwimming.jpg in Resources */,
 				AE3DE1461DF5EDE90016B7C6 /* list-fat-7.png in Resources */,
+				AE34B9571DF75BEA001D1E66 /* languageC++.jpg in Resources */,
 				AE34B9311DF72F0B001D1E66 /* PersonalInfo.jpg in Resources */,
 				AE34B9301DF72F0B001D1E66 /* Languages.jpg in Resources */,
+				AE34B95F1DF75D0A001D1E66 /* languageLatex.jpg in Resources */,
+				AE34B95A1DF75BEA001D1E66 /* languageMatlab.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -360,6 +394,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				AE3DE1511DF5EDE90016B7C6 /* ResumeTableViewController.swift in Sources */,
+				AE34B94F1DF758CC001D1E66 /* languageTableViewCell.swift in Sources */,
 				AE3DE1501DF5EDE90016B7C6 /* ResumeSectionTableViewCell.swift in Sources */,
 				AE34B9151DF61999001D1E66 /* UIImageExtension.swift in Sources */,
 				AE3DD86E1DF5EDD40016B7C6 /* interestsTableViewCell.swift in Sources */,
@@ -368,6 +403,7 @@
 				AE3DD86F1DF5EDD40016B7C6 /* interestsTableViewController.swift in Sources */,
 				AEF088F21DEDECA400AA313C /* ViewController.swift in Sources */,
 				AEF088F01DEDECA400AA313C /* AppDelegate.swift in Sources */,
+				AE34B94D1DF7578D001D1E66 /* languagesTableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

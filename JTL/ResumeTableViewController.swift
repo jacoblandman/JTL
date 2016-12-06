@@ -127,7 +127,6 @@ class ResumeTableViewController: UITableViewController {
     // ------------------------------------------------------------------------------------------
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        print(sections[indexPath.row])
         let cell = tableView.cellForRow(at: indexPath) as! ResumeSectionTableViewCell
         cell.sectionImage.alpha = 0.5
         selectedIndexPath = indexPath
@@ -169,16 +168,22 @@ class ResumeTableViewController: UITableViewController {
     func segueToNextView(sectionType: SectionType) {
         
         switch sectionType {
-        case .education:
-            performSegue(withIdentifier: "segueToEducation", sender: self)
-        case .personalInfo:
-            let vc = UITableViewController()
-            (navigationController?.pushViewController(vc, animated: true))!
-        case .interests:
-            performSegue(withIdentifier: "segueToInterests", sender: self)
-        default:
-            let vc = UITableViewController()
-            (navigationController?.pushViewController(vc, animated: true))!
+            case .personalInfo:
+                let vc = UITableViewController()
+                (navigationController?.pushViewController(vc, animated: true))!
+            
+            case .languages:
+                performSegue(withIdentifier: "segueToLanguages", sender: self)
+            
+            case .education:
+                performSegue(withIdentifier: "segueToEducation", sender: self)
+            
+            case .interests:
+                performSegue(withIdentifier: "segueToInterests", sender: self)
+            
+            default:
+                let vc = UITableViewController()
+                (navigationController?.pushViewController(vc, animated: true))!
         }
 
     }
