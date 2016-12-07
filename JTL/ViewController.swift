@@ -18,7 +18,7 @@ class ViewController: UITableViewController {
     // projects is an array of projects, which are also arrays
     // each project will hold the project name and its subtitle
     var projects = [[String]]()
-    var favorites = [Int]()
+    var showAC: Bool = true
     
     // METHODS
     // ------------------------------------------------------------------------------------------
@@ -29,16 +29,16 @@ class ViewController: UITableViewController {
         
         // load UserDefaults if it exists there already
         let defaults = UserDefaults.standard
-        if let savedFavorites = defaults.object(forKey: "favorites") as? [Int] {
-            favorites = savedFavorites
+        if let showAlertController = defaults.object(forKey: "showAC") as? Bool {
+            showAC = showAlertController
         }
         
         // set table view to be in editing mode and allow users to tap on rows to select them
-        tableView.isEditing = true
-        tableView.allowsSelectionDuringEditing = true
         tableView.register(UITableViewCell.self, forCellReuseIdentifier: "Cell")
         
         title = "Hacking With Swift Tutorial Series"
+        
+        setupSearchableContent()
     }
     
     // ------------------------------------------------------------------------------------------
@@ -61,12 +61,7 @@ class ViewController: UITableViewController {
         
         let project = projects[indexPath.row]
         cell.textLabel?.attributedText = makeAttributedString(title: project[0], subtitle: project[1])
-        
-        if favorites.contains(indexPath.row) {
-            cell.editingAccessoryType = .checkmark
-        } else {
-            cell.editingAccessoryType = .none
-        }
+        cell.accessoryType = UITableViewCellAccessoryType.disclosureIndicator
         
         return cell
     }
@@ -132,34 +127,6 @@ class ViewController: UITableViewController {
     
     // ------------------------------------------------------------------------------------------
     
-    override func tableView(_ tableView: UITableView, editingStyleForRowAt indexPath: IndexPath) -> UITableViewCellEditingStyle {
-        if favorites.contains(indexPath.row) {
-            return .delete
-        } else {
-            return .insert
-        }
-    }
-    
-    // ------------------------------------------------------------------------------------------
-    
-    override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
-        if editingStyle == .insert {
-            favorites.append(indexPath.row)
-            index(item: indexPath.row)
-        } else {
-            if let index = favorites.index(of: indexPath.row) {
-                favorites.remove(at: index)
-                deindex(item: indexPath.row)
-            }
-        }
-        let defaults = UserDefaults.standard
-        defaults.set(favorites, forKey: "favorites")
-        
-        tableView.reloadRows(at: [indexPath], with: .none)
-    }
-    
-    // ------------------------------------------------------------------------------------------
-    
     func index(item: Int) {
         let project = projects[item]
         
@@ -182,17 +149,14 @@ class ViewController: UITableViewController {
     
     // ------------------------------------------------------------------------------------------
     
-    func deindex(item: Int) {
-        CSSearchableIndex.default().deleteSearchableItems(withIdentifiers: ["\(item)"]) { error in
-            if let error = error {
-                print("Deindexing error: \(error.localizedDescription)")
-            } else {
-                print("Search item successfully removed!")
-            }
+    func setupSearchableContent() {
+        for i in 0 ..< projects.count {
+            index(item: i)
         }
     }
     
     // ------------------------------------------------------------------------------------------
+    
 }
 
 

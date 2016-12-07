@@ -43,6 +43,7 @@
 		AE34B97C1DF774BF001D1E66 /* awards2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = AE34B9791DF774BF001D1E66 /* awards2.jpg */; };
 		AE34B97D1DF774BF001D1E66 /* awards3.jpg in Resources */ = {isa = PBXBuildFile; fileRef = AE34B97A1DF774BF001D1E66 /* awards3.jpg */; };
 		AE34B97F1DF775FF001D1E66 /* TechnicalExperience.txt in Resources */ = {isa = PBXBuildFile; fileRef = AE34B97E1DF775FF001D1E66 /* TechnicalExperience.txt */; };
+		AE36C2C81DF8D78A005BDF4E /* SafariServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AE36C2C71DF8D78A005BDF4E /* SafariServices.framework */; };
 		AE3DD86D1DF5EDD40016B7C6 /* file-document-7.png in Resources */ = {isa = PBXBuildFile; fileRef = AE3DCCDE1DF5EDCB0016B7C6 /* file-document-7.png */; };
 		AE3DE1461DF5EDE90016B7C6 /* list-fat-7.png in Resources */ = {isa = PBXBuildFile; fileRef = AE3DD85E1DF5EDD30016B7C6 /* list-fat-7.png */; };
 		AE3DE14F1DF5EDE90016B7C6 /* Resume.pdf in Resources */ = {isa = PBXBuildFile; fileRef = AE3DD8681DF5EDD30016B7C6 /* Resume.pdf */; };
@@ -132,6 +133,7 @@
 		AE34B9791DF774BF001D1E66 /* awards2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = awards2.jpg; sourceTree = "<group>"; };
 		AE34B97A1DF774BF001D1E66 /* awards3.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = awards3.jpg; sourceTree = "<group>"; };
 		AE34B97E1DF775FF001D1E66 /* TechnicalExperience.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = TechnicalExperience.txt; sourceTree = "<group>"; };
+		AE36C2C71DF8D78A005BDF4E /* SafariServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SafariServices.framework; path = System/Library/Frameworks/SafariServices.framework; sourceTree = SDKROOT; };
 		AE3DCCDE1DF5EDCB0016B7C6 /* file-document-7.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "file-document-7.png"; sourceTree = "<group>"; };
 		AE3DD85E1DF5EDD30016B7C6 /* list-fat-7.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "list-fat-7.png"; sourceTree = "<group>"; };
 		AE3DD8681DF5EDD30016B7C6 /* Resume.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = Resume.pdf; sourceTree = "<group>"; };
@@ -178,6 +180,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AE36C2C81DF8D78A005BDF4E /* SafariServices.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -274,6 +277,14 @@
 			name = "Icons and PDF";
 			sourceTree = "<group>";
 		};
+		AE36C2C61DF8D78A005BDF4E /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				AE36C2C71DF8D78A005BDF4E /* SafariServices.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		AEF088E31DEDECA400AA313C = {
 			isa = PBXGroup;
 			children = (
@@ -281,6 +292,7 @@
 				AEF089031DEDECA400AA313C /* JTLTests */,
 				AEF0890E1DEDECA400AA313C /* JTLUITests */,
 				AEF088ED1DEDECA400AA313C /* Products */,
+				AE36C2C61DF8D78A005BDF4E /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};

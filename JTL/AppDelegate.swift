@@ -7,6 +7,8 @@
 //
 
 import UIKit
+import CoreSpotlight
+import SafariServices
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -75,13 +77,17 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
     }
 
-    /*
+    
     func application(_ application: UIApplication, continue userActivity: NSUserActivity, restorationHandler: @escaping ([Any]?) -> Void) -> Bool {
+        
+        // If the user activity has the type CSSearchableItemActionType it means we're being launched as a result of a Spotlight search
         if userActivity.activityType == CSSearchableItemActionType {
             if let uniqueIdentifier = userActivity.userInfo?[CSSearchableItemActivityIdentifier] as? String {
-                if let navigationController = window?.rootViewController as? UINavigationController {
-                    if let ViewController = navigationController.topViewController as? ViewController {
-                        ViewController.showTutorial(Int(uniqueIdentifier)!)
+                let sb = UIStoryboard(name: "Main", bundle: nil)
+                if let viewController = sb.instantiateViewController(withIdentifier: "ExperienceViewController") as? ViewController {
+                    if let rootViewController = self.window?.rootViewController as? UINavigationController {
+                        rootViewController.pushViewController(viewController, animated: false)
+                        viewController.showTutorial(Int(uniqueIdentifier)!)
                     }
                 }
             }
@@ -89,7 +95,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         return true
     }
-    */
+ 
     
     func application(_ application: UIApplication, performActionFor shortcutItem: UIApplicationShortcutItem, completionHandler: @escaping (Bool) -> Void) {
         completionHandler(handleShortcut(shortcutItem: shortcutItem))
