@@ -65,8 +65,7 @@ class InitialViewController: UIViewController {
     // ------------------------------------------------------------------------------------------
     
     func tappedIOSExperience(_ sender: Any) {
-        let vc = ViewController()
-        navigationController?.pushViewController(vc, animated: true)
+        performSegue(withIdentifier: "segueToIOS", sender: self)
         
     }
     
