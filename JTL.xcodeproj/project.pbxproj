@@ -49,6 +49,19 @@
 		AE3DE1501DF5EDE90016B7C6 /* ResumeSectionTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE3DD8691DF5EDD40016B7C6 /* ResumeSectionTableViewCell.swift */; };
 		AE3DE1511DF5EDE90016B7C6 /* ResumeTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE3DD86A1DF5EDD40016B7C6 /* ResumeTableViewController.swift */; };
 		AE3DE1521DF5EDE90016B7C6 /* ResumeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE3DD86B1DF5EDD40016B7C6 /* ResumeViewController.swift */; };
+		AE9312871DF87D450032E423 /* detailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE9312861DF87D450032E423 /* detailViewController.swift */; };
+		AE9312891DF8877F0032E423 /* technicalexperience0.txt in Resources */ = {isa = PBXBuildFile; fileRef = AE9312881DF8877F0032E423 /* technicalexperience0.txt */; };
+		AE93128B1DF887C60032E423 /* technicalexperience1.txt in Resources */ = {isa = PBXBuildFile; fileRef = AE93128A1DF887C60032E423 /* technicalexperience1.txt */; };
+		AE93128D1DF887F40032E423 /* technicalexperience2.txt in Resources */ = {isa = PBXBuildFile; fileRef = AE93128C1DF887F40032E423 /* technicalexperience2.txt */; };
+		AE93128F1DF888000032E423 /* technicalexperience3.txt in Resources */ = {isa = PBXBuildFile; fileRef = AE93128E1DF888000032E423 /* technicalexperience3.txt */; };
+		AE9312911DF888100032E423 /* technicalexperience4.txt in Resources */ = {isa = PBXBuildFile; fileRef = AE9312901DF888100032E423 /* technicalexperience4.txt */; };
+		AE9312931DF888230032E423 /* technicalexperience5.txt in Resources */ = {isa = PBXBuildFile; fileRef = AE9312921DF888230032E423 /* technicalexperience5.txt */; };
+		AEEF38FC1DF8779800A95883 /* technicalexperience0.jpg in Resources */ = {isa = PBXBuildFile; fileRef = AEEF38F91DF8779800A95883 /* technicalexperience0.jpg */; };
+		AEEF38FD1DF8779800A95883 /* technicalexperience2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = AEEF38FA1DF8779800A95883 /* technicalexperience2.jpg */; };
+		AEEF38FE1DF8779800A95883 /* technicalexperience4.jpg in Resources */ = {isa = PBXBuildFile; fileRef = AEEF38FB1DF8779800A95883 /* technicalexperience4.jpg */; };
+		AEEF39011DF877E200A95883 /* technicalexperience1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = AEEF38FF1DF877E200A95883 /* technicalexperience1.jpg */; };
+		AEEF39021DF877E200A95883 /* technicalexperience3.jpg in Resources */ = {isa = PBXBuildFile; fileRef = AEEF39001DF877E200A95883 /* technicalexperience3.jpg */; };
+		AEEF39041DF8781400A95883 /* technicalexperience5.jpg in Resources */ = {isa = PBXBuildFile; fileRef = AEEF39031DF8781400A95883 /* technicalexperience5.jpg */; };
 		AEF088F01DEDECA400AA313C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEF088EF1DEDECA400AA313C /* AppDelegate.swift */; };
 		AEF088F21DEDECA400AA313C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEF088F11DEDECA400AA313C /* ViewController.swift */; };
 		AEF088F51DEDECA400AA313C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AEF088F31DEDECA400AA313C /* Main.storyboard */; };
@@ -119,6 +132,19 @@
 		AE3DD8691DF5EDD40016B7C6 /* ResumeSectionTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResumeSectionTableViewCell.swift; sourceTree = "<group>"; };
 		AE3DD86A1DF5EDD40016B7C6 /* ResumeTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResumeTableViewController.swift; sourceTree = "<group>"; };
 		AE3DD86B1DF5EDD40016B7C6 /* ResumeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResumeViewController.swift; sourceTree = "<group>"; };
+		AE9312861DF87D450032E423 /* detailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = detailViewController.swift; sourceTree = "<group>"; };
+		AE9312881DF8877F0032E423 /* technicalexperience0.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = technicalexperience0.txt; sourceTree = "<group>"; };
+		AE93128A1DF887C60032E423 /* technicalexperience1.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = technicalexperience1.txt; sourceTree = "<group>"; };
+		AE93128C1DF887F40032E423 /* technicalexperience2.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = technicalexperience2.txt; sourceTree = "<group>"; };
+		AE93128E1DF888000032E423 /* technicalexperience3.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = technicalexperience3.txt; sourceTree = "<group>"; };
+		AE9312901DF888100032E423 /* technicalexperience4.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = technicalexperience4.txt; sourceTree = "<group>"; };
+		AE9312921DF888230032E423 /* technicalexperience5.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = technicalexperience5.txt; sourceTree = "<group>"; };
+		AEEF38F91DF8779800A95883 /* technicalexperience0.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = technicalexperience0.jpg; sourceTree = "<group>"; };
+		AEEF38FA1DF8779800A95883 /* technicalexperience2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = technicalexperience2.jpg; sourceTree = "<group>"; };
+		AEEF38FB1DF8779800A95883 /* technicalexperience4.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = technicalexperience4.jpg; sourceTree = "<group>"; };
+		AEEF38FF1DF877E200A95883 /* technicalexperience1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = technicalexperience1.jpg; sourceTree = "<group>"; };
+		AEEF39001DF877E200A95883 /* technicalexperience3.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = technicalexperience3.jpg; sourceTree = "<group>"; };
+		AEEF39031DF8781400A95883 /* technicalexperience5.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = technicalexperience5.jpg; sourceTree = "<group>"; };
 		AEF088EC1DEDECA400AA313C /* JTL.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = JTL.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AEF088EF1DEDECA400AA313C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		AEF088F11DEDECA400AA313C /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -163,6 +189,12 @@
 		AE34B9251DF72F0B001D1E66 /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				AEEF38F91DF8779800A95883 /* technicalexperience0.jpg */,
+				AEEF38FF1DF877E200A95883 /* technicalexperience1.jpg */,
+				AEEF39001DF877E200A95883 /* technicalexperience3.jpg */,
+				AEEF38FA1DF8779800A95883 /* technicalexperience2.jpg */,
+				AEEF39031DF8781400A95883 /* technicalexperience5.jpg */,
+				AEEF38FB1DF8779800A95883 /* technicalexperience4.jpg */,
 				AE34B9761DF7739C001D1E66 /* awards0.jpg */,
 				AE34B9781DF774BF001D1E66 /* awards1.jpg */,
 				AE34B9791DF774BF001D1E66 /* awards2.jpg */,
@@ -204,6 +236,12 @@
 				AE34B96C1DF76C68001D1E66 /* Publications.txt */,
 				AE34B96E1DF76CC4001D1E66 /* Awards.txt */,
 				AE34B97E1DF775FF001D1E66 /* TechnicalExperience.txt */,
+				AE9312881DF8877F0032E423 /* technicalexperience0.txt */,
+				AE93128A1DF887C60032E423 /* technicalexperience1.txt */,
+				AE93128C1DF887F40032E423 /* technicalexperience2.txt */,
+				AE93128E1DF888000032E423 /* technicalexperience3.txt */,
+				AE9312901DF888100032E423 /* technicalexperience4.txt */,
+				AE9312921DF888230032E423 /* technicalexperience5.txt */,
 			);
 			name = "Text Files";
 			sourceTree = "<group>";
@@ -241,6 +279,7 @@
 		AEF088EE1DEDECA400AA313C /* JTL */ = {
 			isa = PBXGroup;
 			children = (
+				AE9312861DF87D450032E423 /* detailViewController.swift */,
 				AE34B96B1DF76C0D001D1E66 /* Icons and PDF */,
 				AE34B96A1DF76BF6001D1E66 /* Text Files */,
 				AEF088EF1DEDECA400AA313C /* AppDelegate.swift */,
@@ -398,17 +437,24 @@
 				AE34B9771DF7739C001D1E66 /* awards0.jpg in Resources */,
 				AE34B92F1DF72F0B001D1E66 /* Interests.jpg in Resources */,
 				AEF088FA1DEDECA400AA313C /* LaunchScreen.storyboard in Resources */,
+				AE93128F1DF888000032E423 /* technicalexperience3.txt in Resources */,
+				AEEF38FD1DF8779800A95883 /* technicalexperience2.jpg in Resources */,
 				AE34B9331DF72F0B001D1E66 /* TechnicalExperience.jpg in Resources */,
+				AE93128D1DF887F40032E423 /* technicalexperience2.txt in Resources */,
 				AE34B95D1DF75BEA001D1E66 /* languagesSwift.jpg in Resources */,
 				AEF088F71DEDECA400AA313C /* Assets.xcassets in Resources */,
 				AE34B9581DF75BEA001D1E66 /* languagesFortran.jpg in Resources */,
 				AE34B97D1DF774BF001D1E66 /* awards3.jpg in Resources */,
+				AE9312931DF888230032E423 /* technicalexperience5.txt in Resources */,
 				AE34B9441DF747C4001D1E66 /* interestsGolf.jpg in Resources */,
 				AE34B9321DF72F0B001D1E66 /* Publications.jpg in Resources */,
+				AEEF39021DF877E200A95883 /* technicalexperience3.jpg in Resources */,
 				AE3DE14F1DF5EDE90016B7C6 /* Resume.pdf in Resources */,
 				AE34B95B1DF75BEA001D1E66 /* languagesPython.jpg in Resources */,
 				AE34B9751DF77150001D1E66 /* publications2.jpg in Resources */,
+				AEEF38FE1DF8779800A95883 /* technicalexperience4.jpg in Resources */,
 				AE34B9451DF747C4001D1E66 /* interestsHiking.jpg in Resources */,
+				AE93128B1DF887C60032E423 /* technicalexperience1.txt in Resources */,
 				AE3DD86D1DF5EDD40016B7C6 /* file-document-7.png in Resources */,
 				AE34B93F1DF73D9C001D1E66 /* tamu1.jpg in Resources */,
 				AEF088F51DEDECA400AA313C /* Main.storyboard in Resources */,
@@ -416,18 +462,23 @@
 				AE34B92D1DF72F0B001D1E66 /* Awards.jpg in Resources */,
 				AE34B9411DF74135001D1E66 /* tamu2.jpg in Resources */,
 				AE34B96F1DF76CC4001D1E66 /* Awards.txt in Resources */,
+				AE9312911DF888100032E423 /* technicalexperience4.txt in Resources */,
 				AE34B94B1DF7486D001D1E66 /* interestsSwimming.jpg in Resources */,
 				AE34B97C1DF774BF001D1E66 /* awards2.jpg in Resources */,
 				AE34B9691DF76B3F001D1E66 /* Interests.txt in Resources */,
 				AE3DE1461DF5EDE90016B7C6 /* list-fat-7.png in Resources */,
 				AE34B9571DF75BEA001D1E66 /* languagesC++.jpg in Resources */,
+				AE9312891DF8877F0032E423 /* technicalexperience0.txt in Resources */,
+				AEEF39011DF877E200A95883 /* technicalexperience1.jpg in Resources */,
 				AE34B96D1DF76C68001D1E66 /* Publications.txt in Resources */,
 				AE34B9311DF72F0B001D1E66 /* PersonalInfo.jpg in Resources */,
 				AE34B9301DF72F0B001D1E66 /* Languages.jpg in Resources */,
 				AE34B9731DF77150001D1E66 /* publications0.jpg in Resources */,
+				AEEF38FC1DF8779800A95883 /* technicalexperience0.jpg in Resources */,
 				AE34B95F1DF75D0A001D1E66 /* languagesLatex.jpg in Resources */,
 				AE34B97F1DF775FF001D1E66 /* TechnicalExperience.txt in Resources */,
 				AE34B95A1DF75BEA001D1E66 /* languagesMatlab.jpg in Resources */,
+				AEEF39041DF8781400A95883 /* technicalexperience5.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -455,6 +506,7 @@
 				AE3DE1511DF5EDE90016B7C6 /* ResumeTableViewController.swift in Sources */,
 				AE3DE1501DF5EDE90016B7C6 /* ResumeSectionTableViewCell.swift in Sources */,
 				AE34B9151DF61999001D1E66 /* UIImageExtension.swift in Sources */,
+				AE9312871DF87D450032E423 /* detailViewController.swift in Sources */,
 				AE3DE1521DF5EDE90016B7C6 /* ResumeViewController.swift in Sources */,
 				AEF0891E1DEDEE7B00AA313C /* InitialViewController.swift in Sources */,
 				AEF088F21DEDECA400AA313C /* ViewController.swift in Sources */,
