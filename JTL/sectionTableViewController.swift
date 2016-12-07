@@ -22,6 +22,12 @@ class sectionTableViewController: UITableViewController {
     // METHODS
     // ------------------------------------------------------------------------------------------
     
+    deinit {
+        NotificationCenter.default.removeObserver(self)
+    }
+    
+    // ------------------------------------------------------------------------------------------
+    
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         
@@ -40,6 +46,9 @@ class sectionTableViewController: UITableViewController {
         setImageNames()
         
         if dataType == "Technical Experience" { cellAccessory = .disclosureIndicator }
+        
+        // create an observer to know when we enter the foreground
+        NotificationCenter.default.addObserver(self, selector: #selector(willEnterForeground), name: .UIApplicationWillEnterForeground, object: nil)
         
     }
     
@@ -89,7 +98,7 @@ class sectionTableViewController: UITableViewController {
     // ------------------------------------------------------------------------------------------
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath) as! dataTableViewCell
+        let cell = tableView.dequeueReusableCell(withIdentifier: "SectionCell", for: indexPath) as! dataTableViewCell
         
         let type = dataType.lowercased()
         let name: String = type.replacingOccurrences(of: " ", with: "").appending(imageNames[indexPath.row].appending(".jpg"))
@@ -104,6 +113,8 @@ class sectionTableViewController: UITableViewController {
         cell.dataLabel.textColor = UIColor.white
         cell.accessoryType = cellAccessory
         if cellAccessory != .none { cell.isUserInteractionEnabled = true }
+        
+        if (cell.dataLabel.text == "jlandman@tamu.edu") { cell.isUserInteractionEnabled = true }
         
         if dataType == "Publications" { cell.dataLabel.font = UIFont(name: "AppleSDGothicNeo-Regular", size: cell.frame.height / 12) }
         if cell.dataImage.image == nil { cell.dataLabel.textColor = UIColor.black }
@@ -137,7 +148,7 @@ class sectionTableViewController: UITableViewController {
     
     func setImageNames() {
         imageNames.removeAll()
-        if (dataType == "Awards" || dataType == "Publications" || dataType == "Technical Experience") {
+        if (dataType == "Awards" || dataType == "Publications" || dataType == "Technical Experience" || dataType == "Personal Info") {
             for i in 0 ..< data.count {
                 imageNames.append(String(i))
             }
@@ -150,8 +161,16 @@ class sectionTableViewController: UITableViewController {
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         if let cell = tableView.cellForRow(at: indexPath) as? dataTableViewCell {
+            
             cell.dataImage.alpha = 0.5
             selectedIndexPath = indexPath
+            
+            if cell.dataLabel.text == "jlandman@tamu.edu" {
+                if let url = URL(string: "mailto:jlandman@tamu.edu") {
+                    UIApplication.shared.open(url, options: [:])
+                    return
+                }
+            }
             
             performSegue(withIdentifier: "segueToDetailView", sender: self)
         }
@@ -189,6 +208,16 @@ class sectionTableViewController: UITableViewController {
         }
         
         return ""
+    }
+    
+    // ------------------------------------------------------------------------------------------
+    
+    func willEnterForeground() {
+        if let indexPath = selectedIndexPath {
+            if let cell = tableView.cellForRow(at: indexPath) as? dataTableViewCell {
+                cell.dataImage.alpha = 0.95
+            }
+        }
     }
     
     // ------------------------------------------------------------------------------------------

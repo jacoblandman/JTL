@@ -47,8 +47,11 @@ class ResumeTableViewController: UITableViewController {
         super.viewWillAppear(animated)
         
         if let indexPath = selectedIndexPath {
-            let cell = tableView.cellForRow(at: indexPath) as! ResumeSectionTableViewCell
-            cell.sectionImage.alpha = 0.9
+            if let cell = tableView.cellForRow(at: indexPath) as? ResumeSectionTableViewCell {
+                cell.sectionImage.alpha = 0.95
+            } else {
+                print("When the view is appearing, the cell isn't the correct class")
+            }
         }
     }
     
@@ -70,9 +73,22 @@ class ResumeTableViewController: UITableViewController {
     
     override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         // tab height should be 49
-        let tabHeight: CGFloat = (tabBarController?.tabBar.frame.size.height)!
+        let tabHeight: CGFloat
+        if let tb = tabBarController {
+            tabHeight = tb.tabBar.frame.size.height
+        } else {
+            print("The tab controller is nil")
+            tabHeight = 49
+        }
+
         // nav height shoudl be 44
-        let navHeight: CGFloat = (navigationController?.navigationBar.frame.size.height)!
+        let navHeight: CGFloat
+        if let nc = navigationController {
+            navHeight = nc.navigationBar.frame.size.height
+        } else {
+            print("the nav controller is nil")
+            navHeight = 44
+        }
         
         return (tableView.frame.size.height - tabHeight - navHeight) / 3.0
     }
@@ -80,8 +96,24 @@ class ResumeTableViewController: UITableViewController {
     // ------------------------------------------------------------------------------------------
     
     override func tableView(_ tableView: UITableView, estimatedHeightForRowAt indexPath: IndexPath) -> CGFloat {
-        let tabHeight: CGFloat = (tabBarController?.tabBar.frame.size.height)!
-        let navHeight: CGFloat = (navigationController?.navigationBar.frame.size.height)!
+        // tab height should be 49
+        let tabHeight: CGFloat
+        if let tb = tabBarController {
+            tabHeight = tb.tabBar.frame.size.height
+        } else {
+            print("The tab controller is nil")
+            tabHeight = 49
+        }
+        
+        // nav height shoudl be 44
+        let navHeight: CGFloat
+        if let nc = navigationController {
+            navHeight = nc.navigationBar.frame.size.height
+        } else {
+            print("The nav controller is nil")
+            navHeight = 44
+        }
+        
         return (tableView.frame.size.height - tabHeight - navHeight) / 3.0
     }
     
@@ -127,11 +159,19 @@ class ResumeTableViewController: UITableViewController {
     // ------------------------------------------------------------------------------------------
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let cell = tableView.cellForRow(at: indexPath) as! ResumeSectionTableViewCell
-        cell.sectionImage.alpha = 0.5
-        selectedIndexPath = indexPath
+        if let cell = tableView.cellForRow(at: indexPath) as? ResumeSectionTableViewCell {
+            cell.sectionImage.alpha = 0.5
+            selectedIndexPath = indexPath
+            
+            if let sectionType = SectionType(rawValue: indexPath.row) {
+                segueToNextView(sectionType: sectionType)
+            } else {
+                print("The section Type is wrong when selecting a row")
+            }
+        } else {
+            print("The cell is not the correct type when selecting")
+        }
         
-        segueToNextView(sectionType: SectionType(rawValue: indexPath.row)!)
         
     }
     
@@ -169,8 +209,7 @@ class ResumeTableViewController: UITableViewController {
         
         switch sectionType {
             case .personalInfo:
-                let vc = UITableViewController()
-                (navigationController?.pushViewController(vc, animated: true))!
+                performSegue(withIdentifier: "segueToSection", sender: self)
             
             case .technicalExperience:
                 performSegue(withIdentifier: "segueToSection", sender: self)
@@ -197,28 +236,38 @@ class ResumeTableViewController: UITableViewController {
     
     func filterCellImage(cell: ResumeSectionTableViewCell) {
         // attempt to filter the image
-        let inputImage = CIImage(image: cell.sectionImage.image!)
-        
-        // The inputEV value on the CIFilter adjusts exposure (negative values darken, positive values brighten)
-        filter.setValue(inputImage, forKey: kCIInputImageKey)
-        filter.setValue(-2.0, forKey: kCIInputEVKey)
-        
-        // Break early if the filter was not a success (.outputImage is optional in Swift)
-        if let cgimg = context.createCGImage(filter.outputImage!, from: filter.outputImage!.extent) {
-            let processedImage = UIImage(cgImage: cgimg)
-            let resizedImage = processedImage.resize(maxHeight: cell.frame.size.height, maxWidth: cell.frame.size.width)
-            cell.sectionImage.image = resizedImage
+        if let image = cell.sectionImage.image {
+            let inputImage =  CIImage(image: image)
+            
+            // The inputEV value on the CIFilter adjusts exposure (negative values darken, positive values brighten)
+            filter.setValue(inputImage, forKey: kCIInputImageKey)
+            filter.setValue(-2.0, forKey: kCIInputEVKey)
+            
+            // Break early if the filter was not a success (.outputImage is optional in Swift)
+            if let cgimg = context.createCGImage(filter.outputImage!, from: filter.outputImage!.extent) {
+                let processedImage = UIImage(cgImage: cgimg)
+                let resizedImage = processedImage.resize(maxHeight: cell.frame.size.height, maxWidth: cell.frame.size.width)
+                cell.sectionImage.image = resizedImage
+            } else {
+                print("Filtering the image was not a success")
+            }
+        } else {
+            print("The cell image is nil when trying to filter")
         }
-
     }
     
     // ------------------------------------------------------------------------------------------
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if (segue.identifier == "segueToSection") {
-            let vc = segue.destination as! sectionTableViewController
-            if let indexPath = selectedIndexPath {
-                vc.dataType = sections[indexPath.row]
+            if let vc = segue.destination as? sectionTableViewController {
+                if let indexPath = selectedIndexPath {
+                    vc.dataType = sections[indexPath.row]
+                } else {
+                    print("When preparing to segue, the index path isn't set")
+                }
+            } else {
+                print("When preparing to segue, the destination isn't correct")
             }
         }
     }

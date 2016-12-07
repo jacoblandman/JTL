@@ -56,6 +56,12 @@
 		AE93128F1DF888000032E423 /* technicalexperience3.txt in Resources */ = {isa = PBXBuildFile; fileRef = AE93128E1DF888000032E423 /* technicalexperience3.txt */; };
 		AE9312911DF888100032E423 /* technicalexperience4.txt in Resources */ = {isa = PBXBuildFile; fileRef = AE9312901DF888100032E423 /* technicalexperience4.txt */; };
 		AE9312931DF888230032E423 /* technicalexperience5.txt in Resources */ = {isa = PBXBuildFile; fileRef = AE9312921DF888230032E423 /* technicalexperience5.txt */; };
+		AE9312951DF88B210032E423 /* PersonalInfo.txt in Resources */ = {isa = PBXBuildFile; fileRef = AE9312941DF88B210032E423 /* PersonalInfo.txt */; };
+		AE93129A1DF88D490032E423 /* personalinfo1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = AE9312961DF88D490032E423 /* personalinfo1.jpg */; };
+		AE93129B1DF88D490032E423 /* personalinfo2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = AE9312971DF88D490032E423 /* personalinfo2.jpg */; };
+		AE93129C1DF88D490032E423 /* personalinfo3.jpg in Resources */ = {isa = PBXBuildFile; fileRef = AE9312981DF88D490032E423 /* personalinfo3.jpg */; };
+		AE93129D1DF88D490032E423 /* personalinfo4.jpg in Resources */ = {isa = PBXBuildFile; fileRef = AE9312991DF88D490032E423 /* personalinfo4.jpg */; };
+		AE9312A11DF890910032E423 /* personalinfo0.jpg in Resources */ = {isa = PBXBuildFile; fileRef = AE9312A01DF890910032E423 /* personalinfo0.jpg */; };
 		AEEF38FC1DF8779800A95883 /* technicalexperience0.jpg in Resources */ = {isa = PBXBuildFile; fileRef = AEEF38F91DF8779800A95883 /* technicalexperience0.jpg */; };
 		AEEF38FD1DF8779800A95883 /* technicalexperience2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = AEEF38FA1DF8779800A95883 /* technicalexperience2.jpg */; };
 		AEEF38FE1DF8779800A95883 /* technicalexperience4.jpg in Resources */ = {isa = PBXBuildFile; fileRef = AEEF38FB1DF8779800A95883 /* technicalexperience4.jpg */; };
@@ -139,6 +145,12 @@
 		AE93128E1DF888000032E423 /* technicalexperience3.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = technicalexperience3.txt; sourceTree = "<group>"; };
 		AE9312901DF888100032E423 /* technicalexperience4.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = technicalexperience4.txt; sourceTree = "<group>"; };
 		AE9312921DF888230032E423 /* technicalexperience5.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = technicalexperience5.txt; sourceTree = "<group>"; };
+		AE9312941DF88B210032E423 /* PersonalInfo.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = PersonalInfo.txt; sourceTree = "<group>"; };
+		AE9312961DF88D490032E423 /* personalinfo1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = personalinfo1.jpg; sourceTree = "<group>"; };
+		AE9312971DF88D490032E423 /* personalinfo2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = personalinfo2.jpg; sourceTree = "<group>"; };
+		AE9312981DF88D490032E423 /* personalinfo3.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = personalinfo3.jpg; sourceTree = "<group>"; };
+		AE9312991DF88D490032E423 /* personalinfo4.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = personalinfo4.jpg; sourceTree = "<group>"; };
+		AE9312A01DF890910032E423 /* personalinfo0.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = personalinfo0.jpg; sourceTree = "<group>"; };
 		AEEF38F91DF8779800A95883 /* technicalexperience0.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = technicalexperience0.jpg; sourceTree = "<group>"; };
 		AEEF38FA1DF8779800A95883 /* technicalexperience2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = technicalexperience2.jpg; sourceTree = "<group>"; };
 		AEEF38FB1DF8779800A95883 /* technicalexperience4.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = technicalexperience4.jpg; sourceTree = "<group>"; };
@@ -189,6 +201,11 @@
 		AE34B9251DF72F0B001D1E66 /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				AE9312A01DF890910032E423 /* personalinfo0.jpg */,
+				AE9312961DF88D490032E423 /* personalinfo1.jpg */,
+				AE9312971DF88D490032E423 /* personalinfo2.jpg */,
+				AE9312981DF88D490032E423 /* personalinfo3.jpg */,
+				AE9312991DF88D490032E423 /* personalinfo4.jpg */,
 				AEEF38F91DF8779800A95883 /* technicalexperience0.jpg */,
 				AEEF38FF1DF877E200A95883 /* technicalexperience1.jpg */,
 				AEEF39001DF877E200A95883 /* technicalexperience3.jpg */,
@@ -242,6 +259,7 @@
 				AE93128E1DF888000032E423 /* technicalexperience3.txt */,
 				AE9312901DF888100032E423 /* technicalexperience4.txt */,
 				AE9312921DF888230032E423 /* technicalexperience5.txt */,
+				AE9312941DF88B210032E423 /* PersonalInfo.txt */,
 			);
 			name = "Text Files";
 			sourceTree = "<group>";
@@ -428,6 +446,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AE93129C1DF88D490032E423 /* personalinfo3.jpg in Resources */,
 				AE34B9741DF77150001D1E66 /* publications1.jpg in Resources */,
 				AE34B97B1DF774BF001D1E66 /* awards1.jpg in Resources */,
 				AE34B92E1DF72F0B001D1E66 /* Education.jpg in Resources */,
@@ -443,7 +462,9 @@
 				AE93128D1DF887F40032E423 /* technicalexperience2.txt in Resources */,
 				AE34B95D1DF75BEA001D1E66 /* languagesSwift.jpg in Resources */,
 				AEF088F71DEDECA400AA313C /* Assets.xcassets in Resources */,
+				AE9312A11DF890910032E423 /* personalinfo0.jpg in Resources */,
 				AE34B9581DF75BEA001D1E66 /* languagesFortran.jpg in Resources */,
+				AE93129B1DF88D490032E423 /* personalinfo2.jpg in Resources */,
 				AE34B97D1DF774BF001D1E66 /* awards3.jpg in Resources */,
 				AE9312931DF888230032E423 /* technicalexperience5.txt in Resources */,
 				AE34B9441DF747C4001D1E66 /* interestsGolf.jpg in Resources */,
@@ -466,6 +487,7 @@
 				AE34B94B1DF7486D001D1E66 /* interestsSwimming.jpg in Resources */,
 				AE34B97C1DF774BF001D1E66 /* awards2.jpg in Resources */,
 				AE34B9691DF76B3F001D1E66 /* Interests.txt in Resources */,
+				AE93129A1DF88D490032E423 /* personalinfo1.jpg in Resources */,
 				AE3DE1461DF5EDE90016B7C6 /* list-fat-7.png in Resources */,
 				AE34B9571DF75BEA001D1E66 /* languagesC++.jpg in Resources */,
 				AE9312891DF8877F0032E423 /* technicalexperience0.txt in Resources */,
@@ -476,6 +498,8 @@
 				AE34B9731DF77150001D1E66 /* publications0.jpg in Resources */,
 				AEEF38FC1DF8779800A95883 /* technicalexperience0.jpg in Resources */,
 				AE34B95F1DF75D0A001D1E66 /* languagesLatex.jpg in Resources */,
+				AE9312951DF88B210032E423 /* PersonalInfo.txt in Resources */,
+				AE93129D1DF88D490032E423 /* personalinfo4.jpg in Resources */,
 				AE34B97F1DF775FF001D1E66 /* TechnicalExperience.txt in Resources */,
 				AE34B95A1DF75BEA001D1E66 /* languagesMatlab.jpg in Resources */,
 				AEEF39041DF8781400A95883 /* technicalexperience5.jpg in Resources */,
