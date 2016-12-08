@@ -196,11 +196,20 @@ class sectionTableViewController: UITableViewController {
         if (segue.identifier == "segueToDetailView") {
             if let vc = segue.destination as? detailViewController {
                 if let indexPath = selectedIndexPath {
+                    // set the image name
                     let name: String = dataType.lowercased().replacingOccurrences(of: " ", with: "").appending(imageNames[indexPath.row])
                     vc.imageName = name.appending(".jpg")
+                    
+                    // set the detailed text
                     let text = loadText(withName: name)
                     vc.text = text
+                    
+                    // set the label
                     vc.label = data[indexPath.row]
+                    
+                    // set the date, which will be the views title
+                    let fileName = dataType.replacingOccurrences(of: " ", with: "").appending("Dates")
+                    vc.date = loadDates(forFile: fileName, forCellRowAt: indexPath)
                 }
             }
         }
@@ -235,5 +244,22 @@ class sectionTableViewController: UITableViewController {
     }
     
     // ------------------------------------------------------------------------------------------
-
+    // func to load the dates of education and tech experience
+    
+    func loadDates(forFile fileName: String, forCellRowAt indexPath: IndexPath ) -> String {
+        if let filePath = Bundle.main.path(forResource: fileName, ofType: "txt") {
+            do {
+                let text = try String(contentsOfFile: filePath)
+                let dates = text.components(separatedBy: "\n")
+                return dates[indexPath.row]
+            } catch {
+                print("The dates could not be loaded")
+            }
+        }
+        
+        // return an empty string as the date
+        return ""
+    }
+    
+    // ------------------------------------------------------------------------------------------
 }

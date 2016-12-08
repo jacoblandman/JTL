@@ -19,6 +19,7 @@ class detailViewController: UIViewController {
     var imageName: String!
     var text: String!
     var label: String!
+    var date: String!
     
     
     // METHODS
@@ -27,6 +28,9 @@ class detailViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
+        
+        // set the title of the view to the date of education or tech experience
+        title = date
     }
     
     // ------------------------------------------------------------------------------------------
@@ -45,7 +49,7 @@ class detailViewController: UIViewController {
         detailText.text = text
         detailText.font = UIFont.preferredFont(forTextStyle: .body)
         detailLabel.text = label
-        detailLabel.font = UIFont(name: "AppleSDGothicNeo-Regular", size: detailLabel.frame.height / 6)
+        detailLabel.font = UIFont(name: "AppleSDGothicNeo-Regular", size: detailLabel.frame.height / 10)
         detailLabel.textColor = UIColor.white
         
     }
