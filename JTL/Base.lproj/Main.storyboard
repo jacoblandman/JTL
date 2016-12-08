@@ -48,6 +48,9 @@
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="vUa-aN-39p">
+                                            <rect key="frame" x="0.0" y="0.0" width="79" height="150"/>
+                                        </imageView>
                                     </subviews>
                                     <constraints>
                                         <constraint firstItem="T98-bY-Cee" firstAttribute="top" secondItem="xtT-ZH-DKD" secondAttribute="bottom" constant="-10" id="9y9-cw-5py"/>
@@ -57,6 +60,8 @@
                                         <constraint firstItem="T98-bY-Cee" firstAttribute="centerY" secondItem="fqf-Te-ysD" secondAttribute="centerY" id="VSp-hP-XRB"/>
                                         <constraint firstItem="yvo-cW-ZQH" firstAttribute="leading" secondItem="fqf-Te-ysD" secondAttribute="leadingMargin" constant="-8" id="XRa-WL-qdL"/>
                                         <constraint firstItem="yvo-cW-ZQH" firstAttribute="centerY" secondItem="fqf-Te-ysD" secondAttribute="centerY" id="acx-AW-M8U"/>
+                                        <constraint firstItem="vUa-aN-39p" firstAttribute="leading" secondItem="yvo-cW-ZQH" secondAttribute="leading" id="ltF-zC-7UK"/>
+                                        <constraint firstItem="vUa-aN-39p" firstAttribute="centerY" secondItem="yvo-cW-ZQH" secondAttribute="centerY" id="vZa-Rh-NNm"/>
                                     </constraints>
                                 </tableViewCellContentView>
                                 <constraints>
@@ -67,7 +72,9 @@
                                 </constraints>
                                 <inset key="separatorInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 <connections>
-                                    <outlet property="projectImage" destination="yvo-cW-ZQH" id="BhR-wZ-n0b"/>
+                                    <outlet property="baseImageView" destination="yvo-cW-ZQH" id="rqu-Us-nm9"/>
+                                    <outlet property="projectImage" destination="vUa-aN-39p" id="cEH-Nn-rcb"/>
+                                    <outlet property="projectImageView" destination="vUa-aN-39p" id="wgN-Ji-BSi"/>
                                     <outlet property="projectNameLabel" destination="T98-bY-Cee" id="kwE-K5-eX1"/>
                                     <outlet property="projectNumberLabel" destination="xtT-ZH-DKD" id="gXQ-mx-sOQ"/>
                                 </connections>

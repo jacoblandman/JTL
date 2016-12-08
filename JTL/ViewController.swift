@@ -57,7 +57,7 @@ class ViewController: UITableViewController {
         let cell = tableView.dequeueReusableCell(withIdentifier: "projectCell", for: indexPath) as! projectTableViewCell
         
         let name: String = "project".appending(String(indexPath.row + 1)).appending(".jpg")
-        cell.projectImage.image = UIImage(named: name)
+        cell.projectImage = UIImage(named: name)
         cell.resizeImageView()
         
         let project = projects[indexPath.row]
@@ -93,7 +93,7 @@ class ViewController: UITableViewController {
             navHeight = 44
         }
         
-        return (tableView.frame.size.height - navHeight) / 5.0
+        return (tableView.frame.size.height - navHeight) / 4.0
 
     }
     
@@ -109,7 +109,7 @@ class ViewController: UITableViewController {
             navHeight = 44
         }
         
-        return (tableView.frame.size.height - navHeight) / 5.0
+        return (tableView.frame.size.height - navHeight) / 4.0
 
     }
     
