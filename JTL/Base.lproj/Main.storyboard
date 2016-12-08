@@ -179,10 +179,10 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="tamu1.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="hvO-Hb-2bV">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="education0.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="hvO-Hb-2bV">
                                 <rect key="frame" x="0.0" y="64" width="414" height="311.33333333333331"/>
                             </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="tamu2.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="fGq-hA-Kv4">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="education1.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="fGq-hA-Kv4">
                                 <rect key="frame" x="0.0" y="376.33333333333326" width="414" height="310.66666666666674"/>
                             </imageView>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="Bhd-pu-cRG">
@@ -384,9 +384,9 @@ Cumulative GPA: 3.54/4.0</string>
         </scene>
     </scenes>
     <resources>
+        <image name="education0.jpg" width="1080" height="1080"/>
+        <image name="education1.jpg" width="3258" height="2007"/>
         <image name="file-document-7.png" width="30" height="30"/>
         <image name="list-fat-7.png" width="30" height="30"/>
-        <image name="tamu1.jpg" width="1080" height="1080"/>
-        <image name="tamu2.jpg" width="3258" height="2007"/>
     </resources>
 </document>

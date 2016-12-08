@@ -15,8 +15,8 @@
 		AE34B9311DF72F0B001D1E66 /* PersonalInfo.jpg in Resources */ = {isa = PBXBuildFile; fileRef = AE34B92A1DF72F0B001D1E66 /* PersonalInfo.jpg */; };
 		AE34B9321DF72F0B001D1E66 /* Publications.jpg in Resources */ = {isa = PBXBuildFile; fileRef = AE34B92B1DF72F0B001D1E66 /* Publications.jpg */; };
 		AE34B9331DF72F0B001D1E66 /* TechnicalExperience.jpg in Resources */ = {isa = PBXBuildFile; fileRef = AE34B92C1DF72F0B001D1E66 /* TechnicalExperience.jpg */; };
-		AE34B93F1DF73D9C001D1E66 /* tamu1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = AE34B93D1DF73D9C001D1E66 /* tamu1.jpg */; };
-		AE34B9411DF74135001D1E66 /* tamu2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = AE34B9401DF74135001D1E66 /* tamu2.jpg */; };
+		AE34B93F1DF73D9C001D1E66 /* education0.jpg in Resources */ = {isa = PBXBuildFile; fileRef = AE34B93D1DF73D9C001D1E66 /* education0.jpg */; };
+		AE34B9411DF74135001D1E66 /* education1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = AE34B9401DF74135001D1E66 /* education1.jpg */; };
 		AE34B9441DF747C4001D1E66 /* interestsGolf.jpg in Resources */ = {isa = PBXBuildFile; fileRef = AE34B9421DF747C4001D1E66 /* interestsGolf.jpg */; };
 		AE34B9451DF747C4001D1E66 /* interestsHiking.jpg in Resources */ = {isa = PBXBuildFile; fileRef = AE34B9431DF747C4001D1E66 /* interestsHiking.jpg */; };
 		AE34B9481DF74837001D1E66 /* interestsBaseball.jpg in Resources */ = {isa = PBXBuildFile; fileRef = AE34B9461DF74837001D1E66 /* interestsBaseball.jpg */; };
@@ -45,6 +45,10 @@
 		AE34B97F1DF775FF001D1E66 /* TechnicalExperience.txt in Resources */ = {isa = PBXBuildFile; fileRef = AE34B97E1DF775FF001D1E66 /* TechnicalExperience.txt */; };
 		AE36C2C81DF8D78A005BDF4E /* SafariServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AE36C2C71DF8D78A005BDF4E /* SafariServices.framework */; };
 		AE36C2CA1DF8E2CF005BDF4E /* TechnicalExperienceDates.txt in Resources */ = {isa = PBXBuildFile; fileRef = AE36C2C91DF8E2CF005BDF4E /* TechnicalExperienceDates.txt */; };
+		AE36C2CC1DF8E73E005BDF4E /* Education.txt in Resources */ = {isa = PBXBuildFile; fileRef = AE36C2CB1DF8E73E005BDF4E /* Education.txt */; };
+		AE36C2CE1DF8E89E005BDF4E /* EducationDates.txt in Resources */ = {isa = PBXBuildFile; fileRef = AE36C2CD1DF8E89E005BDF4E /* EducationDates.txt */; };
+		AE36C2D01DF8E945005BDF4E /* education0.txt in Resources */ = {isa = PBXBuildFile; fileRef = AE36C2CF1DF8E945005BDF4E /* education0.txt */; };
+		AE36C2D21DF8E951005BDF4E /* education1.txt in Resources */ = {isa = PBXBuildFile; fileRef = AE36C2D11DF8E951005BDF4E /* education1.txt */; };
 		AE3DD86D1DF5EDD40016B7C6 /* file-document-7.png in Resources */ = {isa = PBXBuildFile; fileRef = AE3DCCDE1DF5EDCB0016B7C6 /* file-document-7.png */; };
 		AE3DE1461DF5EDE90016B7C6 /* list-fat-7.png in Resources */ = {isa = PBXBuildFile; fileRef = AE3DD85E1DF5EDD30016B7C6 /* list-fat-7.png */; };
 		AE3DE14F1DF5EDE90016B7C6 /* Resume.pdf in Resources */ = {isa = PBXBuildFile; fileRef = AE3DD8681DF5EDD30016B7C6 /* Resume.pdf */; };
@@ -106,8 +110,8 @@
 		AE34B92A1DF72F0B001D1E66 /* PersonalInfo.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = PersonalInfo.jpg; sourceTree = "<group>"; };
 		AE34B92B1DF72F0B001D1E66 /* Publications.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Publications.jpg; sourceTree = "<group>"; };
 		AE34B92C1DF72F0B001D1E66 /* TechnicalExperience.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = TechnicalExperience.jpg; sourceTree = "<group>"; };
-		AE34B93D1DF73D9C001D1E66 /* tamu1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = tamu1.jpg; sourceTree = "<group>"; };
-		AE34B9401DF74135001D1E66 /* tamu2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = tamu2.jpg; sourceTree = "<group>"; };
+		AE34B93D1DF73D9C001D1E66 /* education0.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = education0.jpg; sourceTree = "<group>"; };
+		AE34B9401DF74135001D1E66 /* education1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = education1.jpg; sourceTree = "<group>"; };
 		AE34B9421DF747C4001D1E66 /* interestsGolf.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = interestsGolf.jpg; sourceTree = "<group>"; };
 		AE34B9431DF747C4001D1E66 /* interestsHiking.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = interestsHiking.jpg; sourceTree = "<group>"; };
 		AE34B9461DF74837001D1E66 /* interestsBaseball.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = interestsBaseball.jpg; sourceTree = "<group>"; };
@@ -136,6 +140,10 @@
 		AE34B97E1DF775FF001D1E66 /* TechnicalExperience.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = TechnicalExperience.txt; sourceTree = "<group>"; };
 		AE36C2C71DF8D78A005BDF4E /* SafariServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SafariServices.framework; path = System/Library/Frameworks/SafariServices.framework; sourceTree = SDKROOT; };
 		AE36C2C91DF8E2CF005BDF4E /* TechnicalExperienceDates.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = TechnicalExperienceDates.txt; sourceTree = "<group>"; };
+		AE36C2CB1DF8E73E005BDF4E /* Education.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Education.txt; sourceTree = "<group>"; };
+		AE36C2CD1DF8E89E005BDF4E /* EducationDates.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = EducationDates.txt; sourceTree = "<group>"; };
+		AE36C2CF1DF8E945005BDF4E /* education0.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = education0.txt; sourceTree = "<group>"; };
+		AE36C2D11DF8E951005BDF4E /* education1.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = education1.txt; path = ../education1.txt; sourceTree = "<group>"; };
 		AE3DCCDE1DF5EDCB0016B7C6 /* file-document-7.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "file-document-7.png"; sourceTree = "<group>"; };
 		AE3DD85E1DF5EDD30016B7C6 /* list-fat-7.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "list-fat-7.png"; sourceTree = "<group>"; };
 		AE3DD8681DF5EDD30016B7C6 /* Resume.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = Resume.pdf; sourceTree = "<group>"; };
@@ -216,16 +224,16 @@
 				AEEF39001DF877E200A95883 /* technicalexperience3.jpg */,
 				AEEF38FA1DF8779800A95883 /* technicalexperience2.jpg */,
 				AEEF39031DF8781400A95883 /* technicalexperience5.jpg */,
+				AE34B9711DF77150001D1E66 /* publications1.jpg */,
 				AEEF38FB1DF8779800A95883 /* technicalexperience4.jpg */,
 				AE34B9761DF7739C001D1E66 /* awards0.jpg */,
 				AE34B9781DF774BF001D1E66 /* awards1.jpg */,
 				AE34B9791DF774BF001D1E66 /* awards2.jpg */,
 				AE34B97A1DF774BF001D1E66 /* awards3.jpg */,
 				AE34B9701DF77150001D1E66 /* publications0.jpg */,
-				AE34B9711DF77150001D1E66 /* publications1.jpg */,
 				AE34B9721DF77150001D1E66 /* publications2.jpg */,
 				AE34B9261DF72F0B001D1E66 /* Awards.jpg */,
-				AE34B93D1DF73D9C001D1E66 /* tamu1.jpg */,
+				AE34B93D1DF73D9C001D1E66 /* education0.jpg */,
 				AE34B9461DF74837001D1E66 /* interestsBaseball.jpg */,
 				AE34B9501DF75BEA001D1E66 /* languagesC++.jpg */,
 				AE34B9511DF75BEA001D1E66 /* languagesFortran.jpg */,
@@ -238,7 +246,7 @@
 				AE34B9471DF74837001D1E66 /* interestsFootball.jpg */,
 				AE34B9421DF747C4001D1E66 /* interestsGolf.jpg */,
 				AE34B9431DF747C4001D1E66 /* interestsHiking.jpg */,
-				AE34B9401DF74135001D1E66 /* tamu2.jpg */,
+				AE34B9401DF74135001D1E66 /* education1.jpg */,
 				AE34B9271DF72F0B001D1E66 /* Education.jpg */,
 				AE34B9281DF72F0B001D1E66 /* Interests.jpg */,
 				AE34B9291DF72F0B001D1E66 /* Languages.jpg */,
@@ -256,7 +264,10 @@
 				AE34B9681DF76B3F001D1E66 /* Interests.txt */,
 				AE34B9661DF76815001D1E66 /* Languages.txt */,
 				AE34B96C1DF76C68001D1E66 /* Publications.txt */,
+				AE36C2CD1DF8E89E005BDF4E /* EducationDates.txt */,
 				AE34B96E1DF76CC4001D1E66 /* Awards.txt */,
+				AE36C2CF1DF8E945005BDF4E /* education0.txt */,
+				AE36C2D11DF8E951005BDF4E /* education1.txt */,
 				AE34B97E1DF775FF001D1E66 /* TechnicalExperience.txt */,
 				AE9312881DF8877F0032E423 /* technicalexperience0.txt */,
 				AE93128A1DF887C60032E423 /* technicalexperience1.txt */,
@@ -266,6 +277,7 @@
 				AE9312921DF888230032E423 /* technicalexperience5.txt */,
 				AE9312941DF88B210032E423 /* PersonalInfo.txt */,
 				AE36C2C91DF8E2CF005BDF4E /* TechnicalExperienceDates.txt */,
+				AE36C2CB1DF8E73E005BDF4E /* Education.txt */,
 			);
 			name = "Text Files";
 			sourceTree = "<group>";
@@ -462,6 +474,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				AE93129C1DF88D490032E423 /* personalinfo3.jpg in Resources */,
+				AE36C2CC1DF8E73E005BDF4E /* Education.txt in Resources */,
 				AE34B9741DF77150001D1E66 /* publications1.jpg in Resources */,
 				AE34B97B1DF774BF001D1E66 /* awards1.jpg in Resources */,
 				AE34B92E1DF72F0B001D1E66 /* Education.jpg in Resources */,
@@ -485,18 +498,21 @@
 				AE34B9441DF747C4001D1E66 /* interestsGolf.jpg in Resources */,
 				AE34B9321DF72F0B001D1E66 /* Publications.jpg in Resources */,
 				AEEF39021DF877E200A95883 /* technicalexperience3.jpg in Resources */,
+				AE36C2D01DF8E945005BDF4E /* education0.txt in Resources */,
 				AE3DE14F1DF5EDE90016B7C6 /* Resume.pdf in Resources */,
 				AE34B95B1DF75BEA001D1E66 /* languagesPython.jpg in Resources */,
 				AE34B9751DF77150001D1E66 /* publications2.jpg in Resources */,
+				AE36C2D21DF8E951005BDF4E /* education1.txt in Resources */,
 				AEEF38FE1DF8779800A95883 /* technicalexperience4.jpg in Resources */,
+				AE36C2CE1DF8E89E005BDF4E /* EducationDates.txt in Resources */,
 				AE34B9451DF747C4001D1E66 /* interestsHiking.jpg in Resources */,
 				AE93128B1DF887C60032E423 /* technicalexperience1.txt in Resources */,
 				AE3DD86D1DF5EDD40016B7C6 /* file-document-7.png in Resources */,
-				AE34B93F1DF73D9C001D1E66 /* tamu1.jpg in Resources */,
+				AE34B93F1DF73D9C001D1E66 /* education0.jpg in Resources */,
 				AEF088F51DEDECA400AA313C /* Main.storyboard in Resources */,
 				AE34B9491DF74837001D1E66 /* interestsFootball.jpg in Resources */,
 				AE34B92D1DF72F0B001D1E66 /* Awards.jpg in Resources */,
-				AE34B9411DF74135001D1E66 /* tamu2.jpg in Resources */,
+				AE34B9411DF74135001D1E66 /* education1.jpg in Resources */,
 				AE34B96F1DF76CC4001D1E66 /* Awards.txt in Resources */,
 				AE9312911DF888100032E423 /* technicalexperience4.txt in Resources */,
 				AE34B94B1DF7486D001D1E66 /* interestsSwimming.jpg in Resources */,

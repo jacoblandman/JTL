@@ -224,7 +224,7 @@ class ResumeTableViewController: UITableViewController {
                 performSegue(withIdentifier: "segueToSection", sender: self)
             
             case .education:
-                performSegue(withIdentifier: "segueToEducation", sender: self)
+                performSegue(withIdentifier: "segueToSection", sender: self)
             
             case .awards:
                 performSegue(withIdentifier: "segueToSection", sender: self)

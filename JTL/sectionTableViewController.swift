@@ -50,7 +50,7 @@ class sectionTableViewController: UITableViewController {
         setImageNames()
         
         // these data types have additional detailed views
-        if dataType == "Technical Experience" { cellAccessory = .disclosureIndicator }
+        if (dataType == "Technical Experience" || dataType == "Education") { cellAccessory = .disclosureIndicator }
         
         // create an observer to know when we enter the foreground
         // this is needed for changing the image alpha value when the email cell is selected
@@ -84,7 +84,10 @@ class sectionTableViewController: UITableViewController {
             navHeight = 0.0
         }
         
-        return (tableView.frame.size.height - navHeight) / 3.0
+        var scale : CGFloat = 3.0
+        if data.count < 3 { scale = CGFloat(data.count) }
+        
+        return (tableView.frame.size.height - navHeight) / scale
     }
     
     // ------------------------------------------------------------------------------------------
@@ -98,7 +101,11 @@ class sectionTableViewController: UITableViewController {
             print("The navigation controller is nil")
             navHeight = 0.0
         }
-        return (tableView.frame.size.height  - navHeight) / 3.0
+        
+        var scale : CGFloat = 3.0
+        if data.count < 3 { scale = CGFloat(data.count) }
+        
+        return (tableView.frame.size.height  - navHeight) / scale
     }
     
     // ------------------------------------------------------------------------------------------
@@ -158,7 +165,7 @@ class sectionTableViewController: UITableViewController {
     
     func setImageNames() {
         imageNames.removeAll()
-        if (dataType == "Awards" || dataType == "Publications" || dataType == "Technical Experience" || dataType == "Personal Info") {
+        if (dataType == "Awards" || dataType == "Publications" || dataType == "Technical Experience" || dataType == "Personal Info" || dataType == "Education") {
             for i in 0 ..< data.count {
                 imageNames.append(String(i))
             }
