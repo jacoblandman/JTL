@@ -22,6 +22,7 @@ class ResumeViewController: UIViewController, WKNavigationDelegate {
     override func loadView() {
         super.loadView()
         
+        // create the webView for displaying the pdf
         webView = WKWebView()
         webView.navigationDelegate = self
         view = webView
@@ -32,6 +33,7 @@ class ResumeViewController: UIViewController, WKNavigationDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        // load the pdf
         if let pdf = Bundle.main.path(forResource: "Resume", ofType: "pdf") {
             let url = URL(fileURLWithPath: pdf)
             webView.load(URLRequest(url: url))

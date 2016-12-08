@@ -92,6 +92,7 @@ class InitialViewController: UIViewController {
     }
     
     // ------------------------------------------------------------------------------------------
+    // if the user taps the linkedIn button, they will be redirected to my linkedIn profile
     
     func tappedLinkedIn(_ sender: Any) {
         let UID: String = "25216973"
@@ -113,11 +114,11 @@ class InitialViewController: UIViewController {
     // ------------------------------------------------------------------------------------------
     
     func tappedResume(_ sender: Any) {
-        //let vc = ResumeTableViewController()
         performSegue(withIdentifier: "segueToTab", sender: self)
     }
     
     // ------------------------------------------------------------------------------------------
+    // animate the labels so that they move into the view
     
     func animateLabels() {
         UIView.animate(withDuration: 1) { [unowned self] in self.jacobLabel.transform = CGAffineTransform(translationX: -self.view.frame.size.width, y: 0) }
@@ -126,6 +127,8 @@ class InitialViewController: UIViewController {
     }
     
     // ------------------------------------------------------------------------------------------
+    // create all the labels and offset them off the screen
+    // they will be animated in when the view loads
     
     func makeLabels() {
         

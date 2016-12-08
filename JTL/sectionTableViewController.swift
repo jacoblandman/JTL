@@ -21,12 +21,16 @@ class sectionTableViewController: UITableViewController {
     
     // METHODS
     // ------------------------------------------------------------------------------------------
+    // remove the observer when this class is deconstructed
+    // this may not be necessary anymore due to updates in iOS8?
     
     deinit {
         NotificationCenter.default.removeObserver(self)
     }
     
     // ------------------------------------------------------------------------------------------
+    // in this function we can set the image alpha back to normal 
+    // this simulates to the user that they clicked a cell
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
@@ -45,9 +49,11 @@ class sectionTableViewController: UITableViewController {
         loadData()
         setImageNames()
         
+        // these data types have additional detailed views
         if dataType == "Technical Experience" { cellAccessory = .disclosureIndicator }
         
         // create an observer to know when we enter the foreground
+        // this is needed for changing the image alpha value when the email cell is selected
         NotificationCenter.default.addObserver(self, selector: #selector(willEnterForeground), name: .UIApplicationWillEnterForeground, object: nil)
         
     }
@@ -69,7 +75,7 @@ class sectionTableViewController: UITableViewController {
     // ------------------------------------------------------------------------------------------
     
     override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        // nav height shoudl be 44
+        // nav height should be 44
         let navHeight: CGFloat
         if let nc = navigationController {
             navHeight = nc.navigationBar.frame.size.height
@@ -84,7 +90,7 @@ class sectionTableViewController: UITableViewController {
     // ------------------------------------------------------------------------------------------
     
     override func tableView(_ tableView: UITableView, estimatedHeightForRowAt indexPath: IndexPath) -> CGFloat {
-        // nav height shoudl be 44
+        // nav height should be 44
         let navHeight: CGFloat
         if let nc = navigationController {
             navHeight = nc.navigationBar.frame.size.height
@@ -106,18 +112,20 @@ class sectionTableViewController: UITableViewController {
         cell.dataImage.image = UIImage(named: name)
         cell.dataImage.alpha = 0.95
         
-        // modify the labe attributes
+        // modify the label attributes
         cell.dataLabel.text = data[indexPath.row]
-        //cell.interestLabel.frame = cell.frame
         cell.dataLabel.font = UIFont(name: "AppleSDGothicNeo-Regular", size: cell.frame.height / 6)
         cell.dataLabel.textColor = UIColor.white
+        
+        // change the accessory type if there is another view with more detail (i.e. education and experience)
         cell.accessoryType = cellAccessory
         if cellAccessory != .none { cell.isUserInteractionEnabled = true }
         
+        // let the user interact with the email cell to email me
         if (cell.dataLabel.text == "jlandman@tamu.edu") { cell.isUserInteractionEnabled = true }
         
+        // change the font size for publications because the label is long
         if dataType == "Publications" { cell.dataLabel.font = UIFont(name: "AppleSDGothicNeo-Regular", size: cell.frame.height / 12) }
-        if cell.dataImage.image == nil { cell.dataLabel.textColor = UIColor.black }
         
         return cell
     }
@@ -131,6 +139,7 @@ class sectionTableViewController: UITableViewController {
     // ------------------------------------------------------------------------------------------
     
     func loadData() {
+        // load the text data that will be displayed in each cell of the tableView
         if let filePath = Bundle.main.path(forResource: dataType.replacingOccurrences(of: " ", with: ""), ofType: "txt") {
             do {
                 let text = try String(contentsOfFile: filePath)
@@ -145,6 +154,7 @@ class sectionTableViewController: UITableViewController {
     }
     
     // ------------------------------------------------------------------------------------------
+    // set the names that we use to load the images for each cell
     
     func setImageNames() {
         imageNames.removeAll()
@@ -162,9 +172,11 @@ class sectionTableViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         if let cell = tableView.cellForRow(at: indexPath) as? dataTableViewCell {
             
+            // change the alpha value so the user sees they selected the cell
             cell.dataImage.alpha = 0.5
             selectedIndexPath = indexPath
             
+            // if the email cell was selected, open the mail app
             if cell.dataLabel.text == "jlandman@tamu.edu" {
                 if let url = URL(string: "mailto:jlandman@tamu.edu") {
                     UIApplication.shared.open(url, options: [:])
@@ -177,6 +189,8 @@ class sectionTableViewController: UITableViewController {
     }
     
     // ------------------------------------------------------------------------------------------
+    // this function sets values for the detail view (if there is one)
+    // the imageName to be loaded, the label and the detailed text need to be set
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if (segue.identifier == "segueToDetailView") {
@@ -196,7 +210,6 @@ class sectionTableViewController: UITableViewController {
     
     func loadText(withName fileName: String) -> String {
         // don't need to unwrap the selected index path because at this point we know it has been set
-        print(fileName)
         if let filePath = Bundle.main.path(forResource: fileName, ofType: "txt") {
             do {
                 let detailText = try String(contentsOfFile: filePath)
@@ -206,11 +219,12 @@ class sectionTableViewController: UITableViewController {
                 print("The detailed data could not be loaded")
             }
         }
-        
+        // set the detailed text to nothing if the file failed to load
         return ""
     }
     
     // ------------------------------------------------------------------------------------------
+    // this function is necessary for changing the image alpha value back to normal when they selected the email cell
     
     func willEnterForeground() {
         if let indexPath = selectedIndexPath {

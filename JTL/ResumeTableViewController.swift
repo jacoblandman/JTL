@@ -25,8 +25,6 @@ class ResumeTableViewController: UITableViewController {
     // ------------------------------------------------------------------------------------------
     var sections = [String]()
     var selectedIndexPath: IndexPath?
-    var context: CIContext!
-    var filter: CIFilter!
     
     
     // METHODS
@@ -35,16 +33,17 @@ class ResumeTableViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        // load the labels for each cell in the table
         loadSections()
-        
-        filter = CIFilter(name: "CIExposureAdjust")
-        context = CIContext()
     }
     
     // ------------------------------------------------------------------------------------------
+    // in this function we can set the image alpha back to normal
+    // this simulates to the user that they clicked a cell
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
+        
         
         if let indexPath = selectedIndexPath {
             if let cell = tableView.cellForRow(at: indexPath) as? ResumeSectionTableViewCell {
@@ -118,6 +117,7 @@ class ResumeTableViewController: UITableViewController {
     }
     
     // ------------------------------------------------------------------------------------------
+    // load the text data that will be displayed in each cell of the tableView
     
     func loadSections() {
         sections.append("Personal Info")
@@ -137,7 +137,7 @@ class ResumeTableViewController: UITableViewController {
         let name: String = sections[indexPath.row].replacingOccurrences(of: " ", with: "").appending(".jpg")
         cell.sectionImage.image = UIImage(named: name)
         
-        // modify the labe attributes
+        // modify the label attributes
         cell.sectionLabel.text = sections[indexPath.row]
         cell.sectionLabel.font = UIFont(name: "AppleSDGothicNeo-Regular", size: cell.frame.height / 6)
         cell.sectionLabel.textColor = UIColor.white
@@ -160,9 +160,12 @@ class ResumeTableViewController: UITableViewController {
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         if let cell = tableView.cellForRow(at: indexPath) as? ResumeSectionTableViewCell {
+            
+            // change the alpha value so the user sees they selected the cell
             cell.sectionImage.alpha = 0.5
             selectedIndexPath = indexPath
             
+            // load the section view table
             if let sectionType = SectionType(rawValue: indexPath.row) {
                 segueToNextView(sectionType: sectionType)
             } else {
@@ -204,6 +207,9 @@ class ResumeTableViewController: UITableViewController {
     }
     
     // ------------------------------------------------------------------------------------------
+    // this function doesn't seem necessary anymore because all views have the same segue
+    // orifinally they were going to have different segues
+    // i'll just leave the function here for now
     
     func segueToNextView(sectionType: SectionType) {
         
@@ -236,6 +242,10 @@ class ResumeTableViewController: UITableViewController {
     
     func filterCellImage(cell: ResumeSectionTableViewCell) {
         // attempt to filter the image
+        // these filters are no longer needed
+        let filter = CIFilter(name: "CIExposureAdjust")!
+        let context = CIContext()
+        
         if let image = cell.sectionImage.image {
             let inputImage =  CIImage(image: image)
             
@@ -257,6 +267,8 @@ class ResumeTableViewController: UITableViewController {
     }
     
     // ------------------------------------------------------------------------------------------
+    // this function sets values for the section table view
+    // the dataType gets set, which informs the next view what text file to look at when loading the data
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if (segue.identifier == "segueToSection") {
