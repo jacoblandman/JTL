@@ -61,7 +61,6 @@ class ViewController: UITableViewController {
         
         let project = projects[indexPath.row]
         cell.textLabel?.attributedText = makeAttributedString(title: project[0], subtitle: project[1])
-        //cell.detailTextLabel?.text = project
         
         return cell
     }
@@ -78,7 +77,7 @@ class ViewController: UITableViewController {
             print("the nav controller is nil")
             navHeight = 44
         }
-        return UITableViewAutomaticDimension
+
         return (tableView.frame.size.height - navHeight) / 5.0
     }
     
@@ -93,7 +92,7 @@ class ViewController: UITableViewController {
             print("the nav controller is nil")
             navHeight = 44
         }
-        return UITableViewAutomaticDimension
+
         return (tableView.frame.size.height - navHeight) / 5.0
     }
     
@@ -107,7 +106,7 @@ class ViewController: UITableViewController {
         projects.append(["Project 5: Word Scramble", "Closures, method return values, booleans, NSRange"])
         projects.append(["Project 6: Auto Layout", "Get to grips with Auto Layout using practical examples and code"])
         projects.append(["Project 7: Whitehouse Petitions", "JSON, Data, UITabBarController"])
-        projects.append(["Project 8: 7 Swifty Words", "addTarget(), enumerated(), count, index(of:), property observers, range operators."])
+        projects.append(["Project 8: 7 Swifty Words", "addTarget(), enumerated(), count, index(of:), property observers, range operators"])
     }
     
     // ------------------------------------------------------------------------------------------
@@ -166,6 +165,7 @@ class ViewController: UITableViewController {
     }
     
     // ------------------------------------------------------------------------------------------
+    // this function makes the projects searchable in the phone spotlight
     
     func setupSearchableContent() {
         for i in 0 ..< projects.count {
