@@ -11,7 +11,7 @@ import SafariServices
 import CoreSpotlight
 import MobileCoreServices
 
-class ViewController: UITableViewController {
+class ViewController: UITableViewController, UIViewControllerPreviewingDelegate {
     
     // PARAMETERS
     // ------------------------------------------------------------------------------------------
@@ -39,6 +39,14 @@ class ViewController: UITableViewController {
         title = "Hacking With Swift Tutorial Series"
         
         setupSearchableContent()
+        
+        // register our view controller for peek and pop, if 3D is available on the device
+        if traitCollection.forceTouchCapability == .available {
+            registerForPreviewing(with: self, sourceView: view)
+        }
+        
+        
+        
     }
     
     // ------------------------------------------------------------------------------------------
@@ -171,6 +179,29 @@ class ViewController: UITableViewController {
         for i in 0 ..< projects.count {
             index(item: i)
         }
+    }
+    
+    // ------------------------------------------------------------------------------------------
+    
+    func previewingContext(_ previewingContext: UIViewControllerPreviewing, viewControllerForLocation location: CGPoint) -> UIViewController? {
+        guard let indexPath = tableView.indexPathForRow(at: location) else { return nil }
+        
+        guard let cell = tableView.cellForRow(at: indexPath) else { return nil }
+        
+        if let url = URL(string: "https://www.hackingwithswift.com/read/\(indexPath.row + 1)") {
+            let vc = SFSafariViewController(url: url, entersReaderIfAvailable: true)
+            // is this the correct frame size?
+            previewingContext.sourceRect = cell.frame
+            return vc
+        } else {
+            return nil
+        }
+    }
+    
+    // ------------------------------------------------------------------------------------------
+    
+    func previewingContext(_ previewingContext: UIViewControllerPreviewing, commit viewControllerToCommit: UIViewController) {
+        show(viewControllerToCommit, sender: self)
     }
     
     // ------------------------------------------------------------------------------------------
