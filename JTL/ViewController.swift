@@ -33,6 +33,9 @@ class ViewController: UITableViewController {
             showAC = showAlertController
         }
         
+        // set table view to be in editing mode and allow users to tap on rows to select them
+        //tableView.register(UITableViewCell.self, forCellReuseIdentifier: "Cell")
+        
         title = "Hacking With Swift Tutorial Series"
         
         setupSearchableContent()
@@ -54,36 +57,19 @@ class ViewController: UITableViewController {
     // ------------------------------------------------------------------------------------------
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "projectCell", for: indexPath) as! projectTableViewCell
-        
-        let name: String = "project".appending(String(indexPath.row + 1)).appending(".jpg")
-        cell.projectImage = UIImage(named: name)
-        cell.resizeImageView()
+        let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath)
         
         let project = projects[indexPath.row]
-        
-        if let projectIdentity = project.first {
-            let projectContents = projectIdentity.components(separatedBy: ": ")
-            
-            cell.projectNumberLabel.text = projectContents[0]
-            cell.projectNumberLabel.font = UIFont(name: "AppleSDGothicNeo-Regular", size: cell.frame.height / 8)
-            
-            cell.projectNameLabel.text = projectContents[1]
-            cell.projectNameLabel.font = UIFont(name: "AppleSDGothicNeo-Regular", size: cell.frame.height / 8)
-        }
-        
-        
-        
-        //cell.textLabel?.attributedText = makeAttributedString(title: project[0], subtitle: project[1])
-        //cell.accessoryType = UITableViewCellAccessoryType.disclosureIndicator
+        cell.textLabel?.attributedText = makeAttributedString(title: project[0], subtitle: project[1])
+        //cell.detailTextLabel?.text = project
         
         return cell
     }
     
     // ------------------------------------------------------------------------------------------
+    // the following two functions make sure auto layout does the hard work for us to automatically size every cell
     
     override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        
         // nav height shoudl be 44
         let navHeight: CGFloat
         if let nc = navigationController {
@@ -92,9 +78,8 @@ class ViewController: UITableViewController {
             print("the nav controller is nil")
             navHeight = 44
         }
-        
-        return (tableView.frame.size.height - navHeight) / 4.0
-
+        return UITableViewAutomaticDimension
+        return (tableView.frame.size.height - navHeight) / 5.0
     }
     
     // ------------------------------------------------------------------------------------------
@@ -108,9 +93,8 @@ class ViewController: UITableViewController {
             print("the nav controller is nil")
             navHeight = 44
         }
-        
-        return (tableView.frame.size.height - navHeight) / 4.0
-
+        return UITableViewAutomaticDimension
+        return (tableView.frame.size.height - navHeight) / 5.0
     }
     
     // ------------------------------------------------------------------------------------------
