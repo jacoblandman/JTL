@@ -8,6 +8,8 @@
 
 import UIKit
 import SafariServices
+import AudioToolbox
+import AVFoundation
 
 class InitialViewController: UIViewController {
 
@@ -21,6 +23,10 @@ class InitialViewController: UIViewController {
     var facebookButton: UIButton!
     var linkedinButton: UIButton!
     var resumeButton: UIButton!
+    var myAlertSound: SystemSoundID?
+    var sound: AVAudioPlayer!
+    
+    var buttonTapped: Bool = false
     
     
     // METHODS
@@ -65,6 +71,7 @@ class InitialViewController: UIViewController {
     // ------------------------------------------------------------------------------------------
     
     func tappedIOSExperience(_ sender: Any) {
+        buttonTapped = true
         performSegue(withIdentifier: "segueToIOS", sender: self)
         
     }
@@ -73,6 +80,7 @@ class InitialViewController: UIViewController {
     // if the user taps the facebook button, they will be redirected to my facebook
     
     func tappedFacebook(_ sender: Any) {
+        buttonTapped = true
         let UID: String = "1372129908"
         let URLString = "fb://profile/" + UID
         
@@ -95,6 +103,7 @@ class InitialViewController: UIViewController {
     // if the user taps the linkedIn button, they will be redirected to my linkedIn profile
     
     func tappedLinkedIn(_ sender: Any) {
+        buttonTapped = true
         let UID: String = "25216973"
         let URLString = "https://www.linkedin.com/in/jacob-landman-" + UID
         
@@ -114,6 +123,7 @@ class InitialViewController: UIViewController {
     // ------------------------------------------------------------------------------------------
     
     func tappedResume(_ sender: Any) {
+        buttonTapped = true
         performSegue(withIdentifier: "segueToTab", sender: self)
     }
     
@@ -121,9 +131,42 @@ class InitialViewController: UIViewController {
     // animate the labels so that they move into the view
     
     func animateLabels() {
-        UIView.animate(withDuration: 1) { [unowned self] in self.jacobLabel.transform = CGAffineTransform(translationX: -self.view.frame.size.width, y: 0) }
-        UIView.animate(withDuration: 1, delay: 1, options: [], animations: { [unowned self] in self.taylorLabel.transform = CGAffineTransform(translationX: -self.view.frame.size.width, y: 0) }, completion: nil)
-        UIView.animate(withDuration: 1, delay: 2, options: [], animations: { [unowned self] in self.landmanLabel.transform = CGAffineTransform(translationX: -self.view.frame.size.width, y: 0) }, completion: nil)
+
+        // try to create my own sound object
+        
+        
+        if let url = URL(string: "/System/Library/Audio/UISounds/Swish.caf") {
+            myAlertSound = 0
+            AudioServicesCreateSystemSoundID(url as CFURL, &myAlertSound!)
+            AudioServicesPlaySystemSound(myAlertSound!)
+        }
+        
+        UIView.animate(withDuration: 1, delay: 0, options: [], animations: { [unowned self] in self.jacobLabel.transform = CGAffineTransform(translationX: -self.view.frame.size.width, y: 0) }, completion: { [unowned self] _ in
+            if let alertSound = self.myAlertSound {
+                if !self.buttonTapped {
+                    AudioServicesPlaySystemSound(alertSound)
+                }
+            }
+        })
+        
+        UIView.animate(withDuration: 1, delay: 1, options: [], animations: { [unowned self] in self.taylorLabel.transform = CGAffineTransform(translationX: -self.view.frame.size.width, y: 0) }, completion: { [unowned self] _ in
+            if let alertSound = self.myAlertSound {
+                if !self.buttonTapped {
+                    AudioServicesPlaySystemSound(alertSound)
+                }
+            }
+        })
+        
+        UIView.animate(withDuration: 1, delay: 2, options: [], animations: { [unowned self] in self.landmanLabel.transform = CGAffineTransform(translationX: -self.view.frame.size.width, y: 0); AudioServicesPlaySystemSound(0) }, completion: nil)
+        
+        // now remove the sound object if it was created. We know it was created if the myAlertSound variable is not nil
+        // we need to delay for 3 seconds to make sure the sounds have been played already
+        DispatchQueue.global().asyncAfter(deadline: .now() + 3) { [unowned self] in
+            if let alertSound = self.myAlertSound {
+                AudioServicesDisposeSystemSoundID(alertSound)
+                print("AudioID was deleted")
+            }
+        }
     }
     
     // ------------------------------------------------------------------------------------------
@@ -251,4 +294,5 @@ class InitialViewController: UIViewController {
     }
     
     // ------------------------------------------------------------------------------------------
+
 }

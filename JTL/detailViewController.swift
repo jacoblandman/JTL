@@ -55,6 +55,9 @@ class detailViewController: UIViewController {
         detailLabel.font = UIFont(name: "AppleSDGothicNeo-Regular", size: detailLabel.frame.height / 10)
         detailLabel.textColor = UIColor.white
         
+        // nothing to swipe so we don't need to hide the navigation bar
+        navigationController?.hidesBarsOnSwipe = false
+        
     }
     
     // ------------------------------------------------------------------------------------------

@@ -140,6 +140,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             // then the quick action won't work because the topViewController won't be the InitialViewController
             navigationController.popToRootViewController(animated: false)
             if let ViewController = navigationController.topViewController as? InitialViewController {
+                ViewController.buttonTapped = true
                 
                 switch (shortcutIdentifier) {
                     case .ViewFacebook:
