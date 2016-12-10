@@ -19,6 +19,7 @@ class ViewController: UITableViewController, UIViewControllerPreviewingDelegate 
     // each project will hold the project name and its subtitle
     var projects = [[String]]()
     var showAC: Bool = true
+    var previewIndexPath: IndexPath?
     
     // METHODS
     // ------------------------------------------------------------------------------------------
@@ -115,6 +116,12 @@ class ViewController: UITableViewController, UIViewControllerPreviewingDelegate 
         projects.append(["Project 6: Auto Layout", "Get to grips with Auto Layout using practical examples and code"])
         projects.append(["Project 7: Whitehouse Petitions", "JSON, Data, UITabBarController"])
         projects.append(["Project 8: 7 Swifty Words", "addTarget(), enumerated(), count, index(of:), property observers, range operators"])
+        projects.append(["Project 9: Grand Central Dispatch", "GCD, threading, DispatchQueue, async"])
+        projects.append(["Project 10: Names to Faces", "UICollectionViewController, UIIMagePickerController, UUID, CALayer, Data, UIAlertController"])
+        projects.append(["Project 11: Pachinko", "SpriteKit, Node, PhysicsBody, Action, ContactDelegate, LabelNode, EmitterNode"])
+        projects.append(["Project 12: UserDefaults", "NSCoding, NSKeyedUnarchiver, NSKeyedArchiver"])
+        projects.append(["Project 13: Instafilter", "UISlider, Core Image, CIContext, CIFilter, UIImageWriteToSavedPhotosAlbum()"])
+        projects.append(["Project 14: Whack-a-Penguin", ""])
     }
     
     // ------------------------------------------------------------------------------------------
@@ -185,6 +192,7 @@ class ViewController: UITableViewController, UIViewControllerPreviewingDelegate 
     
     func previewingContext(_ previewingContext: UIViewControllerPreviewing, viewControllerForLocation location: CGPoint) -> UIViewController? {
         guard let indexPath = tableView.indexPathForRow(at: location) else { return nil }
+        previewIndexPath = indexPath
         
         guard let cell = tableView.cellForRow(at: indexPath) else { return nil }
         
@@ -201,7 +209,7 @@ class ViewController: UITableViewController, UIViewControllerPreviewingDelegate 
     // ------------------------------------------------------------------------------------------
     
     func previewingContext(_ previewingContext: UIViewControllerPreviewing, commit viewControllerToCommit: UIViewController) {
-        show(viewControllerToCommit, sender: self)
+        present(viewControllerToCommit, animated: false)
     }
     
     // ------------------------------------------------------------------------------------------

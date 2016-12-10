@@ -55,6 +55,8 @@
 		AE3DE1501DF5EDE90016B7C6 /* ResumeSectionTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE3DD8691DF5EDD40016B7C6 /* ResumeSectionTableViewCell.swift */; };
 		AE3DE1511DF5EDE90016B7C6 /* ResumeTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE3DD86A1DF5EDD40016B7C6 /* ResumeTableViewController.swift */; };
 		AE3DE1521DF5EDE90016B7C6 /* ResumeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE3DD86B1DF5EDD40016B7C6 /* ResumeViewController.swift */; };
+		AE70E2491DFBA4AE00088CD3 /* HidingNavigationBarManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE70E2481DFBA4AE00088CD3 /* HidingNavigationBarManager.swift */; };
+		AE70E24B1DFBA4D800088CD3 /* HidingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE70E24A1DFBA4D800088CD3 /* HidingViewController.swift */; };
 		AE9312871DF87D450032E423 /* detailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE9312861DF87D450032E423 /* detailViewController.swift */; };
 		AE9312891DF8877F0032E423 /* technicalexperience0.txt in Resources */ = {isa = PBXBuildFile; fileRef = AE9312881DF8877F0032E423 /* technicalexperience0.txt */; };
 		AE93128B1DF887C60032E423 /* technicalexperience1.txt in Resources */ = {isa = PBXBuildFile; fileRef = AE93128A1DF887C60032E423 /* technicalexperience1.txt */; };
@@ -150,6 +152,8 @@
 		AE3DD8691DF5EDD40016B7C6 /* ResumeSectionTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResumeSectionTableViewCell.swift; sourceTree = "<group>"; };
 		AE3DD86A1DF5EDD40016B7C6 /* ResumeTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResumeTableViewController.swift; sourceTree = "<group>"; };
 		AE3DD86B1DF5EDD40016B7C6 /* ResumeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResumeViewController.swift; sourceTree = "<group>"; };
+		AE70E2481DFBA4AE00088CD3 /* HidingNavigationBarManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HidingNavigationBarManager.swift; sourceTree = "<group>"; };
+		AE70E24A1DFBA4D800088CD3 /* HidingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HidingViewController.swift; sourceTree = "<group>"; };
 		AE9312861DF87D450032E423 /* detailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = detailViewController.swift; sourceTree = "<group>"; };
 		AE9312881DF8877F0032E423 /* technicalexperience0.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = technicalexperience0.txt; sourceTree = "<group>"; };
 		AE93128A1DF887C60032E423 /* technicalexperience1.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = technicalexperience1.txt; sourceTree = "<group>"; };
@@ -331,6 +335,8 @@
 				AE34B9141DF61999001D1E66 /* UIImageExtension.swift */,
 				AEF088F11DEDECA400AA313C /* ViewController.swift */,
 				AEF088F31DEDECA400AA313C /* Main.storyboard */,
+				AE70E2481DFBA4AE00088CD3 /* HidingNavigationBarManager.swift */,
+				AE70E24A1DFBA4D800088CD3 /* HidingViewController.swift */,
 				AEF0891D1DEDEE7B00AA313C /* InitialViewController.swift */,
 				AEF088F61DEDECA400AA313C /* Assets.xcassets */,
 				AE34B9621DF76328001D1E66 /* sectionTableViewController.swift */,
@@ -566,9 +572,11 @@
 				AE3DE1521DF5EDE90016B7C6 /* ResumeViewController.swift in Sources */,
 				AEF0891E1DEDEE7B00AA313C /* InitialViewController.swift in Sources */,
 				AEF088F21DEDECA400AA313C /* ViewController.swift in Sources */,
+				AE70E2491DFBA4AE00088CD3 /* HidingNavigationBarManager.swift in Sources */,
 				AEF088F01DEDECA400AA313C /* AppDelegate.swift in Sources */,
 				AE34B9631DF76328001D1E66 /* sectionTableViewController.swift in Sources */,
 				AE34B9651DF763B4001D1E66 /* dataTableViewCell.swift in Sources */,
+				AE70E24B1DFBA4D800088CD3 /* HidingViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

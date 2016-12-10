@@ -8,6 +8,7 @@
 
 import UIKit
 import CoreImage
+//import HidingNavigationBar
 
 enum SectionType: Int {
     case personalInfo
@@ -25,6 +26,7 @@ class ResumeTableViewController: UITableViewController {
     // ------------------------------------------------------------------------------------------
     var sections = [String]()
     var selectedIndexPath: IndexPath?
+    var hidingNavigationBarManager: HidingNavigationBarManager?
     
     
     // METHODS
@@ -35,6 +37,13 @@ class ResumeTableViewController: UITableViewController {
 
         // load the labels for each cell in the table
         loadSections()
+        hidingNavigationBarManager = HidingNavigationBarManager(viewController: self, scrollView: tableView)
+        
+        if let tabBar = tabBarController?.tabBar {
+            print("tab bar is added")
+            hidingNavigationBarManager?.manageBottomBar(tabBar)
+            
+        }
     }
     
     // ------------------------------------------------------------------------------------------
@@ -45,6 +54,8 @@ class ResumeTableViewController: UITableViewController {
         super.viewWillAppear(animated)
         
         
+        //navigationController?.hidesBarsOnSwipe = true
+
         if let indexPath = selectedIndexPath {
             if let cell = tableView.cellForRow(at: indexPath) as? ResumeSectionTableViewCell {
                 cell.sectionImage.alpha = 0.95
@@ -52,6 +63,8 @@ class ResumeTableViewController: UITableViewController {
                 print("When the view is appearing, the cell isn't the correct class")
             }
         }
+        
+        hidingNavigationBarManager?.viewWillAppear(animated)
     }
     
     // ------------------------------------------------------------------------------------------
@@ -179,34 +192,6 @@ class ResumeTableViewController: UITableViewController {
     }
     
     // ------------------------------------------------------------------------------------------
-    
-    func changeTabBar(hidden: Bool, animated: Bool){
-        let tabBar = self.tabBarController?.tabBar
-        if tabBar!.isHidden == hidden { return }
-        let frame = tabBar?.frame
-        let offset = (hidden ? (frame?.size.height)! : -(frame?.size.height)!)
-        let duration:TimeInterval = (animated ? 0.5 : 0.0)
-        tabBar?.isHidden = false
-        if frame != nil
-        {
-            UIView.animate(withDuration: duration, animations: {tabBar!.frame = frame!.offsetBy(dx: 0, dy: offset)}, completion: {
-                print($0)
-                if $0 {tabBar?.isHidden = hidden}
-            })
-        }
-    }
-    
-    // ------------------------------------------------------------------------------------------
-    
-    override func scrollViewWillBeginDragging(_ scrollView: UIScrollView) {
-        if scrollView.panGestureRecognizer.translation(in: scrollView).y < 0 {
-            changeTabBar(hidden: true, animated: true)
-        } else {
-            changeTabBar(hidden: false, animated: true)
-        }
-    }
-    
-    // ------------------------------------------------------------------------------------------
     // this function doesn't seem necessary anymore because all views have the same segue
     // orifinally they were going to have different segues
     // i'll just leave the function here for now
@@ -282,6 +267,30 @@ class ResumeTableViewController: UITableViewController {
                 print("When preparing to segue, the destination isn't correct")
             }
         }
+    }
+    
+    // ------------------------------------------------------------------------------------------
+    
+    override func viewDidLayoutSubviews() {
+        super.viewDidLayoutSubviews()
+        
+        hidingNavigationBarManager?.viewDidLayoutSubviews()
+    }
+    
+    // ------------------------------------------------------------------------------------------
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        
+        hidingNavigationBarManager?.viewWillDisappear(animated)
+    }
+    
+    // ------------------------------------------------------------------------------------------
+    
+    override func scrollViewShouldScrollToTop(_ scrollView: UIScrollView) -> Bool {
+        hidingNavigationBarManager?.shouldScrollToTop()
+        
+        return true
     }
     
     // ------------------------------------------------------------------------------------------
