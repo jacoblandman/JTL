@@ -37,6 +37,7 @@ class ResumeTableViewController: UITableViewController {
 
         // load the labels for each cell in the table
         loadSections()
+        
         hidingNavigationBarManager = HidingNavigationBarManager(viewController: self, scrollView: tableView)
         
         if let tabBar = tabBarController?.tabBar {
@@ -44,6 +45,10 @@ class ResumeTableViewController: UITableViewController {
             hidingNavigationBarManager?.manageBottomBar(tabBar)
             
         }
+        
+        hidingNavigationBarManager?.onForegroundAction = .show
+        
+        hidingNavigationBarManager?.expansionResistance = 125
     }
     
     // ------------------------------------------------------------------------------------------
@@ -63,6 +68,8 @@ class ResumeTableViewController: UITableViewController {
                 print("When the view is appearing, the cell isn't the correct class")
             }
         }
+        
+        navigationController?.hidesBarsOnSwipe = false
         
         hidingNavigationBarManager?.viewWillAppear(animated)
     }

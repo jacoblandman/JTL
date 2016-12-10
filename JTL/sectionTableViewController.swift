@@ -40,6 +40,8 @@ class sectionTableViewController: UITableViewController {
                cell.dataImage.alpha = 0.95
             }
         }
+        
+        navigationController?.hidesBarsOnSwipe = true
     }
     
     // ------------------------------------------------------------------------------------------
@@ -49,12 +51,10 @@ class sectionTableViewController: UITableViewController {
         loadData()
         setImageNames()
         
+        title = dataType
         // these data types have additional detailed views
         if (dataType == "Technical Experience" || dataType == "Education") { cellAccessory = .disclosureIndicator }
         
-        // create an observer to know when we enter the foreground
-        // this is needed for changing the image alpha value when the email cell is selected
-        NotificationCenter.default.addObserver(self, selector: #selector(willEnterForeground), name: .UIApplicationWillEnterForeground, object: nil)
         
     }
     
@@ -130,6 +130,7 @@ class sectionTableViewController: UITableViewController {
         
         // let the user interact with the email cell to email me
         if (cell.dataLabel.text == "jlandman@tamu.edu") { cell.isUserInteractionEnabled = true }
+        if (cell.dataLabel.text == "(817)-734-7833") { cell.isUserInteractionEnabled = true }
         
         // change the font size for publications because the label is long
         if dataType == "Publications" { cell.dataLabel.font = UIFont(name: "AppleSDGothicNeo-Regular", size: cell.frame.height / 12) }
@@ -185,10 +186,13 @@ class sectionTableViewController: UITableViewController {
             
             // if the email cell was selected, open the mail app
             if cell.dataLabel.text == "jlandman@tamu.edu" {
-                if let url = URL(string: "mailto:jlandman@tamu.edu") {
-                    UIApplication.shared.open(url, options: [:])
-                    return
-                }
+                emailSelected()
+                return
+            }
+            
+            if cell.dataLabel.text == "(817)-734-7833" {
+                phoneSelected()
+                return
             }
             
             performSegue(withIdentifier: "segueToDetailView", sender: self)
@@ -217,6 +221,9 @@ class sectionTableViewController: UITableViewController {
                     // set the date, which will be the views title
                     let fileName = dataType.replacingOccurrences(of: " ", with: "").appending("Dates")
                     vc.date = loadDates(forFile: fileName, forCellRowAt: indexPath)
+                    
+                    // set the title of the back item
+                    self.navigationController?.navigationBar.backItem?.title = "Back"
                 }
             }
         }
@@ -240,17 +247,6 @@ class sectionTableViewController: UITableViewController {
     }
     
     // ------------------------------------------------------------------------------------------
-    // this function is necessary for changing the image alpha value back to normal when they selected the email cell
-    
-    func willEnterForeground() {
-        if let indexPath = selectedIndexPath {
-            if let cell = tableView.cellForRow(at: indexPath) as? dataTableViewCell {
-                cell.dataImage.alpha = 0.95
-            }
-        }
-    }
-    
-    // ------------------------------------------------------------------------------------------
     // func to load the dates of education and tech experience
     
     func loadDates(forFile fileName: String, forCellRowAt indexPath: IndexPath ) -> String {
@@ -269,4 +265,52 @@ class sectionTableViewController: UITableViewController {
     }
     
     // ------------------------------------------------------------------------------------------
+    
+    func emailSelected() {
+        let ac = UIAlertController(title: "jlandman@tamu.edu", message: nil, preferredStyle: .alert)
+        ac.addAction(UIAlertAction(title: "Cancel", style: .cancel))
+        ac.addAction(UIAlertAction(title: "Email", style: .default) { [] _ in
+            if let url = URL(string: "mailto:jlandman@tamu.edu") {
+                UIApplication.shared.open(url, options: [:])
+            }
+        })
+        
+        present(ac, animated: true)
+
+        DispatchQueue.main.asyncAfter(deadline: .now() + 0.1, execute: {
+            if let indexPath = self.selectedIndexPath {
+                if let cell = self.tableView.cellForRow(at: indexPath) as? dataTableViewCell {
+                    cell.dataImage.alpha = 0.95
+                }
+            }
+        })
+        
+    }
+    
+    // ------------------------------------------------------------------------------------------
+    
+    func phoneSelected() {
+        let ac = UIAlertController(title: "(817) 734-7833", message: nil, preferredStyle: .alert)
+        ac.addAction(UIAlertAction(title: "Cancel", style: .cancel))
+        ac.addAction(UIAlertAction(title: "Call", style: .default) { [] _ in
+            if let url = URL(string: "tel://8177347833") {
+                if UIApplication.shared.canOpenURL(url) {
+                    UIApplication.shared.open(url, options: [:])
+                }
+            }
+        })
+        
+        present(ac, animated: true)
+        
+        DispatchQueue.main.asyncAfter(deadline: .now() + 0.2, execute: {
+            if let indexPath = self.selectedIndexPath {
+                if let cell = self.tableView.cellForRow(at: indexPath) as? dataTableViewCell {
+                    cell.dataImage.alpha = 0.95
+                }
+            }
+        })
+    }
+    
+    // ------------------------------------------------------------------------------------------
+    
 }

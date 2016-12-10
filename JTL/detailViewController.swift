@@ -31,6 +31,9 @@ class detailViewController: UIViewController {
         
         // set the title of the view to the date of education or tech experience
         title = date
+        
+        self.navigationController?.navigationBar.backItem?.backBarButtonItem?.title = "Back"
+
     }
     
     // ------------------------------------------------------------------------------------------

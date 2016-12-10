@@ -23,7 +23,9 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <navigationItem key="navigationItem" id="Vfq-Uj-Vw6"/>
+                    <navigationItem key="navigationItem" id="Vfq-Uj-Vw6">
+                        <barButtonItem key="backBarButtonItem" title="Back" id="FK1-HY-ljv"/>
+                    </navigationItem>
                     <connections>
                         <segue destination="hvb-4Q-iYa" kind="show" identifier="segueToTab" id="gaI-do-v8j"/>
                         <segue destination="PpT-x6-eJJ" kind="show" identifier="segueToIOS" id="FHW-6i-iQX"/>
@@ -305,7 +307,7 @@ Cumulative GPA: 3.54/4.0</string>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Eg3-9n-LBp" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="5154" y="62"/>
+            <point key="canvasLocation" x="5154" y="137"/>
         </scene>
         <!--Detail View Controller-->
         <scene sceneID="MTE-td-XFG">

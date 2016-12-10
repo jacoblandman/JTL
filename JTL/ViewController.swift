@@ -34,8 +34,16 @@ class ViewController: UITableViewController, UIViewControllerPreviewingDelegate 
             showAC = showAlertController
         }
         
-        // set table view to be in editing mode and allow users to tap on rows to select them
-        //tableView.register(UITableViewCell.self, forCellReuseIdentifier: "Cell")
+        if showAC {
+            let ac = UIAlertController(title: "iOS Experience", message: "This view displays a list of the 39 projects completed during the 'Hacking With Swift' tutorial series. Various topics discussed within each project can be seen below the title. Selecting a cell will load a safari view where you can obtain more information about each project. Peek and pop if you dare. Also, upon visiting this table view, each project has been indexed so you can search in spotlight for topics such as 'CALayer', 'closures', etc.", preferredStyle: .alert)
+            ac.addAction(UIAlertAction(title: "Got It!", style: .default))
+            ac.addAction(UIAlertAction(title: "Don't show again", style: .default) { [] _ in
+                let defaults = UserDefaults.standard
+                defaults.set(false, forKey: "showAC")
+            })
+            
+            present(ac, animated: true)
+        }
         
         title = "Hacking With Swift Tutorial Series"
         
@@ -46,9 +54,15 @@ class ViewController: UITableViewController, UIViewControllerPreviewingDelegate 
             registerForPreviewing(with: self, sourceView: view)
         }
         
-        
-        
     }
+    
+    // ------------------------------------------------------------------------------------------
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        navigationController?.hidesBarsOnSwipe = true
+    }
+    
     
     // ------------------------------------------------------------------------------------------
     
@@ -117,7 +131,7 @@ class ViewController: UITableViewController, UIViewControllerPreviewingDelegate 
         projects.append(["Project 7: Whitehouse Petitions", "JSON, Data, UITabBarController"])
         projects.append(["Project 8: 7 Swifty Words", "addTarget(), enumerated(), count, index(of:), property observers, range operators"])
         projects.append(["Project 9: Grand Central Dispatch", "GCD, threading, DispatchQueue, async"])
-        projects.append(["Project 10: Names to Faces", "UICollectionViewController, UIIMagePickerController, UUID, CALayer, Data, UIAlertController"])
+        projects.append(["Project 10: Names to Faces", "UICollectionViewController, UIImagePickerController, UUID, CALayer, Data, UIAlertController"])
         projects.append(["Project 11: Pachinko", "SpriteKit, Node, PhysicsBody, Action, ContactDelegate, LabelNode, EmitterNode"])
         projects.append(["Project 12: UserDefaults", "NSCoding, NSKeyedUnarchiver, NSKeyedArchiver"])
         projects.append(["Project 13: Instafilter", "UISlider, Core Image, CIContext, CIFilter, UIImageWriteToSavedPhotosAlbum()"])
