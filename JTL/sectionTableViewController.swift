@@ -223,7 +223,9 @@ class sectionTableViewController: UITableViewController {
                     vc.date = loadDates(forFile: fileName, forCellRowAt: indexPath)
                     
                     // set the title of the back item
-                    self.navigationController?.navigationBar.backItem?.title = "Back"
+                    let backItem = UIBarButtonItem()
+                    backItem.title = "Back"
+                    self.navigationItem.backBarButtonItem = backItem
                 }
             }
         }
