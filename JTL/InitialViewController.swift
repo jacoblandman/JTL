@@ -157,7 +157,8 @@ class InitialViewController: UIViewController {
             }
         }
        
-        UIView.animate(withDuration: 1, delay: 0, options: [], animations: { [unowned self] in self.jacobLabel.transform = CGAffineTransform(translationX: -self.view.frame.size.width, y: 0) }, completion: { [unowned self] _ in
+        UIView.animate(withDuration: 1, delay: 0, options: [], animations: {
+            [unowned self] in self.jacobLabel.transform = CGAffineTransform(translationX: -self.view.frame.size.width, y: 0) }, completion: { [unowned self] _ in
             if let alertSound = self.myAlertSound {
                 if !self.buttonTapped {
                     AudioServicesPlaySystemSound(alertSound)
@@ -165,7 +166,8 @@ class InitialViewController: UIViewController {
             }
         })
         
-        UIView.animate(withDuration: 1, delay: 1, options: [], animations: { [unowned self] in self.taylorLabel.transform = CGAffineTransform(translationX: -self.view.frame.size.width, y: 0) }, completion: { [unowned self] _ in
+        UIView.animate(withDuration: 1, delay: 1, options: [], animations: {
+            [unowned self] in self.taylorLabel.transform = CGAffineTransform(translationX: -self.view.frame.size.width, y: 0) }, completion: { [unowned self] _ in
             if let alertSound = self.myAlertSound {
                 if !self.buttonTapped {
                     AudioServicesPlaySystemSound(alertSound)
@@ -173,7 +175,8 @@ class InitialViewController: UIViewController {
             }
         })
         
-        UIView.animate(withDuration: 1, delay: 2, options: [], animations: { [unowned self] in self.landmanLabel.transform = CGAffineTransform(translationX: -self.view.frame.size.width, y: 0); AudioServicesPlaySystemSound(0) }, completion: nil)
+        UIView.animate(withDuration: 1, delay: 2, options: [], animations: {
+            [unowned self] in self.landmanLabel.transform = CGAffineTransform(translationX: -self.view.frame.size.width, y: 0); AudioServicesPlaySystemSound(0) }, completion: nil)
         
         // now remove the sound object if it was created. We know it was created if the myAlertSound variable is not nil
         // we need to delay for 3 seconds to make sure the sounds have been played already
@@ -317,6 +320,11 @@ class InitialViewController: UIViewController {
             print("turning sound off")
             bellButtonItem.image = UIImage(named: "bell-off-7")
             playSound = false
+            
+            // if in the middle of the animations, go ahead and delete the sound object to stop making noise
+            if let alertSound = myAlertSound {
+                AudioServicesDisposeSystemSoundID(alertSound)
+            }
         } else {
             print("turning sound on")
             bellButtonItem.image = UIImage(named: "bell-7")

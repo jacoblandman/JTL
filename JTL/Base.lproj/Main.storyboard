@@ -111,10 +111,10 @@
             </objects>
             <point key="canvasLocation" x="3210" y="-388"/>
         </scene>
-        <!--Table-->
+        <!--Resume-->
         <scene sceneID="6Jy-1Y-pFf">
             <objects>
-                <tableViewController storyboardIdentifier="resumeTable" useStoryboardIdentifierAsRestorationIdentifier="YES" id="1ou-fZ-0yn" customClass="ResumeTableViewController" customModule="JTL" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController storyboardIdentifier="ResumeViewController" title="Resume" useStoryboardIdentifierAsRestorationIdentifier="YES" id="1ou-fZ-0yn" customClass="ResumeTableViewController" customModule="JTL" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="187" sectionHeaderHeight="28" sectionFooterHeight="28" id="725-RS-Rvs">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
