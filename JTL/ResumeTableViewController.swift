@@ -8,7 +8,6 @@
 
 import UIKit
 import CoreImage
-//import HidingNavigationBar
 
 enum SectionType: Int {
     case personalInfo
@@ -47,7 +46,6 @@ class ResumeTableViewController: UITableViewController {
         }
         
         hidingNavigationBarManager?.onForegroundAction = .show
-        
         hidingNavigationBarManager?.expansionResistance = 125
     }
     

@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		AE2A15EB1DFCD059009C540A /* bell-7.png in Resources */ = {isa = PBXBuildFile; fileRef = AE2A15E91DFCD059009C540A /* bell-7.png */; };
+		AE2A15EC1DFCD059009C540A /* bell-off-7.png in Resources */ = {isa = PBXBuildFile; fileRef = AE2A15EA1DFCD059009C540A /* bell-off-7.png */; };
 		AE34B9151DF61999001D1E66 /* UIImageExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE34B9141DF61999001D1E66 /* UIImageExtension.swift */; };
 		AE34B92D1DF72F0B001D1E66 /* Awards.jpg in Resources */ = {isa = PBXBuildFile; fileRef = AE34B9261DF72F0B001D1E66 /* Awards.jpg */; };
 		AE34B92E1DF72F0B001D1E66 /* Education.jpg in Resources */ = {isa = PBXBuildFile; fileRef = AE34B9271DF72F0B001D1E66 /* Education.jpg */; };
@@ -106,6 +108,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		AE2A15E91DFCD059009C540A /* bell-7.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "bell-7.png"; path = "../../../../../../../Downloads/iconbeast-lite-200/iconbeast lite 200 - png/bell-7.png"; sourceTree = "<group>"; };
+		AE2A15EA1DFCD059009C540A /* bell-off-7.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "bell-off-7.png"; path = "../../../../../../../Downloads/iconbeast-lite-200/iconbeast lite 200 - png/bell-off-7.png"; sourceTree = "<group>"; };
 		AE34B9141DF61999001D1E66 /* UIImageExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIImageExtension.swift; sourceTree = "<group>"; };
 		AE34B9261DF72F0B001D1E66 /* Awards.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Awards.jpg; sourceTree = "<group>"; };
 		AE34B9271DF72F0B001D1E66 /* Education.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Education.jpg; sourceTree = "<group>"; };
@@ -294,6 +298,8 @@
 		AE34B96B1DF76C0D001D1E66 /* Icons and PDF */ = {
 			isa = PBXGroup;
 			children = (
+				AE2A15E91DFCD059009C540A /* bell-7.png */,
+				AE2A15EA1DFCD059009C540A /* bell-off-7.png */,
 				AE3DD85E1DF5EDD30016B7C6 /* list-fat-7.png */,
 				AE3DD8681DF5EDD30016B7C6 /* Resume.pdf */,
 				AE3DCCDE1DF5EDCB0016B7C6 /* file-document-7.png */,
@@ -527,12 +533,14 @@
 				AE34B9751DF77150001D1E66 /* publications2.jpg in Resources */,
 				AE36C2D21DF8E951005BDF4E /* education1.txt in Resources */,
 				AEEF38FE1DF8779800A95883 /* technicalexperience4.jpg in Resources */,
+				AE2A15EC1DFCD059009C540A /* bell-off-7.png in Resources */,
 				AE36C2CE1DF8E89E005BDF4E /* EducationDates.txt in Resources */,
 				AE34B9451DF747C4001D1E66 /* interestsHiking.jpg in Resources */,
 				AE93128B1DF887C60032E423 /* technicalexperience1.txt in Resources */,
 				AE3DD86D1DF5EDD40016B7C6 /* file-document-7.png in Resources */,
 				AE34B93F1DF73D9C001D1E66 /* education0.jpg in Resources */,
 				AEF088F51DEDECA400AA313C /* Main.storyboard in Resources */,
+				AE2A15EB1DFCD059009C540A /* bell-7.png in Resources */,
 				AE34B9491DF74837001D1E66 /* interestsFootball.jpg in Resources */,
 				AE34B92D1DF72F0B001D1E66 /* Awards.jpg in Resources */,
 				AE34B9411DF74135001D1E66 /* education1.jpg in Resources */,

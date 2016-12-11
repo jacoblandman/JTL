@@ -13,7 +13,7 @@
         <!--Initial View Controller-->
         <scene sceneID="50l-Wb-cEk">
             <objects>
-                <viewController storyboardIdentifier="InitialViewController" id="hqO-Nq-Mm8" customClass="InitialViewController" customModule="JTL" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="InitialViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="hqO-Nq-Mm8" customClass="InitialViewController" customModule="JTL" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="R2L-rc-WHs"/>
                         <viewControllerLayoutGuide type="bottom" id="wSv-VZ-coa"/>
@@ -25,8 +25,10 @@
                     </view>
                     <navigationItem key="navigationItem" id="Vfq-Uj-Vw6">
                         <barButtonItem key="backBarButtonItem" title="Back" id="FK1-HY-ljv"/>
+                        <barButtonItem key="rightBarButtonItem" image="bell-7.png" id="nUO-0Y-MqJ"/>
                     </navigationItem>
                     <connections>
+                        <outlet property="bellButtonItem" destination="nUO-0Y-MqJ" id="fUI-JN-XoG"/>
                         <segue destination="hvb-4Q-iYa" kind="show" identifier="segueToTab" id="gaI-do-v8j"/>
                         <segue destination="PpT-x6-eJJ" kind="show" identifier="segueToIOS" id="FHW-6i-iQX"/>
                     </connections>
@@ -112,7 +114,7 @@
         <!--Table-->
         <scene sceneID="6Jy-1Y-pFf">
             <objects>
-                <tableViewController id="1ou-fZ-0yn" customClass="ResumeTableViewController" customModule="JTL" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController storyboardIdentifier="resumeTable" useStoryboardIdentifierAsRestorationIdentifier="YES" id="1ou-fZ-0yn" customClass="ResumeTableViewController" customModule="JTL" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="187" sectionHeaderHeight="28" sectionFooterHeight="28" id="725-RS-Rvs">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -122,7 +124,7 @@
                                 <rect key="frame" x="0.0" y="28" width="414" height="187"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="hHe-I3-j7h" id="OAm-Ze-EWd">
-                                    <rect key="frame" x="0.0" y="0.0" width="381" height="186"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="381" height="187"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="nIa-5s-cnO">
@@ -265,7 +267,7 @@ Cumulative GPA: 3.54/4.0</string>
                                 <rect key="frame" x="0.0" y="28" width="414" height="186"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="dbu-xA-Xy5" id="UtO-Zr-Npj">
-                                    <rect key="frame" x="0.0" y="0.0" width="414" height="185"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="186"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="GP4-tA-4Jo">
@@ -324,9 +326,13 @@ Cumulative GPA: 3.54/4.0</string>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="H6M-ch-nxU">
                                 <rect key="frame" x="0.0" y="64" width="414" height="247"/>
                             </imageView>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="H5V-ql-bSt">
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" userInteractionEnabled="NO" contentMode="scaleToFill" editable="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="H5V-ql-bSt">
                                 <rect key="frame" x="0.0" y="319" width="414" height="368"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <accessibility key="accessibilityConfiguration">
+                                    <accessibilityTraits key="traits" notEnabled="YES"/>
+                                    <bool key="isElement" value="NO"/>
+                                </accessibility>
                                 <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
                                 <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
@@ -385,6 +391,7 @@ Cumulative GPA: 3.54/4.0</string>
         </scene>
     </scenes>
     <resources>
+        <image name="bell-7.png" width="30" height="30"/>
         <image name="education0.jpg" width="1080" height="1080"/>
         <image name="education1.jpg" width="3258" height="2007"/>
         <image name="file-document-7.png" width="30" height="30"/>

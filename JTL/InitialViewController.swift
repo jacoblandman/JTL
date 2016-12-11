@@ -24,7 +24,8 @@ class InitialViewController: UIViewController {
     var linkedinButton: UIButton!
     var resumeButton: UIButton!
     var myAlertSound: SystemSoundID?
-    var sound: AVAudioPlayer!
+    var playSound: Bool = true
+    var bellButtonItem: UIBarButtonItem!
     
     var buttonTapped: Bool = false
     
@@ -56,6 +57,20 @@ class InitialViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        let defaults = UserDefaults.standard
+        if let playSounds = defaults.object(forKey: "playSound") as? Bool {
+            playSound = playSounds
+        } else {
+            playSound = true
+        }
+        
+        if (playSound) {
+            bellButtonItem = UIBarButtonItem(image: UIImage(named: "bell-7"), style: .plain, target: self, action: #selector(bellTapped))
+        } else {
+            bellButtonItem = UIBarButtonItem(image: UIImage(named: "bell-off-7"), style: .plain, target: self, action: #selector(bellTapped))
+        }
+        
+        navigationItem.rightBarButtonItem = bellButtonItem
         // Animate the labels to move in
         animateLabels()
 
@@ -134,13 +149,14 @@ class InitialViewController: UIViewController {
 
         // try to create my own sound object
         
-        
-        if let url = URL(string: "/System/Library/Audio/UISounds/Swish.caf") {
-            myAlertSound = 0
-            AudioServicesCreateSystemSoundID(url as CFURL, &myAlertSound!)
-            AudioServicesPlaySystemSound(myAlertSound!)
+        if (playSound) {
+            if let url = URL(string: "/System/Library/Audio/UISounds/Swish.caf") {
+                myAlertSound = 0
+                AudioServicesCreateSystemSoundID(url as CFURL, &myAlertSound!)
+                AudioServicesPlaySystemSound(myAlertSound!)
+            }
         }
-        
+       
         UIView.animate(withDuration: 1, delay: 0, options: [], animations: { [unowned self] in self.jacobLabel.transform = CGAffineTransform(translationX: -self.view.frame.size.width, y: 0) }, completion: { [unowned self] _ in
             if let alertSound = self.myAlertSound {
                 if !self.buttonTapped {
@@ -291,6 +307,25 @@ class InitialViewController: UIViewController {
         NSLayoutConstraint(item: iosButton, attribute: .height, relatedBy: .equal, toItem: resumeButton, attribute: .height, multiplier: 1.0, constant: 0.0).isActive = true
         NSLayoutConstraint(item: iosButton, attribute: .top, relatedBy: .equal, toItem: linkedinButton, attribute: .bottom, multiplier: 1.0, constant: distanceBetween).isActive = true
         NSLayoutConstraint(item: iosButton, attribute: .bottom, relatedBy: .equal, toItem: view, attribute: .bottom, multiplier: 1.0, constant: -offsetFromBottom).isActive = true
+    }
+    
+    // ------------------------------------------------------------------------------------------
+    
+    func bellTapped() {
+        
+        if (playSound) {
+            print("turning sound off")
+            bellButtonItem.image = UIImage(named: "bell-off-7")
+            playSound = false
+        } else {
+            print("turning sound on")
+            bellButtonItem.image = UIImage(named: "bell-7")
+            playSound = true
+        }
+        
+        let defaults = UserDefaults.standard
+        defaults.set(playSound, forKey: "playSound")
+        
     }
     
     // ------------------------------------------------------------------------------------------

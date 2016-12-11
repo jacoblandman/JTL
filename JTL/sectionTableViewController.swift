@@ -17,17 +17,10 @@ class sectionTableViewController: UITableViewController {
     var imageNames = [String]()
     var cellAccessory: UITableViewCellAccessoryType = .none
     var selectedIndexPath: IndexPath?
+    var hidingNavigationBarManager: HidingNavigationBarManager?
     
     
     // METHODS
-    // ------------------------------------------------------------------------------------------
-    // remove the observer when this class is deconstructed
-    // this may not be necessary anymore due to updates in iOS8?
-    
-    deinit {
-        NotificationCenter.default.removeObserver(self)
-    }
-    
     // ------------------------------------------------------------------------------------------
     // in this function we can set the image alpha back to normal 
     // this simulates to the user that they clicked a cell
@@ -41,7 +34,7 @@ class sectionTableViewController: UITableViewController {
             }
         }
         
-        navigationController?.hidesBarsOnSwipe = true
+        hidingNavigationBarManager?.viewWillAppear(animated)
     }
     
     // ------------------------------------------------------------------------------------------
@@ -55,6 +48,9 @@ class sectionTableViewController: UITableViewController {
         // these data types have additional detailed views
         if (dataType == "Technical Experience" || dataType == "Education") { cellAccessory = .disclosureIndicator }
         
+        hidingNavigationBarManager = HidingNavigationBarManager(viewController: self, scrollView: tableView)
+        hidingNavigationBarManager?.onForegroundAction = .show
+        hidingNavigationBarManager?.expansionResistance = 125
         
     }
     
@@ -311,6 +307,30 @@ class sectionTableViewController: UITableViewController {
                 }
             }
         })
+    }
+    
+    // ------------------------------------------------------------------------------------------
+    
+    override func viewDidLayoutSubviews() {
+        super.viewDidLayoutSubviews()
+        
+        hidingNavigationBarManager?.viewDidLayoutSubviews()
+    }
+    
+    // ------------------------------------------------------------------------------------------
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        
+        hidingNavigationBarManager?.viewWillDisappear(animated)
+    }
+    
+    // ------------------------------------------------------------------------------------------
+    
+    override func scrollViewShouldScrollToTop(_ scrollView: UIScrollView) -> Bool {
+        hidingNavigationBarManager?.shouldScrollToTop()
+        
+        return true
     }
     
     // ------------------------------------------------------------------------------------------
