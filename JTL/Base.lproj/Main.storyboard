@@ -25,10 +25,8 @@
                     </view>
                     <navigationItem key="navigationItem" id="Vfq-Uj-Vw6">
                         <barButtonItem key="backBarButtonItem" title="Back" id="FK1-HY-ljv"/>
-                        <barButtonItem key="rightBarButtonItem" image="bell-7.png" id="nUO-0Y-MqJ"/>
                     </navigationItem>
                     <connections>
-                        <outlet property="bellButtonItem" destination="nUO-0Y-MqJ" id="fUI-JN-XoG"/>
                         <segue destination="hvb-4Q-iYa" kind="show" identifier="segueToTab" id="gaI-do-v8j"/>
                         <segue destination="PpT-x6-eJJ" kind="show" identifier="segueToIOS" id="FHW-6i-iQX"/>
                     </connections>
@@ -124,7 +122,7 @@
                                 <rect key="frame" x="0.0" y="28" width="414" height="187"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="hHe-I3-j7h" id="OAm-Ze-EWd">
-                                    <rect key="frame" x="0.0" y="0.0" width="381" height="187"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="381" height="186"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="nIa-5s-cnO">
@@ -267,7 +265,7 @@ Cumulative GPA: 3.54/4.0</string>
                                 <rect key="frame" x="0.0" y="28" width="414" height="186"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="dbu-xA-Xy5" id="UtO-Zr-Npj">
-                                    <rect key="frame" x="0.0" y="0.0" width="414" height="186"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="185"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="GP4-tA-4Jo">
@@ -391,7 +389,6 @@ Cumulative GPA: 3.54/4.0</string>
         </scene>
     </scenes>
     <resources>
-        <image name="bell-7.png" width="30" height="30"/>
         <image name="education0.jpg" width="1080" height="1080"/>
         <image name="education1.jpg" width="3258" height="2007"/>
         <image name="file-document-7.png" width="30" height="30"/>
