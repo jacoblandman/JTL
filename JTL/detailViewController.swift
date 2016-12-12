@@ -48,7 +48,8 @@ class detailViewController: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         
-        detailImage.image = UIImage(named: imageName)
+        let path = Bundle.main.path(forResource: imageName, ofType: nil)!
+        detailImage.image = UIImage(contentsOfFile: path)
         detailText.text = text
         detailText.font = UIFont.preferredFont(forTextStyle: .body)
         detailLabel.text = label

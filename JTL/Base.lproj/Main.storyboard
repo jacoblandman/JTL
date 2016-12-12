@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11542" systemVersion="16B2555" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="Z6a-bL-Hk9">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11542" systemVersion="16B2555" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="QG2-Mg-wMc">
     <device id="retina5_5" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -33,7 +33,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="agO-wO-h9c" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2396" y="28"/>
+            <point key="canvasLocation" x="3302.898550724638" y="27.717391304347828"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="z9r-wk-7Gk">
@@ -51,7 +51,7 @@
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zyT-8L-BlR" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3232" y="499"/>
+            <point key="canvasLocation" x="4139.130434782609" y="498.91304347826093"/>
         </scene>
         <!--pdf-->
         <scene sceneID="78W-JE-oUD">
@@ -70,7 +70,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dk2-zA-Kae" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4251" y="799"/>
+            <point key="canvasLocation" x="5158" y="876"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="zYy-Sc-5Rv">
@@ -107,7 +107,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="nZz-nc-KkW" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3210" y="-388"/>
+            <point key="canvasLocation" x="4115.9420289855079" y="-388.04347826086962"/>
         </scene>
         <!--Resume-->
         <scene sceneID="6Jy-1Y-pFf">
@@ -166,7 +166,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="evd-7s-gtH" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4251" y="137"/>
+            <point key="canvasLocation" x="5157.971014492754" y="136.95652173913044"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="dAs-vp-amv">
@@ -250,7 +250,7 @@ Cumulative GPA: 3.54/4.0</string>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jnY-fW-bHf" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="5154" y="-528"/>
+            <point key="canvasLocation" x="6060.8695652173919" y="-528.26086956521738"/>
         </scene>
         <!--Section Table View Controller-->
         <scene sceneID="Ujx-2g-beN">
@@ -307,7 +307,7 @@ Cumulative GPA: 3.54/4.0</string>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Eg3-9n-LBp" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="5154" y="137"/>
+            <point key="canvasLocation" x="6060.8695652173919" y="136.95652173913044"/>
         </scene>
         <!--Detail View Controller-->
         <scene sceneID="MTE-td-XFG">
@@ -367,29 +367,29 @@ Cumulative GPA: 3.54/4.0</string>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="RII-jB-vSi" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="6055" y="137"/>
+            <point key="canvasLocation" x="6960.8695652173919" y="136.95652173913044"/>
         </scene>
         <!--Navigation Controller-->
-        <scene sceneID="G6j-Gi-Rao">
+        <scene sceneID="lGq-tw-KKn">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Z6a-bL-Hk9" sceneMemberID="viewController">
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="QG2-Mg-wMc" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="c91-bv-hnl">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="HXf-mQ-XeT">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
-                        <segue destination="hqO-Nq-Mm8" kind="relationship" relationship="rootViewController" id="Cem-lD-i5W"/>
+                        <segue destination="hqO-Nq-Mm8" kind="relationship" relationship="rootViewController" id="amb-oX-OZC"/>
                     </connections>
                 </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="L0p-IS-9Uh" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="cOI-L6-bhh" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1686" y="28"/>
+            <point key="canvasLocation" x="2395.6521739130435" y="27.717391304347828"/>
         </scene>
     </scenes>
     <resources>
-        <image name="education0.jpg" width="1080" height="1080"/>
+        <image name="education0.jpg" width="432" height="432"/>
         <image name="education1.jpg" width="3258" height="2007"/>
         <image name="file-document-7.png" width="30" height="30"/>
         <image name="list-fat-7.png" width="30" height="30"/>

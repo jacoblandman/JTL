@@ -134,54 +134,37 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         let shortcutType = shortcutItem.type
         guard let shortcutIdentifier = ShortcutIdentifier(fullIdentifier: shortcutType) else { return false }
-        let sb = UIStoryboard(name: "Main", bundle: nil)
         
-        // lets handle the ios and resume quick actions differently
-        switch (shortcutIdentifier) {
-        case .ViewiOS:
-            if let viewController = sb.instantiateViewController(withIdentifier: "ExperienceViewController") as? ViewController {
-                if let rootViewController = self.window?.rootViewController as? UINavigationController {
-                    // push to the iOS experience view and then call the showTutorial Function to launch safari
-                    rootViewController.pushViewController(viewController, animated: false)
-                }
-            }
-            handled = true
-            break
-            
-        case .ViewResume:
-            if let viewController = sb.instantiateViewController(withIdentifier: "ResumeViewController") as? ResumeTableViewController {
-                if let rootViewController = self.window?.rootViewController as? UINavigationController {
-                    // push to the iOS experience view and then call the showTutorial Function to launch safari
-                    rootViewController.pushViewController(viewController, animated: false)
-                }
-            }
-            handled = true
-            break
-            
-        case .ViewFacebook:
-            if let viewController = sb.instantiateViewController(withIdentifier: "InitialViewController") as? InitialViewController {
-                if let rootViewController = self.window?.rootViewController as? UINavigationController {
-                    // push to the iOS experience view and then call the showTutorial Function to launch safari
-                    rootViewController.pushViewController(viewController, animated: false)
-                    viewController.tappedFacebook(self)
-                }
-            }
-            handled = true
-            break
-            
-        case .ViewLinkedIn:
-            if let viewController = sb.instantiateViewController(withIdentifier: "InitialViewController") as? InitialViewController {
-                if let rootViewController = self.window?.rootViewController as? UINavigationController {
-                    // push to the iOS experience view and then call the showTutorial Function to launch safari
-                    rootViewController.pushViewController(viewController, animated: false)
-                    viewController.tappedLinkedIn(self)
-                }
-            }
-            handled = true
-            break
-        }
+//        let sb = UIStoryboard(name: "Main", bundle: nil)
+//        if let viewController = sb.instantiateViewController(withIdentifier: "InitialViewController") as? InitialViewController {
+//            if let rootViewController = self.window?.rootViewController as? UINavigationController {
+//                // push to the iOS experience view and then call the showTutorial Function to launch safari
+//                rootViewController.pushViewController(viewController, animated: false)
+//                
+//                switch (shortcutIdentifier) {
+//                case .ViewFacebook:
+//                    viewController.tappedFacebook(self)
+//                    handled = true
+//                    break
+//                    
+//                case .ViewResume:
+//                    viewController.tappedResume(self)
+//                    handled = true
+//                    break
+//                    
+//                case .ViewLinkedIn:
+//                    viewController.tappedLinkedIn(self)
+//                    handled = true
+//                    break
+//                    
+//                case .ViewiOS:
+//                    viewController.tappedIOSExperience(self)
+//                    handled = true
+//                    break
+//                }
+//            }
+//        }
         
-            /*
         if let navigationController = window?.rootViewController as? UINavigationController {
             // pop to the root view controller bc if you are in one of the other table views when attempting to perform the "resume" or "iOS" quick action
             // then the quick action won't work because the topViewController won't be the InitialViewController
@@ -211,7 +194,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                         break
                 }
             }
-        } */
+        }
         
         return handled
     }

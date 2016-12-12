@@ -112,7 +112,8 @@ class sectionTableViewController: UITableViewController {
         let type = dataType.lowercased()
         let name: String = type.replacingOccurrences(of: " ", with: "").appending(imageNames[indexPath.row].appending(".jpg"))
         print(name)
-        cell.dataImage.image = UIImage(named: name)
+        let path = Bundle.main.path(forResource: name, ofType: "")!
+        cell.dataImage.image = UIImage(contentsOfFile: path)
         cell.dataImage.alpha = 0.95
         
         // modify the label attributes

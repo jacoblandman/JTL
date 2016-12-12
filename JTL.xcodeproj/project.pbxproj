@@ -10,42 +10,13 @@
 		AE2A15EB1DFCD059009C540A /* bell-7.png in Resources */ = {isa = PBXBuildFile; fileRef = AE2A15E91DFCD059009C540A /* bell-7.png */; };
 		AE2A15EC1DFCD059009C540A /* bell-off-7.png in Resources */ = {isa = PBXBuildFile; fileRef = AE2A15EA1DFCD059009C540A /* bell-off-7.png */; };
 		AE34B9151DF61999001D1E66 /* UIImageExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE34B9141DF61999001D1E66 /* UIImageExtension.swift */; };
-		AE34B92D1DF72F0B001D1E66 /* Awards.jpg in Resources */ = {isa = PBXBuildFile; fileRef = AE34B9261DF72F0B001D1E66 /* Awards.jpg */; };
-		AE34B92E1DF72F0B001D1E66 /* Education.jpg in Resources */ = {isa = PBXBuildFile; fileRef = AE34B9271DF72F0B001D1E66 /* Education.jpg */; };
-		AE34B92F1DF72F0B001D1E66 /* Interests.jpg in Resources */ = {isa = PBXBuildFile; fileRef = AE34B9281DF72F0B001D1E66 /* Interests.jpg */; };
-		AE34B9301DF72F0B001D1E66 /* Languages.jpg in Resources */ = {isa = PBXBuildFile; fileRef = AE34B9291DF72F0B001D1E66 /* Languages.jpg */; };
-		AE34B9311DF72F0B001D1E66 /* PersonalInfo.jpg in Resources */ = {isa = PBXBuildFile; fileRef = AE34B92A1DF72F0B001D1E66 /* PersonalInfo.jpg */; };
-		AE34B9321DF72F0B001D1E66 /* Publications.jpg in Resources */ = {isa = PBXBuildFile; fileRef = AE34B92B1DF72F0B001D1E66 /* Publications.jpg */; };
-		AE34B9331DF72F0B001D1E66 /* TechnicalExperience.jpg in Resources */ = {isa = PBXBuildFile; fileRef = AE34B92C1DF72F0B001D1E66 /* TechnicalExperience.jpg */; };
-		AE34B93F1DF73D9C001D1E66 /* education0.jpg in Resources */ = {isa = PBXBuildFile; fileRef = AE34B93D1DF73D9C001D1E66 /* education0.jpg */; };
-		AE34B9411DF74135001D1E66 /* education1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = AE34B9401DF74135001D1E66 /* education1.jpg */; };
-		AE34B9441DF747C4001D1E66 /* interestsGolf.jpg in Resources */ = {isa = PBXBuildFile; fileRef = AE34B9421DF747C4001D1E66 /* interestsGolf.jpg */; };
-		AE34B9451DF747C4001D1E66 /* interestsHiking.jpg in Resources */ = {isa = PBXBuildFile; fileRef = AE34B9431DF747C4001D1E66 /* interestsHiking.jpg */; };
-		AE34B9481DF74837001D1E66 /* interestsBaseball.jpg in Resources */ = {isa = PBXBuildFile; fileRef = AE34B9461DF74837001D1E66 /* interestsBaseball.jpg */; };
-		AE34B9491DF74837001D1E66 /* interestsFootball.jpg in Resources */ = {isa = PBXBuildFile; fileRef = AE34B9471DF74837001D1E66 /* interestsFootball.jpg */; };
-		AE34B94B1DF7486D001D1E66 /* interestsSwimming.jpg in Resources */ = {isa = PBXBuildFile; fileRef = AE34B94A1DF7486D001D1E66 /* interestsSwimming.jpg */; };
-		AE34B9571DF75BEA001D1E66 /* languagesC++.jpg in Resources */ = {isa = PBXBuildFile; fileRef = AE34B9501DF75BEA001D1E66 /* languagesC++.jpg */; };
-		AE34B9581DF75BEA001D1E66 /* languagesFortran.jpg in Resources */ = {isa = PBXBuildFile; fileRef = AE34B9511DF75BEA001D1E66 /* languagesFortran.jpg */; };
-		AE34B95A1DF75BEA001D1E66 /* languagesMatlab.jpg in Resources */ = {isa = PBXBuildFile; fileRef = AE34B9531DF75BEA001D1E66 /* languagesMatlab.jpg */; };
-		AE34B95B1DF75BEA001D1E66 /* languagesPython.jpg in Resources */ = {isa = PBXBuildFile; fileRef = AE34B9541DF75BEA001D1E66 /* languagesPython.jpg */; };
-		AE34B95D1DF75BEA001D1E66 /* languagesSwift.jpg in Resources */ = {isa = PBXBuildFile; fileRef = AE34B9561DF75BEA001D1E66 /* languagesSwift.jpg */; };
-		AE34B95F1DF75D0A001D1E66 /* languagesLatex.jpg in Resources */ = {isa = PBXBuildFile; fileRef = AE34B95E1DF75D0A001D1E66 /* languagesLatex.jpg */; };
-		AE34B9611DF75F08001D1E66 /* languagesR.jpg in Resources */ = {isa = PBXBuildFile; fileRef = AE34B9601DF75F08001D1E66 /* languagesR.jpg */; };
 		AE34B9631DF76328001D1E66 /* sectionTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE34B9621DF76328001D1E66 /* sectionTableViewController.swift */; };
 		AE34B9651DF763B4001D1E66 /* dataTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE34B9641DF763B4001D1E66 /* dataTableViewCell.swift */; };
 		AE34B9671DF76815001D1E66 /* Languages.txt in Resources */ = {isa = PBXBuildFile; fileRef = AE34B9661DF76815001D1E66 /* Languages.txt */; };
 		AE34B9691DF76B3F001D1E66 /* Interests.txt in Resources */ = {isa = PBXBuildFile; fileRef = AE34B9681DF76B3F001D1E66 /* Interests.txt */; };
 		AE34B96D1DF76C68001D1E66 /* Publications.txt in Resources */ = {isa = PBXBuildFile; fileRef = AE34B96C1DF76C68001D1E66 /* Publications.txt */; };
 		AE34B96F1DF76CC4001D1E66 /* Awards.txt in Resources */ = {isa = PBXBuildFile; fileRef = AE34B96E1DF76CC4001D1E66 /* Awards.txt */; };
-		AE34B9731DF77150001D1E66 /* publications0.jpg in Resources */ = {isa = PBXBuildFile; fileRef = AE34B9701DF77150001D1E66 /* publications0.jpg */; };
-		AE34B9741DF77150001D1E66 /* publications1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = AE34B9711DF77150001D1E66 /* publications1.jpg */; };
-		AE34B9751DF77150001D1E66 /* publications2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = AE34B9721DF77150001D1E66 /* publications2.jpg */; };
-		AE34B9771DF7739C001D1E66 /* awards0.jpg in Resources */ = {isa = PBXBuildFile; fileRef = AE34B9761DF7739C001D1E66 /* awards0.jpg */; };
-		AE34B97B1DF774BF001D1E66 /* awards1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = AE34B9781DF774BF001D1E66 /* awards1.jpg */; };
-		AE34B97C1DF774BF001D1E66 /* awards2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = AE34B9791DF774BF001D1E66 /* awards2.jpg */; };
-		AE34B97D1DF774BF001D1E66 /* awards3.jpg in Resources */ = {isa = PBXBuildFile; fileRef = AE34B97A1DF774BF001D1E66 /* awards3.jpg */; };
 		AE34B97F1DF775FF001D1E66 /* TechnicalExperience.txt in Resources */ = {isa = PBXBuildFile; fileRef = AE34B97E1DF775FF001D1E66 /* TechnicalExperience.txt */; };
-		AE36C2C81DF8D78A005BDF4E /* SafariServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AE36C2C71DF8D78A005BDF4E /* SafariServices.framework */; };
 		AE36C2CA1DF8E2CF005BDF4E /* TechnicalExperienceDates.txt in Resources */ = {isa = PBXBuildFile; fileRef = AE36C2C91DF8E2CF005BDF4E /* TechnicalExperienceDates.txt */; };
 		AE36C2CC1DF8E73E005BDF4E /* Education.txt in Resources */ = {isa = PBXBuildFile; fileRef = AE36C2CB1DF8E73E005BDF4E /* Education.txt */; };
 		AE36C2CE1DF8E89E005BDF4E /* EducationDates.txt in Resources */ = {isa = PBXBuildFile; fileRef = AE36C2CD1DF8E89E005BDF4E /* EducationDates.txt */; };
@@ -67,19 +38,47 @@
 		AE9312911DF888100032E423 /* technicalexperience4.txt in Resources */ = {isa = PBXBuildFile; fileRef = AE9312901DF888100032E423 /* technicalexperience4.txt */; };
 		AE9312931DF888230032E423 /* technicalexperience5.txt in Resources */ = {isa = PBXBuildFile; fileRef = AE9312921DF888230032E423 /* technicalexperience5.txt */; };
 		AE9312951DF88B210032E423 /* PersonalInfo.txt in Resources */ = {isa = PBXBuildFile; fileRef = AE9312941DF88B210032E423 /* PersonalInfo.txt */; };
-		AE93129A1DF88D490032E423 /* personalinfo1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = AE9312961DF88D490032E423 /* personalinfo1.jpg */; };
-		AE93129B1DF88D490032E423 /* personalinfo2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = AE9312971DF88D490032E423 /* personalinfo2.jpg */; };
-		AE93129C1DF88D490032E423 /* personalinfo3.jpg in Resources */ = {isa = PBXBuildFile; fileRef = AE9312981DF88D490032E423 /* personalinfo3.jpg */; };
-		AE93129D1DF88D490032E423 /* personalinfo4.jpg in Resources */ = {isa = PBXBuildFile; fileRef = AE9312991DF88D490032E423 /* personalinfo4.jpg */; };
-		AE9312A11DF890910032E423 /* personalinfo0.jpg in Resources */ = {isa = PBXBuildFile; fileRef = AE9312A01DF890910032E423 /* personalinfo0.jpg */; };
+		AE963A7A1DFDE05200EEAB3B /* interestsBaseball.jpg in Resources */ = {isa = PBXBuildFile; fileRef = AE963A781DFDE05200EEAB3B /* interestsBaseball.jpg */; };
+		AE963A7B1DFDE05200EEAB3B /* interestsFootball.jpg in Resources */ = {isa = PBXBuildFile; fileRef = AE963A791DFDE05200EEAB3B /* interestsFootball.jpg */; };
+		AE963AA21DFE08F700EEAB3B /* Awards.jpg in Resources */ = {isa = PBXBuildFile; fileRef = AE963A7E1DFE08F700EEAB3B /* Awards.jpg */; };
+		AE963AA31DFE08F700EEAB3B /* awards0.jpg in Resources */ = {isa = PBXBuildFile; fileRef = AE963A7F1DFE08F700EEAB3B /* awards0.jpg */; };
+		AE963AA41DFE08F700EEAB3B /* awards1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = AE963A801DFE08F700EEAB3B /* awards1.jpg */; };
+		AE963AA51DFE08F700EEAB3B /* awards2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = AE963A811DFE08F700EEAB3B /* awards2.jpg */; };
+		AE963AA61DFE08F700EEAB3B /* awards3.jpg in Resources */ = {isa = PBXBuildFile; fileRef = AE963A821DFE08F700EEAB3B /* awards3.jpg */; };
+		AE963AA71DFE08F700EEAB3B /* Education.jpg in Resources */ = {isa = PBXBuildFile; fileRef = AE963A831DFE08F700EEAB3B /* Education.jpg */; };
+		AE963AA81DFE08F700EEAB3B /* education0.jpg in Resources */ = {isa = PBXBuildFile; fileRef = AE963A841DFE08F700EEAB3B /* education0.jpg */; };
+		AE963AA91DFE08F700EEAB3B /* Interests.jpg in Resources */ = {isa = PBXBuildFile; fileRef = AE963A851DFE08F700EEAB3B /* Interests.jpg */; };
+		AE963AAA1DFE08F700EEAB3B /* interestsGolf.jpg in Resources */ = {isa = PBXBuildFile; fileRef = AE963A861DFE08F700EEAB3B /* interestsGolf.jpg */; };
+		AE963AAB1DFE08F700EEAB3B /* interestsHiking.jpg in Resources */ = {isa = PBXBuildFile; fileRef = AE963A871DFE08F700EEAB3B /* interestsHiking.jpg */; };
+		AE963AAC1DFE08F700EEAB3B /* interestsSwimming.jpg in Resources */ = {isa = PBXBuildFile; fileRef = AE963A881DFE08F700EEAB3B /* interestsSwimming.jpg */; };
+		AE963AAD1DFE08F700EEAB3B /* Languages.jpg in Resources */ = {isa = PBXBuildFile; fileRef = AE963A891DFE08F700EEAB3B /* Languages.jpg */; };
+		AE963AAE1DFE08F700EEAB3B /* languagesC++.jpg in Resources */ = {isa = PBXBuildFile; fileRef = AE963A8A1DFE08F700EEAB3B /* languagesC++.jpg */; };
+		AE963AAF1DFE08F700EEAB3B /* languagesFortran.jpg in Resources */ = {isa = PBXBuildFile; fileRef = AE963A8B1DFE08F700EEAB3B /* languagesFortran.jpg */; };
+		AE963AB01DFE08F700EEAB3B /* languagesLatex.jpg in Resources */ = {isa = PBXBuildFile; fileRef = AE963A8C1DFE08F700EEAB3B /* languagesLatex.jpg */; };
+		AE963AB11DFE08F700EEAB3B /* languagesMatlab.jpg in Resources */ = {isa = PBXBuildFile; fileRef = AE963A8D1DFE08F700EEAB3B /* languagesMatlab.jpg */; };
+		AE963AB21DFE08F700EEAB3B /* languagesPython.jpg in Resources */ = {isa = PBXBuildFile; fileRef = AE963A8E1DFE08F700EEAB3B /* languagesPython.jpg */; };
+		AE963AB31DFE08F700EEAB3B /* languagesR.jpg in Resources */ = {isa = PBXBuildFile; fileRef = AE963A8F1DFE08F700EEAB3B /* languagesR.jpg */; };
+		AE963AB41DFE08F700EEAB3B /* languagesSwift.jpg in Resources */ = {isa = PBXBuildFile; fileRef = AE963A901DFE08F700EEAB3B /* languagesSwift.jpg */; };
+		AE963AB51DFE08F700EEAB3B /* PersonalInfo.jpg in Resources */ = {isa = PBXBuildFile; fileRef = AE963A911DFE08F700EEAB3B /* PersonalInfo.jpg */; };
+		AE963AB61DFE08F700EEAB3B /* personalinfo0.jpg in Resources */ = {isa = PBXBuildFile; fileRef = AE963A921DFE08F700EEAB3B /* personalinfo0.jpg */; };
+		AE963AB71DFE08F700EEAB3B /* personalinfo1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = AE963A931DFE08F700EEAB3B /* personalinfo1.jpg */; };
+		AE963AB81DFE08F700EEAB3B /* personalinfo2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = AE963A941DFE08F700EEAB3B /* personalinfo2.jpg */; };
+		AE963AB91DFE08F700EEAB3B /* personalinfo3.jpg in Resources */ = {isa = PBXBuildFile; fileRef = AE963A951DFE08F700EEAB3B /* personalinfo3.jpg */; };
+		AE963ABA1DFE08F700EEAB3B /* personalinfo4.jpg in Resources */ = {isa = PBXBuildFile; fileRef = AE963A961DFE08F700EEAB3B /* personalinfo4.jpg */; };
+		AE963ABB1DFE08F700EEAB3B /* Publications.jpg in Resources */ = {isa = PBXBuildFile; fileRef = AE963A971DFE08F700EEAB3B /* Publications.jpg */; };
+		AE963ABC1DFE08F700EEAB3B /* publications0.jpg in Resources */ = {isa = PBXBuildFile; fileRef = AE963A981DFE08F700EEAB3B /* publications0.jpg */; };
+		AE963ABD1DFE08F700EEAB3B /* publications1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = AE963A991DFE08F700EEAB3B /* publications1.jpg */; };
+		AE963ABE1DFE08F700EEAB3B /* publications2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = AE963A9A1DFE08F700EEAB3B /* publications2.jpg */; };
+		AE963ABF1DFE08F700EEAB3B /* TechnicalExperience.jpg in Resources */ = {isa = PBXBuildFile; fileRef = AE963A9B1DFE08F700EEAB3B /* TechnicalExperience.jpg */; };
+		AE963AC01DFE08F700EEAB3B /* technicalexperience0.jpg in Resources */ = {isa = PBXBuildFile; fileRef = AE963A9C1DFE08F700EEAB3B /* technicalexperience0.jpg */; };
+		AE963AC11DFE08F700EEAB3B /* technicalexperience1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = AE963A9D1DFE08F700EEAB3B /* technicalexperience1.jpg */; };
+		AE963AC21DFE08F700EEAB3B /* technicalexperience2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = AE963A9E1DFE08F700EEAB3B /* technicalexperience2.jpg */; };
+		AE963AC31DFE08F700EEAB3B /* technicalexperience3.jpg in Resources */ = {isa = PBXBuildFile; fileRef = AE963A9F1DFE08F700EEAB3B /* technicalexperience3.jpg */; };
+		AE963AC41DFE08F700EEAB3B /* technicalexperience4.jpg in Resources */ = {isa = PBXBuildFile; fileRef = AE963AA01DFE08F700EEAB3B /* technicalexperience4.jpg */; };
+		AE963AC51DFE08F700EEAB3B /* technicalexperience5.jpg in Resources */ = {isa = PBXBuildFile; fileRef = AE963AA11DFE08F700EEAB3B /* technicalexperience5.jpg */; };
+		AE963AC71DFE099300EEAB3B /* education1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = AE963AC61DFE099300EEAB3B /* education1.jpg */; };
 		AEDA31C41DFCB2E40045E0F4 /* Swoosh.wav in Resources */ = {isa = PBXBuildFile; fileRef = AEDA31C31DFCB2E40045E0F4 /* Swoosh.wav */; };
 		AEDA31C61DFCB6640045E0F4 /* Swoosh.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = AEDA31C51DFCB6640045E0F4 /* Swoosh.mp3 */; };
-		AEEF38FC1DF8779800A95883 /* technicalexperience0.jpg in Resources */ = {isa = PBXBuildFile; fileRef = AEEF38F91DF8779800A95883 /* technicalexperience0.jpg */; };
-		AEEF38FD1DF8779800A95883 /* technicalexperience2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = AEEF38FA1DF8779800A95883 /* technicalexperience2.jpg */; };
-		AEEF38FE1DF8779800A95883 /* technicalexperience4.jpg in Resources */ = {isa = PBXBuildFile; fileRef = AEEF38FB1DF8779800A95883 /* technicalexperience4.jpg */; };
-		AEEF39011DF877E200A95883 /* technicalexperience1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = AEEF38FF1DF877E200A95883 /* technicalexperience1.jpg */; };
-		AEEF39021DF877E200A95883 /* technicalexperience3.jpg in Resources */ = {isa = PBXBuildFile; fileRef = AEEF39001DF877E200A95883 /* technicalexperience3.jpg */; };
-		AEEF39041DF8781400A95883 /* technicalexperience5.jpg in Resources */ = {isa = PBXBuildFile; fileRef = AEEF39031DF8781400A95883 /* technicalexperience5.jpg */; };
 		AEF088F01DEDECA400AA313C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEF088EF1DEDECA400AA313C /* AppDelegate.swift */; };
 		AEF088F21DEDECA400AA313C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEF088F11DEDECA400AA313C /* ViewController.swift */; };
 		AEF088F51DEDECA400AA313C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AEF088F31DEDECA400AA313C /* Main.storyboard */; };
@@ -111,40 +110,12 @@
 		AE2A15E91DFCD059009C540A /* bell-7.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "bell-7.png"; path = "../../../../../../../Downloads/iconbeast-lite-200/iconbeast lite 200 - png/bell-7.png"; sourceTree = "<group>"; };
 		AE2A15EA1DFCD059009C540A /* bell-off-7.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "bell-off-7.png"; path = "../../../../../../../Downloads/iconbeast-lite-200/iconbeast lite 200 - png/bell-off-7.png"; sourceTree = "<group>"; };
 		AE34B9141DF61999001D1E66 /* UIImageExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIImageExtension.swift; sourceTree = "<group>"; };
-		AE34B9261DF72F0B001D1E66 /* Awards.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Awards.jpg; sourceTree = "<group>"; };
-		AE34B9271DF72F0B001D1E66 /* Education.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Education.jpg; sourceTree = "<group>"; };
-		AE34B9281DF72F0B001D1E66 /* Interests.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Interests.jpg; sourceTree = "<group>"; };
-		AE34B9291DF72F0B001D1E66 /* Languages.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Languages.jpg; sourceTree = "<group>"; };
-		AE34B92A1DF72F0B001D1E66 /* PersonalInfo.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = PersonalInfo.jpg; sourceTree = "<group>"; };
-		AE34B92B1DF72F0B001D1E66 /* Publications.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Publications.jpg; sourceTree = "<group>"; };
-		AE34B92C1DF72F0B001D1E66 /* TechnicalExperience.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = TechnicalExperience.jpg; sourceTree = "<group>"; };
-		AE34B93D1DF73D9C001D1E66 /* education0.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = education0.jpg; sourceTree = "<group>"; };
-		AE34B9401DF74135001D1E66 /* education1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = education1.jpg; sourceTree = "<group>"; };
-		AE34B9421DF747C4001D1E66 /* interestsGolf.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = interestsGolf.jpg; sourceTree = "<group>"; };
-		AE34B9431DF747C4001D1E66 /* interestsHiking.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = interestsHiking.jpg; sourceTree = "<group>"; };
-		AE34B9461DF74837001D1E66 /* interestsBaseball.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = interestsBaseball.jpg; sourceTree = "<group>"; };
-		AE34B9471DF74837001D1E66 /* interestsFootball.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = interestsFootball.jpg; sourceTree = "<group>"; };
-		AE34B94A1DF7486D001D1E66 /* interestsSwimming.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = interestsSwimming.jpg; sourceTree = "<group>"; };
-		AE34B9501DF75BEA001D1E66 /* languagesC++.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "languagesC++.jpg"; sourceTree = "<group>"; };
-		AE34B9511DF75BEA001D1E66 /* languagesFortran.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = languagesFortran.jpg; sourceTree = "<group>"; };
-		AE34B9531DF75BEA001D1E66 /* languagesMatlab.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = languagesMatlab.jpg; sourceTree = "<group>"; };
-		AE34B9541DF75BEA001D1E66 /* languagesPython.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = languagesPython.jpg; sourceTree = "<group>"; };
-		AE34B9561DF75BEA001D1E66 /* languagesSwift.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = languagesSwift.jpg; sourceTree = "<group>"; };
-		AE34B95E1DF75D0A001D1E66 /* languagesLatex.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = languagesLatex.jpg; sourceTree = "<group>"; };
-		AE34B9601DF75F08001D1E66 /* languagesR.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = languagesR.jpg; sourceTree = "<group>"; };
 		AE34B9621DF76328001D1E66 /* sectionTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = sectionTableViewController.swift; sourceTree = "<group>"; };
 		AE34B9641DF763B4001D1E66 /* dataTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = dataTableViewCell.swift; sourceTree = "<group>"; };
 		AE34B9661DF76815001D1E66 /* Languages.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Languages.txt; sourceTree = "<group>"; };
 		AE34B9681DF76B3F001D1E66 /* Interests.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Interests.txt; sourceTree = "<group>"; };
 		AE34B96C1DF76C68001D1E66 /* Publications.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Publications.txt; sourceTree = "<group>"; };
 		AE34B96E1DF76CC4001D1E66 /* Awards.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Awards.txt; sourceTree = "<group>"; };
-		AE34B9701DF77150001D1E66 /* publications0.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = publications0.jpg; sourceTree = "<group>"; };
-		AE34B9711DF77150001D1E66 /* publications1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = publications1.jpg; sourceTree = "<group>"; };
-		AE34B9721DF77150001D1E66 /* publications2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = publications2.jpg; sourceTree = "<group>"; };
-		AE34B9761DF7739C001D1E66 /* awards0.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = awards0.jpg; sourceTree = "<group>"; };
-		AE34B9781DF774BF001D1E66 /* awards1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = awards1.jpg; sourceTree = "<group>"; };
-		AE34B9791DF774BF001D1E66 /* awards2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = awards2.jpg; sourceTree = "<group>"; };
-		AE34B97A1DF774BF001D1E66 /* awards3.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = awards3.jpg; sourceTree = "<group>"; };
 		AE34B97E1DF775FF001D1E66 /* TechnicalExperience.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = TechnicalExperience.txt; sourceTree = "<group>"; };
 		AE36C2C71DF8D78A005BDF4E /* SafariServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SafariServices.framework; path = System/Library/Frameworks/SafariServices.framework; sourceTree = SDKROOT; };
 		AE36C2C91DF8E2CF005BDF4E /* TechnicalExperienceDates.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = TechnicalExperienceDates.txt; sourceTree = "<group>"; };
@@ -168,20 +139,48 @@
 		AE9312901DF888100032E423 /* technicalexperience4.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = technicalexperience4.txt; sourceTree = "<group>"; };
 		AE9312921DF888230032E423 /* technicalexperience5.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = technicalexperience5.txt; sourceTree = "<group>"; };
 		AE9312941DF88B210032E423 /* PersonalInfo.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = PersonalInfo.txt; sourceTree = "<group>"; };
-		AE9312961DF88D490032E423 /* personalinfo1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = personalinfo1.jpg; sourceTree = "<group>"; };
-		AE9312971DF88D490032E423 /* personalinfo2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = personalinfo2.jpg; sourceTree = "<group>"; };
-		AE9312981DF88D490032E423 /* personalinfo3.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = personalinfo3.jpg; sourceTree = "<group>"; };
-		AE9312991DF88D490032E423 /* personalinfo4.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = personalinfo4.jpg; sourceTree = "<group>"; };
-		AE9312A01DF890910032E423 /* personalinfo0.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = personalinfo0.jpg; sourceTree = "<group>"; };
+		AE963A781DFDE05200EEAB3B /* interestsBaseball.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = interestsBaseball.jpg; path = ../../../../../../../../Desktop/interestsBaseball.jpg; sourceTree = "<group>"; };
+		AE963A791DFDE05200EEAB3B /* interestsFootball.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = interestsFootball.jpg; path = ../../../../../../../../Desktop/interestsFootball.jpg; sourceTree = "<group>"; };
+		AE963A7E1DFE08F700EEAB3B /* Awards.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = Awards.jpg; path = JTL/Images/Awards.jpg; sourceTree = SOURCE_ROOT; };
+		AE963A7F1DFE08F700EEAB3B /* awards0.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = awards0.jpg; path = JTL/Images/awards0.jpg; sourceTree = SOURCE_ROOT; };
+		AE963A801DFE08F700EEAB3B /* awards1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = awards1.jpg; path = JTL/Images/awards1.jpg; sourceTree = SOURCE_ROOT; };
+		AE963A811DFE08F700EEAB3B /* awards2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = awards2.jpg; path = JTL/Images/awards2.jpg; sourceTree = SOURCE_ROOT; };
+		AE963A821DFE08F700EEAB3B /* awards3.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = awards3.jpg; path = JTL/Images/awards3.jpg; sourceTree = SOURCE_ROOT; };
+		AE963A831DFE08F700EEAB3B /* Education.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = Education.jpg; path = JTL/Images/Education.jpg; sourceTree = SOURCE_ROOT; };
+		AE963A841DFE08F700EEAB3B /* education0.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = education0.jpg; path = JTL/Images/education0.jpg; sourceTree = SOURCE_ROOT; };
+		AE963A851DFE08F700EEAB3B /* Interests.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = Interests.jpg; path = JTL/Images/Interests.jpg; sourceTree = SOURCE_ROOT; };
+		AE963A861DFE08F700EEAB3B /* interestsGolf.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = interestsGolf.jpg; path = JTL/Images/interestsGolf.jpg; sourceTree = SOURCE_ROOT; };
+		AE963A871DFE08F700EEAB3B /* interestsHiking.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = interestsHiking.jpg; path = JTL/Images/interestsHiking.jpg; sourceTree = SOURCE_ROOT; };
+		AE963A881DFE08F700EEAB3B /* interestsSwimming.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = interestsSwimming.jpg; path = JTL/Images/interestsSwimming.jpg; sourceTree = SOURCE_ROOT; };
+		AE963A891DFE08F700EEAB3B /* Languages.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = Languages.jpg; path = JTL/Images/Languages.jpg; sourceTree = SOURCE_ROOT; };
+		AE963A8A1DFE08F700EEAB3B /* languagesC++.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = "languagesC++.jpg"; path = "JTL/Images/languagesC++.jpg"; sourceTree = SOURCE_ROOT; };
+		AE963A8B1DFE08F700EEAB3B /* languagesFortran.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = languagesFortran.jpg; path = JTL/Images/languagesFortran.jpg; sourceTree = SOURCE_ROOT; };
+		AE963A8C1DFE08F700EEAB3B /* languagesLatex.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = languagesLatex.jpg; path = JTL/Images/languagesLatex.jpg; sourceTree = SOURCE_ROOT; };
+		AE963A8D1DFE08F700EEAB3B /* languagesMatlab.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = languagesMatlab.jpg; path = JTL/Images/languagesMatlab.jpg; sourceTree = SOURCE_ROOT; };
+		AE963A8E1DFE08F700EEAB3B /* languagesPython.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = languagesPython.jpg; path = JTL/Images/languagesPython.jpg; sourceTree = SOURCE_ROOT; };
+		AE963A8F1DFE08F700EEAB3B /* languagesR.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = languagesR.jpg; path = JTL/Images/languagesR.jpg; sourceTree = SOURCE_ROOT; };
+		AE963A901DFE08F700EEAB3B /* languagesSwift.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = languagesSwift.jpg; path = JTL/Images/languagesSwift.jpg; sourceTree = SOURCE_ROOT; };
+		AE963A911DFE08F700EEAB3B /* PersonalInfo.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = PersonalInfo.jpg; path = JTL/Images/PersonalInfo.jpg; sourceTree = SOURCE_ROOT; };
+		AE963A921DFE08F700EEAB3B /* personalinfo0.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = personalinfo0.jpg; path = JTL/Images/personalinfo0.jpg; sourceTree = SOURCE_ROOT; };
+		AE963A931DFE08F700EEAB3B /* personalinfo1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = personalinfo1.jpg; path = JTL/Images/personalinfo1.jpg; sourceTree = SOURCE_ROOT; };
+		AE963A941DFE08F700EEAB3B /* personalinfo2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = personalinfo2.jpg; path = JTL/Images/personalinfo2.jpg; sourceTree = SOURCE_ROOT; };
+		AE963A951DFE08F700EEAB3B /* personalinfo3.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = personalinfo3.jpg; path = JTL/Images/personalinfo3.jpg; sourceTree = SOURCE_ROOT; };
+		AE963A961DFE08F700EEAB3B /* personalinfo4.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = personalinfo4.jpg; path = JTL/Images/personalinfo4.jpg; sourceTree = SOURCE_ROOT; };
+		AE963A971DFE08F700EEAB3B /* Publications.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = Publications.jpg; path = JTL/Images/Publications.jpg; sourceTree = SOURCE_ROOT; };
+		AE963A981DFE08F700EEAB3B /* publications0.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = publications0.jpg; path = JTL/Images/publications0.jpg; sourceTree = SOURCE_ROOT; };
+		AE963A991DFE08F700EEAB3B /* publications1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = publications1.jpg; path = JTL/Images/publications1.jpg; sourceTree = SOURCE_ROOT; };
+		AE963A9A1DFE08F700EEAB3B /* publications2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = publications2.jpg; path = JTL/Images/publications2.jpg; sourceTree = SOURCE_ROOT; };
+		AE963A9B1DFE08F700EEAB3B /* TechnicalExperience.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = TechnicalExperience.jpg; path = JTL/Images/TechnicalExperience.jpg; sourceTree = SOURCE_ROOT; };
+		AE963A9C1DFE08F700EEAB3B /* technicalexperience0.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = technicalexperience0.jpg; path = JTL/Images/technicalexperience0.jpg; sourceTree = SOURCE_ROOT; };
+		AE963A9D1DFE08F700EEAB3B /* technicalexperience1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = technicalexperience1.jpg; path = JTL/Images/technicalexperience1.jpg; sourceTree = SOURCE_ROOT; };
+		AE963A9E1DFE08F700EEAB3B /* technicalexperience2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = technicalexperience2.jpg; path = JTL/Images/technicalexperience2.jpg; sourceTree = SOURCE_ROOT; };
+		AE963A9F1DFE08F700EEAB3B /* technicalexperience3.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = technicalexperience3.jpg; path = JTL/Images/technicalexperience3.jpg; sourceTree = SOURCE_ROOT; };
+		AE963AA01DFE08F700EEAB3B /* technicalexperience4.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = technicalexperience4.jpg; path = JTL/Images/technicalexperience4.jpg; sourceTree = SOURCE_ROOT; };
+		AE963AA11DFE08F700EEAB3B /* technicalexperience5.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = technicalexperience5.jpg; path = JTL/Images/technicalexperience5.jpg; sourceTree = SOURCE_ROOT; };
+		AE963AC61DFE099300EEAB3B /* education1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = education1.jpg; path = ../../../../../../../../Desktop/education1.jpg; sourceTree = "<group>"; };
 		AEDA31C11DFCA9DB0045E0F4 /* Swish.caf */ = {isa = PBXFileReference; lastKnownFileType = file; name = Swish.caf; path = "../../../../../../../../../Library/Developer/CoreSimulator/Profiles/Runtimes/iOS 10.0.simruntime/Contents/Resources/RuntimeRoot/System/Library/Audio/UISounds/Swish.caf"; sourceTree = "<group>"; };
 		AEDA31C31DFCB2E40045E0F4 /* Swoosh.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; name = Swoosh.wav; path = ../../../../../../../Downloads/Swoosh.wav; sourceTree = "<group>"; };
 		AEDA31C51DFCB6640045E0F4 /* Swoosh.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = Swoosh.mp3; path = ../../../../../../../Downloads/Swoosh.mp3; sourceTree = "<group>"; };
-		AEEF38F91DF8779800A95883 /* technicalexperience0.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = technicalexperience0.jpg; sourceTree = "<group>"; };
-		AEEF38FA1DF8779800A95883 /* technicalexperience2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = technicalexperience2.jpg; sourceTree = "<group>"; };
-		AEEF38FB1DF8779800A95883 /* technicalexperience4.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = technicalexperience4.jpg; sourceTree = "<group>"; };
-		AEEF38FF1DF877E200A95883 /* technicalexperience1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = technicalexperience1.jpg; sourceTree = "<group>"; };
-		AEEF39001DF877E200A95883 /* technicalexperience3.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = technicalexperience3.jpg; sourceTree = "<group>"; };
-		AEEF39031DF8781400A95883 /* technicalexperience5.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = technicalexperience5.jpg; sourceTree = "<group>"; };
 		AEF088EC1DEDECA400AA313C /* JTL.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = JTL.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AEF088EF1DEDECA400AA313C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		AEF088F11DEDECA400AA313C /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -203,7 +202,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AE36C2C81DF8D78A005BDF4E /* SafariServices.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -227,45 +225,45 @@
 		AE34B9251DF72F0B001D1E66 /* Images */ = {
 			isa = PBXGroup;
 			children = (
-				AE9312A01DF890910032E423 /* personalinfo0.jpg */,
-				AE9312961DF88D490032E423 /* personalinfo1.jpg */,
-				AE9312971DF88D490032E423 /* personalinfo2.jpg */,
-				AE9312981DF88D490032E423 /* personalinfo3.jpg */,
-				AE9312991DF88D490032E423 /* personalinfo4.jpg */,
-				AEEF38F91DF8779800A95883 /* technicalexperience0.jpg */,
-				AEEF38FF1DF877E200A95883 /* technicalexperience1.jpg */,
-				AEEF39001DF877E200A95883 /* technicalexperience3.jpg */,
-				AEEF38FA1DF8779800A95883 /* technicalexperience2.jpg */,
-				AEEF39031DF8781400A95883 /* technicalexperience5.jpg */,
-				AE34B9711DF77150001D1E66 /* publications1.jpg */,
-				AEEF38FB1DF8779800A95883 /* technicalexperience4.jpg */,
-				AE34B9761DF7739C001D1E66 /* awards0.jpg */,
-				AE34B9781DF774BF001D1E66 /* awards1.jpg */,
-				AE34B9791DF774BF001D1E66 /* awards2.jpg */,
-				AE34B97A1DF774BF001D1E66 /* awards3.jpg */,
-				AE34B9701DF77150001D1E66 /* publications0.jpg */,
-				AE34B9721DF77150001D1E66 /* publications2.jpg */,
-				AE34B9261DF72F0B001D1E66 /* Awards.jpg */,
-				AE34B93D1DF73D9C001D1E66 /* education0.jpg */,
-				AE34B9461DF74837001D1E66 /* interestsBaseball.jpg */,
-				AE34B9501DF75BEA001D1E66 /* languagesC++.jpg */,
-				AE34B9511DF75BEA001D1E66 /* languagesFortran.jpg */,
-				AE34B9531DF75BEA001D1E66 /* languagesMatlab.jpg */,
-				AE34B9541DF75BEA001D1E66 /* languagesPython.jpg */,
-				AE34B9601DF75F08001D1E66 /* languagesR.jpg */,
-				AE34B95E1DF75D0A001D1E66 /* languagesLatex.jpg */,
-				AE34B9561DF75BEA001D1E66 /* languagesSwift.jpg */,
-				AE34B94A1DF7486D001D1E66 /* interestsSwimming.jpg */,
-				AE34B9471DF74837001D1E66 /* interestsFootball.jpg */,
-				AE34B9421DF747C4001D1E66 /* interestsGolf.jpg */,
-				AE34B9431DF747C4001D1E66 /* interestsHiking.jpg */,
-				AE34B9401DF74135001D1E66 /* education1.jpg */,
-				AE34B9271DF72F0B001D1E66 /* Education.jpg */,
-				AE34B9281DF72F0B001D1E66 /* Interests.jpg */,
-				AE34B9291DF72F0B001D1E66 /* Languages.jpg */,
-				AE34B92A1DF72F0B001D1E66 /* PersonalInfo.jpg */,
-				AE34B92B1DF72F0B001D1E66 /* Publications.jpg */,
-				AE34B92C1DF72F0B001D1E66 /* TechnicalExperience.jpg */,
+				AE963A7E1DFE08F700EEAB3B /* Awards.jpg */,
+				AE963A7F1DFE08F700EEAB3B /* awards0.jpg */,
+				AE963A801DFE08F700EEAB3B /* awards1.jpg */,
+				AE963A811DFE08F700EEAB3B /* awards2.jpg */,
+				AE963A821DFE08F700EEAB3B /* awards3.jpg */,
+				AE963A831DFE08F700EEAB3B /* Education.jpg */,
+				AE963A841DFE08F700EEAB3B /* education0.jpg */,
+				AE963A851DFE08F700EEAB3B /* Interests.jpg */,
+				AE963AC61DFE099300EEAB3B /* education1.jpg */,
+				AE963A861DFE08F700EEAB3B /* interestsGolf.jpg */,
+				AE963A871DFE08F700EEAB3B /* interestsHiking.jpg */,
+				AE963A881DFE08F700EEAB3B /* interestsSwimming.jpg */,
+				AE963A891DFE08F700EEAB3B /* Languages.jpg */,
+				AE963A8A1DFE08F700EEAB3B /* languagesC++.jpg */,
+				AE963A8B1DFE08F700EEAB3B /* languagesFortran.jpg */,
+				AE963A8C1DFE08F700EEAB3B /* languagesLatex.jpg */,
+				AE963A8D1DFE08F700EEAB3B /* languagesMatlab.jpg */,
+				AE963A8E1DFE08F700EEAB3B /* languagesPython.jpg */,
+				AE963A8F1DFE08F700EEAB3B /* languagesR.jpg */,
+				AE963A901DFE08F700EEAB3B /* languagesSwift.jpg */,
+				AE963A911DFE08F700EEAB3B /* PersonalInfo.jpg */,
+				AE963A921DFE08F700EEAB3B /* personalinfo0.jpg */,
+				AE963A931DFE08F700EEAB3B /* personalinfo1.jpg */,
+				AE963A941DFE08F700EEAB3B /* personalinfo2.jpg */,
+				AE963A951DFE08F700EEAB3B /* personalinfo3.jpg */,
+				AE963A961DFE08F700EEAB3B /* personalinfo4.jpg */,
+				AE963A971DFE08F700EEAB3B /* Publications.jpg */,
+				AE963A981DFE08F700EEAB3B /* publications0.jpg */,
+				AE963A991DFE08F700EEAB3B /* publications1.jpg */,
+				AE963A9A1DFE08F700EEAB3B /* publications2.jpg */,
+				AE963A9B1DFE08F700EEAB3B /* TechnicalExperience.jpg */,
+				AE963A9C1DFE08F700EEAB3B /* technicalexperience0.jpg */,
+				AE963A9D1DFE08F700EEAB3B /* technicalexperience1.jpg */,
+				AE963A9E1DFE08F700EEAB3B /* technicalexperience2.jpg */,
+				AE963A9F1DFE08F700EEAB3B /* technicalexperience3.jpg */,
+				AE963AA01DFE08F700EEAB3B /* technicalexperience4.jpg */,
+				AE963AA11DFE08F700EEAB3B /* technicalexperience5.jpg */,
+				AE963A781DFDE05200EEAB3B /* interestsBaseball.jpg */,
+				AE963A791DFDE05200EEAB3B /* interestsFootball.jpg */,
 			);
 			name = Images;
 			path = ResumeHalfFiltered;
@@ -459,7 +457,7 @@
 				TargetAttributes = {
 					AEF088EB1DEDECA400AA313C = {
 						CreatedOnToolsVersion = 8.1;
-						DevelopmentTeam = MBLBPAM74V;
+						DevelopmentTeam = E294R2UKFW;
 						ProvisioningStyle = Automatic;
 					};
 					AEF088FF1DEDECA400AA313C = {
@@ -501,72 +499,72 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AE93129C1DF88D490032E423 /* personalinfo3.jpg in Resources */,
+				AE963AB51DFE08F700EEAB3B /* PersonalInfo.jpg in Resources */,
+				AE963AA71DFE08F700EEAB3B /* Education.jpg in Resources */,
+				AE963AA81DFE08F700EEAB3B /* education0.jpg in Resources */,
+				AE963AA91DFE08F700EEAB3B /* Interests.jpg in Resources */,
 				AE36C2CC1DF8E73E005BDF4E /* Education.txt in Resources */,
-				AE34B9741DF77150001D1E66 /* publications1.jpg in Resources */,
-				AE34B97B1DF774BF001D1E66 /* awards1.jpg in Resources */,
-				AE34B92E1DF72F0B001D1E66 /* Education.jpg in Resources */,
-				AE34B9611DF75F08001D1E66 /* languagesR.jpg in Resources */,
 				AE34B9671DF76815001D1E66 /* Languages.txt in Resources */,
-				AE34B9481DF74837001D1E66 /* interestsBaseball.jpg in Resources */,
-				AE34B9771DF7739C001D1E66 /* awards0.jpg in Resources */,
-				AE34B92F1DF72F0B001D1E66 /* Interests.jpg in Resources */,
+				AE963AB91DFE08F700EEAB3B /* personalinfo3.jpg in Resources */,
+				AE963AB41DFE08F700EEAB3B /* languagesSwift.jpg in Resources */,
 				AEF088FA1DEDECA400AA313C /* LaunchScreen.storyboard in Resources */,
+				AE963AA21DFE08F700EEAB3B /* Awards.jpg in Resources */,
 				AEDA31C61DFCB6640045E0F4 /* Swoosh.mp3 in Resources */,
+				AE963AAC1DFE08F700EEAB3B /* interestsSwimming.jpg in Resources */,
 				AE93128F1DF888000032E423 /* technicalexperience3.txt in Resources */,
-				AEEF38FD1DF8779800A95883 /* technicalexperience2.jpg in Resources */,
-				AE34B9331DF72F0B001D1E66 /* TechnicalExperience.jpg in Resources */,
 				AE93128D1DF887F40032E423 /* technicalexperience2.txt in Resources */,
-				AE34B95D1DF75BEA001D1E66 /* languagesSwift.jpg in Resources */,
+				AE963AC41DFE08F700EEAB3B /* technicalexperience4.jpg in Resources */,
+				AE963AB71DFE08F700EEAB3B /* personalinfo1.jpg in Resources */,
+				AE963AB81DFE08F700EEAB3B /* personalinfo2.jpg in Resources */,
 				AEF088F71DEDECA400AA313C /* Assets.xcassets in Resources */,
-				AE9312A11DF890910032E423 /* personalinfo0.jpg in Resources */,
-				AE34B9581DF75BEA001D1E66 /* languagesFortran.jpg in Resources */,
-				AE93129B1DF88D490032E423 /* personalinfo2.jpg in Resources */,
-				AE34B97D1DF774BF001D1E66 /* awards3.jpg in Resources */,
+				AE963AB11DFE08F700EEAB3B /* languagesMatlab.jpg in Resources */,
+				AE963AC21DFE08F700EEAB3B /* technicalexperience2.jpg in Resources */,
+				AE963AC51DFE08F700EEAB3B /* technicalexperience5.jpg in Resources */,
+				AE963AAA1DFE08F700EEAB3B /* interestsGolf.jpg in Resources */,
+				AE963ABD1DFE08F700EEAB3B /* publications1.jpg in Resources */,
+				AE963AB31DFE08F700EEAB3B /* languagesR.jpg in Resources */,
 				AE9312931DF888230032E423 /* technicalexperience5.txt in Resources */,
-				AE34B9441DF747C4001D1E66 /* interestsGolf.jpg in Resources */,
-				AE34B9321DF72F0B001D1E66 /* Publications.jpg in Resources */,
-				AEEF39021DF877E200A95883 /* technicalexperience3.jpg in Resources */,
+				AE963AB21DFE08F700EEAB3B /* languagesPython.jpg in Resources */,
 				AE36C2D01DF8E945005BDF4E /* education0.txt in Resources */,
 				AE3DE14F1DF5EDE90016B7C6 /* Resume.pdf in Resources */,
-				AE34B95B1DF75BEA001D1E66 /* languagesPython.jpg in Resources */,
-				AE34B9751DF77150001D1E66 /* publications2.jpg in Resources */,
 				AE36C2D21DF8E951005BDF4E /* education1.txt in Resources */,
-				AEEF38FE1DF8779800A95883 /* technicalexperience4.jpg in Resources */,
+				AE963AAE1DFE08F700EEAB3B /* languagesC++.jpg in Resources */,
+				AE963ABE1DFE08F700EEAB3B /* publications2.jpg in Resources */,
+				AE963ABF1DFE08F700EEAB3B /* TechnicalExperience.jpg in Resources */,
 				AE2A15EC1DFCD059009C540A /* bell-off-7.png in Resources */,
+				AE963AA41DFE08F700EEAB3B /* awards1.jpg in Resources */,
+				AE963ABA1DFE08F700EEAB3B /* personalinfo4.jpg in Resources */,
+				AE963ABC1DFE08F700EEAB3B /* publications0.jpg in Resources */,
 				AE36C2CE1DF8E89E005BDF4E /* EducationDates.txt in Resources */,
-				AE34B9451DF747C4001D1E66 /* interestsHiking.jpg in Resources */,
 				AE93128B1DF887C60032E423 /* technicalexperience1.txt in Resources */,
+				AE963AB01DFE08F700EEAB3B /* languagesLatex.jpg in Resources */,
+				AE963AA51DFE08F700EEAB3B /* awards2.jpg in Resources */,
 				AE3DD86D1DF5EDD40016B7C6 /* file-document-7.png in Resources */,
-				AE34B93F1DF73D9C001D1E66 /* education0.jpg in Resources */,
 				AEF088F51DEDECA400AA313C /* Main.storyboard in Resources */,
+				AE963AAB1DFE08F700EEAB3B /* interestsHiking.jpg in Resources */,
 				AE2A15EB1DFCD059009C540A /* bell-7.png in Resources */,
-				AE34B9491DF74837001D1E66 /* interestsFootball.jpg in Resources */,
-				AE34B92D1DF72F0B001D1E66 /* Awards.jpg in Resources */,
-				AE34B9411DF74135001D1E66 /* education1.jpg in Resources */,
 				AE34B96F1DF76CC4001D1E66 /* Awards.txt in Resources */,
+				AE963AA61DFE08F700EEAB3B /* awards3.jpg in Resources */,
+				AE963AC11DFE08F700EEAB3B /* technicalexperience1.jpg in Resources */,
+				AE963AA31DFE08F700EEAB3B /* awards0.jpg in Resources */,
+				AE963AC71DFE099300EEAB3B /* education1.jpg in Resources */,
 				AE9312911DF888100032E423 /* technicalexperience4.txt in Resources */,
-				AE34B94B1DF7486D001D1E66 /* interestsSwimming.jpg in Resources */,
-				AE34B97C1DF774BF001D1E66 /* awards2.jpg in Resources */,
+				AE963AC31DFE08F700EEAB3B /* technicalexperience3.jpg in Resources */,
+				AE963AAD1DFE08F700EEAB3B /* Languages.jpg in Resources */,
+				AE963A7A1DFDE05200EEAB3B /* interestsBaseball.jpg in Resources */,
 				AE34B9691DF76B3F001D1E66 /* Interests.txt in Resources */,
-				AE93129A1DF88D490032E423 /* personalinfo1.jpg in Resources */,
 				AE3DE1461DF5EDE90016B7C6 /* list-fat-7.png in Resources */,
-				AE34B9571DF75BEA001D1E66 /* languagesC++.jpg in Resources */,
 				AE9312891DF8877F0032E423 /* technicalexperience0.txt in Resources */,
-				AEEF39011DF877E200A95883 /* technicalexperience1.jpg in Resources */,
+				AE963AC01DFE08F700EEAB3B /* technicalexperience0.jpg in Resources */,
+				AE963A7B1DFDE05200EEAB3B /* interestsFootball.jpg in Resources */,
+				AE963ABB1DFE08F700EEAB3B /* Publications.jpg in Resources */,
 				AE34B96D1DF76C68001D1E66 /* Publications.txt in Resources */,
-				AE34B9311DF72F0B001D1E66 /* PersonalInfo.jpg in Resources */,
-				AE34B9301DF72F0B001D1E66 /* Languages.jpg in Resources */,
-				AE34B9731DF77150001D1E66 /* publications0.jpg in Resources */,
 				AE36C2CA1DF8E2CF005BDF4E /* TechnicalExperienceDates.txt in Resources */,
-				AEEF38FC1DF8779800A95883 /* technicalexperience0.jpg in Resources */,
 				AEDA31C41DFCB2E40045E0F4 /* Swoosh.wav in Resources */,
-				AE34B95F1DF75D0A001D1E66 /* languagesLatex.jpg in Resources */,
+				AE963AB61DFE08F700EEAB3B /* personalinfo0.jpg in Resources */,
 				AE9312951DF88B210032E423 /* PersonalInfo.txt in Resources */,
-				AE93129D1DF88D490032E423 /* personalinfo4.jpg in Resources */,
+				AE963AAF1DFE08F700EEAB3B /* languagesFortran.jpg in Resources */,
 				AE34B97F1DF775FF001D1E66 /* TechnicalExperience.txt in Resources */,
-				AE34B95A1DF75BEA001D1E66 /* languagesMatlab.jpg in Resources */,
-				AEEF39041DF8781400A95883 /* technicalexperience5.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -752,10 +750,11 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = MBLBPAM74V;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEVELOPMENT_TEAM = E294R2UKFW;
 				INFOPLIST_FILE = JTL/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.SSB.JTL;
+				PRODUCT_BUNDLE_IDENTIFIER = com.jacobtaylorlandman.JTL;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
 			};
@@ -765,10 +764,11 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = MBLBPAM74V;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEVELOPMENT_TEAM = E294R2UKFW;
 				INFOPLIST_FILE = JTL/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.SSB.JTL;
+				PRODUCT_BUNDLE_IDENTIFIER = com.jacobtaylorlandman.JTL;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
 			};
