@@ -20,6 +20,7 @@ class ViewController: UITableViewController, UIViewControllerPreviewingDelegate 
     var projects = [[String]]()
     var showAC: Bool = true
     var previewIndexPath: IndexPath?
+    var safariViewController: SFSafariViewController?
     
     // METHODS
     // ------------------------------------------------------------------------------------------
@@ -53,6 +54,9 @@ class ViewController: UITableViewController, UIViewControllerPreviewingDelegate 
         if traitCollection.forceTouchCapability == .available {
             registerForPreviewing(with: self, sourceView: view)
         }
+        
+        let notificationCenter = NotificationCenter.default
+        notificationCenter.addObserver(self, selector: #selector(appMovedToBackground), name: Notification.Name.UIApplicationWillResignActive, object: nil)
         
     }
     
@@ -186,7 +190,12 @@ class ViewController: UITableViewController, UIViewControllerPreviewingDelegate 
     func showTutorial(_ which: Int) {
         if let url = URL(string: "https://www.hackingwithswift.com/read/\(which + 1)") {
             let vc = SFSafariViewController(url: url, entersReaderIfAvailable: true)
-            present(vc, animated: true)
+            let navController = UINavigationController(rootViewController: vc)
+            vc.navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .done, target: self, action: #selector(dismiss as () -> Void))
+            vc.navigationController?.isNavigationBarHidden = true
+            self.navigationController!.present(navController, animated: true, completion: nil)
+            safariViewController = vc
+            //present(vc, animated: true)
         }
     }
     
@@ -237,9 +246,13 @@ class ViewController: UITableViewController, UIViewControllerPreviewingDelegate 
         
         if let url = URL(string: "https://www.hackingwithswift.com/read/\(indexPath.row + 1)") {
             let vc = SFSafariViewController(url: url, entersReaderIfAvailable: true)
+            let navController = UINavigationController(rootViewController: vc)
+            vc.navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .done, target: self, action: #selector(dismiss as () -> Void))
+            vc.navigationController?.isNavigationBarHidden = true
             // is this the correct frame size?
             previewingContext.sourceRect = cell.frame
-            return vc
+            safariViewController = vc
+            return navController
         } else {
             return nil
         }
@@ -248,11 +261,43 @@ class ViewController: UITableViewController, UIViewControllerPreviewingDelegate 
     // ------------------------------------------------------------------------------------------
     
     func previewingContext(_ previewingContext: UIViewControllerPreviewing, commit viewControllerToCommit: UIViewController) {
-        present(viewControllerToCommit, animated: false)
+        
+        self.navigationController!.present(viewControllerToCommit, animated: true, completion: nil)
+        //present(viewControllerToCommit, animated: false)
     }
     
     // ------------------------------------------------------------------------------------------
     
+    
+    func appMovedToBackground() {
+        print("App moved to background!")
+        
+        // if the app moved to background and we have a safariViewController
+        if let svc = safariViewController {
+            let button = svc.navigationItem.rightBarButtonItem
+            DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) { [unowned self] in
+                UIApplication.shared.sendAction((button?.action)!, to: button?.target, from: self, for: nil)
+            }
+            
+        }
+        
+    }
+    
+    // ------------------------------------------------------------------------------------------
+    
+    
+    func dismiss() {
+        safariViewController?.dismiss(animated: false, completion: nil)
+    }
+    
+    // ------------------------------------------------------------------------------------------
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        safariViewController = nil
+    }
+    
+    // ------------------------------------------------------------------------------------------
 }
 
 
