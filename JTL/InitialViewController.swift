@@ -29,6 +29,8 @@ class InitialViewController: UIViewController {
     
     var buttonTapped: Bool = false
     
+    var safariVC: SFSafariViewController?
+    
     
     // METHODS
     // ------------------------------------------------------------------------------------------
@@ -47,7 +49,7 @@ class InitialViewController: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        
+        navigationController?.isNavigationBarHidden = false
         addConstraints()
     }
     
@@ -107,8 +109,7 @@ class InitialViewController: UIViewController {
             } else {
                 // if the facebook app isn't installed open in safari
                 if let safariUrl = URL(string: "https://www.facebook.com/" + UID) {
-                    let vc = SFSafariViewController(url: safariUrl, entersReaderIfAvailable: true)
-                    present(vc, animated: true)
+                    UIApplication.shared.open(safariUrl, options: [:])
                 }
             }
         }
@@ -129,8 +130,7 @@ class InitialViewController: UIViewController {
                 UIApplication.shared.open(url, options: [:])
             } else {
                 // if the facebook app isn't installed open in safari
-                let vc = SFSafariViewController(url: url, entersReaderIfAvailable: false)
-                present(vc, animated: true)
+                UIApplication.shared.open(url, options: [:])
             }
         }
     }
@@ -196,18 +196,21 @@ class InitialViewController: UIViewController {
         
         // the size of the screen is in points
         let sizeOfScreen: CGSize = UIScreen.main.bounds.size
-
+        print(sizeOfScreen)
         let xOffset: CGFloat = 20.0
         let yOffset: CGFloat = 30.0
         let viewWidth: CGFloat = sizeOfScreen.width
         let scaleFactor: CGFloat = 0.9
         
         let labelHeight: CGFloat = scaleFactor * 0.33 * ((0.33 * sizeOfScreen.height) - yOffset)
+        print(labelHeight)
         
         let labelStartingPosition: CGFloat = labelHeight + yOffset
+        print(labelStartingPosition)
         
         jacobLabel = UILabel()
         jacobLabel.frame = CGRect(x: viewWidth + xOffset, y: labelStartingPosition, width: viewWidth, height: labelHeight)
+        print(jacobLabel.frame)
         jacobLabel.text = "Jacob"
         jacobLabel.font = UIFont(name: "AppleSDGothicNeo-Regular", size: labelHeight)
         view.addSubview(jacobLabel)

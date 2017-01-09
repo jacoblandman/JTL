@@ -48,6 +48,7 @@ class sectionTableViewController: UITableViewController {
         // these data types have additional detailed views
         if (dataType == "Technical Experience" || dataType == "Education") { cellAccessory = .disclosureIndicator }
         
+        print(self.navigationController)
         hidingNavigationBarManager = HidingNavigationBarManager(viewController: self, scrollView: tableView)
         hidingNavigationBarManager?.onForegroundAction = .show
         hidingNavigationBarManager?.expansionResistance = 125

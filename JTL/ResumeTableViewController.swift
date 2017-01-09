@@ -56,7 +56,7 @@ class ResumeTableViewController: UITableViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         
-        
+        navigationController?.isNavigationBarHidden = false
         //navigationController?.hidesBarsOnSwipe = true
 
         if let indexPath = selectedIndexPath {

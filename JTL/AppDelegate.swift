@@ -104,12 +104,17 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // If the user activity has the type CSSearchableItemActionType it means we're being launched as a result of a Spotlight search
         if userActivity.activityType == CSSearchableItemActionType {
             if let uniqueIdentifier = userActivity.userInfo?[CSSearchableItemActivityIdentifier] as? String {
-                let sb = UIStoryboard(name: "Main", bundle: nil)
-                if let viewController = sb.instantiateViewController(withIdentifier: "ExperienceViewController") as? ViewController {
-                    if let rootViewController = self.window?.rootViewController as? UINavigationController {
-                        // push to the iOS experience view and then call the showTutorial Function to launch safari
-                        rootViewController.pushViewController(viewController, animated: false)
-                        viewController.showTutorial(Int(uniqueIdentifier)!)
+                if let navigationController = window?.rootViewController as? UINavigationController {
+                    // pop to the root view controller bc if you are in one of the other table views when attempting to perform the "resume" or "iOS" quick action
+                    // then the quick action won't work because the topViewController won't be the InitialViewController
+                    navigationController.popToRootViewController(animated: false)
+                    if let ViewController = navigationController.topViewController as? InitialViewController {
+                        // now segue to the iOS experience view (wihtout animating though)
+                        ViewController.performSegue(withIdentifier: "segueToIOSNoAnimation", sender: self)
+                        if let nextViewController = navigationController.topViewController as? ViewController {
+                            // now call the showTutorial function
+                            nextViewController.showTutorial(Int(uniqueIdentifier)!)
+                        }
                     }
                 }
             }

@@ -11,7 +11,7 @@ import SafariServices
 import CoreSpotlight
 import MobileCoreServices
 
-class ViewController: UITableViewController, UIViewControllerPreviewingDelegate {
+class ViewController: UITableViewController, UIViewControllerPreviewingDelegate, SFSafariViewControllerDelegate {
     
     // PARAMETERS
     // ------------------------------------------------------------------------------------------
@@ -21,6 +21,7 @@ class ViewController: UITableViewController, UIViewControllerPreviewingDelegate 
     var showAC: Bool = true
     var previewIndexPath: IndexPath?
     var safariViewController: SFSafariViewController?
+    var alertController: UIAlertController?
     
     // METHODS
     // ------------------------------------------------------------------------------------------
@@ -37,11 +38,18 @@ class ViewController: UITableViewController, UIViewControllerPreviewingDelegate 
         
         if showAC {
             let ac = UIAlertController(title: "iOS Experience", message: "This view displays a list of the 39 projects completed during the 'Hacking With Swift' tutorial series. Various topics discussed within each project can be seen below the title. Selecting a cell will load a safari view where you can obtain more information about each project. Peek and pop if you dare. Also, upon visiting this table view, each project has been indexed so you can search in spotlight for topics such as 'CALayer', 'closures', etc.", preferredStyle: .alert)
-            ac.addAction(UIAlertAction(title: "Got It!", style: .default))
-            ac.addAction(UIAlertAction(title: "Don't show again", style: .default) { [] _ in
+            
+            ac.addAction(UIAlertAction(title: "Got It!", style: .default){ [unowned self] _ in
+                self.alertController = nil
+            })
+            
+            ac.addAction(UIAlertAction(title: "Don't show again", style: .default) { [unowned self] _ in
                 let defaults = UserDefaults.standard
                 defaults.set(false, forKey: "showAC")
+                self.alertController = nil
             })
+            
+            alertController = ac
             
             present(ac, animated: true)
         }
@@ -193,8 +201,9 @@ class ViewController: UITableViewController, UIViewControllerPreviewingDelegate 
             let navController = UINavigationController(rootViewController: vc)
             vc.navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .done, target: self, action: #selector(dismiss as () -> Void))
             vc.navigationController?.isNavigationBarHidden = true
-            self.navigationController!.present(navController, animated: true, completion: nil)
+            vc.delegate = self
             safariViewController = vc
+            self.navigationController!.present(navController, animated: true, completion: nil)
             //present(vc, animated: true)
         }
     }
@@ -249,6 +258,7 @@ class ViewController: UITableViewController, UIViewControllerPreviewingDelegate 
             let navController = UINavigationController(rootViewController: vc)
             vc.navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .done, target: self, action: #selector(dismiss as () -> Void))
             vc.navigationController?.isNavigationBarHidden = true
+            vc.delegate = self
             // is this the correct frame size?
             previewingContext.sourceRect = cell.frame
             safariViewController = vc
@@ -261,9 +271,7 @@ class ViewController: UITableViewController, UIViewControllerPreviewingDelegate 
     // ------------------------------------------------------------------------------------------
     
     func previewingContext(_ previewingContext: UIViewControllerPreviewing, commit viewControllerToCommit: UIViewController) {
-        
         self.navigationController!.present(viewControllerToCommit, animated: true, completion: nil)
-        //present(viewControllerToCommit, animated: false)
     }
     
     // ------------------------------------------------------------------------------------------
@@ -271,6 +279,10 @@ class ViewController: UITableViewController, UIViewControllerPreviewingDelegate 
     
     func appMovedToBackground() {
         print("App moved to background!")
+        
+        if let ac = alertController {
+            ac.dismiss(animated: false, completion: nil)
+        }
         
         // if the app moved to background and we have a safariViewController
         if let svc = safariViewController {
@@ -284,20 +296,26 @@ class ViewController: UITableViewController, UIViewControllerPreviewingDelegate 
     }
     
     // ------------------------------------------------------------------------------------------
-    
+    // this is a hidden button that dismisses the safari view controller when the app goes to background
+    // need to set the safariViewController to nil
     
     func dismiss() {
         safariViewController?.dismiss(animated: false, completion: nil)
-    }
-    
-    // ------------------------------------------------------------------------------------------
-    
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
         safariViewController = nil
     }
     
     // ------------------------------------------------------------------------------------------
+    // this happens when the done button gets pressed
+    // this is the other way we need to set the safariViewController to nil
+    
+    func safariViewControllerDidFinish(_ controller: SFSafariViewController) {
+        safariViewController = nil
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        navigationController?.isNavigationBarHidden = false
+    }
 }
 
 
